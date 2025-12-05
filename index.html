@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>ScoreMony</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/indexStyle.css">
 </head>
 <body>
-    
+    <header>
+      <div class="topnav" id="myTopnav">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        <a href="#home" class="active">Home</a>
+        <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+          <input type="text" placeholder="Search.." name="search2">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </header>
     <script src="app.js"></script>
 </body>
 </html>
