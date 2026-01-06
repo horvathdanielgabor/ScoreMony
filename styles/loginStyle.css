@@ -1,0 +1,78 @@
+/* Main Page */
+
+html{
+    background: blue;
+    background-image: url(/img/coffee-3512027.jpg);
+    background-size: 100%;
+    background-position-x: 15%;
+    background-position-y: 10%;
+}
+
+/* Flipcards */
+
+#flipCard {
+    background-color: transparent;
+    width: 500px;
+    height: 400px;
+    perspective: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.flipCardInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flipCardFront, .flipCardBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.flipCardFront {
+    background-color: #bbb;
+    color: black;
+}
+
+.flipCardBack {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* Flipcard Inner Elemenets */
+
+input{
+    padding: 0;
+    font-size: large;
+}
+
+h1{
+    padding: 0;
+    margin: 0;
+}
+
+label{
+    padding: 0;
+    margin: 0;
+    font-size: larger;
+}
+
+.logRegBtn{
+    width: 50%;
+}
+
+.flipBtn{
+    align-self: flex-end;
+}
