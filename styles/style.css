@@ -42,7 +42,7 @@ body {
   box-sizing: border-box;
 }
 
-form.example input[type=text] {
+form.navsearch input[type=text] {
   padding: 10px;
   font-size: 17px;
   border: 0px solid transparent;
@@ -52,7 +52,7 @@ form.example input[type=text] {
   background: #f1f1f1;
 }
 
-form.example button {
+form.navsearch button {
   float: left;
   width: 10%;
   padding: 10px;
@@ -63,11 +63,11 @@ form.example button {
   cursor: pointer;
 }
 
-form.example button:hover {
-  background: #0b7dda;
+form.navsearch button:hover {
+  background: #d1d1d1;
 }
 
-form.example {
+form.navsearch {
   display: flex;
   justify-content: right;
   margin: 0px;
@@ -75,13 +75,58 @@ form.example {
   max-width: 700px;
 }
 
-form.example::after {
+form.navsearch::after {
   content: "";
   clear: both;
   display: table;
 }
 
-/*header phone view*/
-@media screen and (max-width: 390px) {
+.phone{
+  display: none;
+}
+
+/*phone view*/
+@media screen and (max-width: 350px) {
+  /*header*/
   
+  /* Add a black background color to the top navigation bar */
+  .topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .topnav a{
+    display: none;
+  }
+
+  .topnav div {
+    display: none;
+  }
+
+  .phone{
+    display: flex;
+  }
+
+  form.navsearch{
+    display: none;
+  }
+
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav a.icon {
+    background: black;
+    display: flex;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav #search {
+    display: none;
+  }
+
+  .topnav #user {
+    display: none;
+  }
 }
