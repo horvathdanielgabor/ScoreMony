@@ -1,5 +1,5 @@
 //header
-function myFunction(selected) {
+function headerDropDown(selected) {
     var x = document.getElementById(selected);
     if (x.style.display === "block") {
       x.style.display = "none";

@@ -2,6 +2,7 @@ body {
   margin: 0px;
 }
 
+/*header*/
 /* Add a black background color to the top navigation bar */
 .topnav {
   overflow: hidden;
@@ -81,8 +82,19 @@ form.navsearch::after {
   display: table;
 }
 
-.phone{
-  display: none;
+#user{
+  display: flex;
+  justify-content: space-between;
+}
+
+#user a{
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.fa{
+  font-size: 80%;
 }
 
 /*phone view*/
@@ -98,16 +110,12 @@ form.navsearch::after {
     align-items: center;
   }
 
-  .topnav a{
+  .topnav a {
     display: none;
   }
 
   .topnav div {
     display: none;
-  }
-
-  .phone{
-    display: flex;
   }
 
   form.navsearch{
