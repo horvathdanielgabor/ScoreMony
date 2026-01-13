@@ -13,19 +13,20 @@
     <header>
       <div class="topnav">
         <a href="#home"><img src="images/rajz.png" alt="Icon" width="178px" height="98px"></a>
-        <form class="navsearch" id="search" action="/action_page.php">
-          <input type="text" placeholder="Search.." name="search2">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
+        <div  id="search">
+          <form class="navsearch" action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search2">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
         <div id="user">
           <h2 id="username">Anonymous12345</h2>
-          <a href="#"><img src="images/LogOut.png" alt="LogOut" width="60%" height="60%"></a>
+          <a href="#"><img src="images/LogOut.png" alt="LogOut" width="48px" height="48px"></a>
         </div>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction('search')">
+        <a href="javascript:void(0);" class="icon" onclick="headerDropDown('search')">
           <i class="fa fa-bars"></i>
         </a>
-        <a href="#home"><img src="images/rajz.png" alt="Icon" width="178px" height="98px" class="phone"></a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction('user')">
+        <a href="javascript:void(0);" class="icon" onclick="headerDropDown('user')">
           <i class="fa fa-bars"></i>
         </a>
       </div>
