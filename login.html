@@ -8,7 +8,44 @@
     <link rel="stylesheet" href="styles/loginStyle.css">
 </head>
 <body>
-    
+    <form id="flipCard">
+        <div class="flipCardInner">
+          <div class="flipCardFront">
+            <h1>Bejelentkezés</h1>
+            <div>
+                <label>Név</label>
+                <input type="text" name="loginName" id="loginName">
+            </div>
+            <div>
+                <label>Jelszó</label>
+                <input type="password" name="loginPass" id="loginPass">
+            </div>
+            <input class="logRegBtn" type="submit" value="Bejelentkezés">
+            <input class="flipBtn" id="flipID" type="button" value="Regisztráció">
+          </div>
+          <div class="flipCardBack">
+            <h1>Regisztráció</h1>
+            <div>
+                <label>Név</label>
+                <input type="text" name="regName" id="regName">
+            </div>
+            <div>
+                <label>Email</label>
+                <input type="text" name="regEmail" id="regEmail">
+            </div>
+            <div>
+                <label>Jelszó</label>
+                <input type="password" name="regPass" id="regPass">
+            </div>
+            <div>
+                <label>Jelszó ismétlése</label>
+                <input type="password" name="regPassConf" id="regPassConf">
+            </div>
+            <input class="logRegBtn" type="submit" value="Regisztráció">
+            <input class="flipBtn" id="flipBackID" type="button" value="Bejelentkezés">
+          </div>
+        </div>
+    </form>
     <script src="app.js"></script>
 </body>
 </html>
