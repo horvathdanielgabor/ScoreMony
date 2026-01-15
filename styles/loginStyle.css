@@ -2,7 +2,7 @@
 
 html{
     background: blue;
-    background-image: url(/img/coffee-3512027.jpg);
+    background-image: url(/images/coffee-3512027.jpg);
     background-size: 100%;
     background-position-x: 15%;
     background-position-y: 10%;
@@ -13,7 +13,7 @@ html{
 #flipCard {
     background-color: transparent;
     width: 500px;
-    height: 400px;
+    height: 620px;
     perspective: 1000px;
     position: absolute;
     top: 50%;
@@ -38,15 +38,22 @@ html{
     backface-visibility: hidden;
     display: flex;
     flex-direction: column;
+    background: inherit;
+    background-color: rgba(255,255,255,0.3);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flipCardFront > div, .flipCardBack > div{
+    display: flex;
+    flex-direction: column;
 }
 
 .flipCardFront {
-    background-color: #bbb;
     color: black;
 }
 
 .flipCardBack {
-    background-color: dodgerblue;
     color: white;
     transform: rotateY(180deg);
 }
@@ -67,12 +74,38 @@ label{
     padding: 0;
     margin: 0;
     font-size: larger;
+    align-self: flex-start;
 }
 
 .logRegBtn{
     width: 50%;
+    align-self: center;
 }
 
 .flipBtn{
     align-self: flex-end;
+}
+
+/* Flipcard Animations */
+
+@keyframes cardFlipFade{
+    from{
+        background-color: rgba(255,255,255,0.3);
+        color: black;
+    }
+    to{
+        background: #53629E;
+        color: white;
+    }
+}
+
+@keyframes cardFlipFadeBack{
+    from{
+        background: #53629E;
+        color: white;
+    }
+    to{
+        background-color: rgba(255,255,255,0.3);
+        color: black;
+    }
 }
