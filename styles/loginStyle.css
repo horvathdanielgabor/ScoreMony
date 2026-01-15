@@ -13,7 +13,7 @@ html{
 #flipCard {
     background-color: transparent;
     width: 500px;
-    height: 400px;
+    height: 620px;
     perspective: 1000px;
     position: absolute;
     top: 50%;
@@ -40,6 +40,13 @@ html{
     flex-direction: column;
     background: inherit;
     background-color: rgba(255,255,255,0.3);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flipCardFront > div, .flipCardBack > div{
+    display: flex;
+    flex-direction: column;
 }
 
 .flipCardFront {
@@ -67,10 +74,12 @@ label{
     padding: 0;
     margin: 0;
     font-size: larger;
+    align-self: flex-start;
 }
 
 .logRegBtn{
     width: 50%;
+    align-self: center;
 }
 
 .flipBtn{
@@ -85,14 +94,14 @@ label{
         color: black;
     }
     to{
-        background-color: blue;
+        background: #53629E;
         color: white;
     }
 }
 
 @keyframes cardFlipFadeBack{
     from{
-        background-color: blue;
+        background: #53629E;
         color: white;
     }
     to{
