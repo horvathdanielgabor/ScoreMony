@@ -6,6 +6,8 @@ html{
     background-size: 100%;
     background-position-x: 15%;
     background-position-y: 10%;
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
 }
 
 /* Flipcards */
@@ -40,6 +42,7 @@ html{
     flex-direction: column;
     background: inherit;
     background-color: rgba(255,255,255,0.3);
+    border-radius: 20px;
     align-items: center;
     justify-content: space-between;
 }
@@ -50,7 +53,7 @@ html{
 }
 
 .flipCardFront {
-    color: black;
+    color: white;
 }
 
 .flipCardBack {
@@ -63,17 +66,21 @@ html{
 input{
     padding: 0;
     font-size: large;
+    background-color: #53629E;
+    border: 0;
+    border-radius: 15px;
 }
 
 h1{
     padding: 0;
-    margin: 0;
+    margin: 15% 0 0 0;
+    font-size: 45px;
 }
 
 label{
     padding: 0;
-    margin: 0;
-    font-size: larger;
+    margin: 1%;
+    font-size: 25px;
     align-self: flex-start;
 }
 
@@ -86,26 +93,27 @@ label{
     align-self: flex-end;
 }
 
+.textInput{
+    width: 275px;
+    height: 35px;
+}
+
 /* Flipcard Animations */
 
 @keyframes cardFlipFade{
     from{
         background-color: rgba(255,255,255,0.3);
-        color: black;
     }
     to{
-        background: #53629E;
-        color: white;
+        background: #4D4B88;
     }
 }
 
 @keyframes cardFlipFadeBack{
     from{
-        background: #53629E;
-        color: white;
+        background: #4D4B88;
     }
     to{
         background-color: rgba(255,255,255,0.3);
-        color: black;
     }
 }
