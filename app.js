@@ -28,13 +28,12 @@ document.getElementById("flipID").addEventListener("click", function (e) {
     document.getElementsByClassName("flipCardFront")[0].style.animation = "cardFlipFade 0.3s 0.3s forwards";
 
     setTimeout(() => {
-      document.getElementsByClassName("flipCardFront")[0].style.background = "#53629E";
+      document.getElementsByClassName("flipCardFront")[0].style.background = "#4D4B88";
     }, 300);
 
     setTimeout(() => {
       document.getElementsByClassName("flipCardBack")[0].style.display = "flex";
-      document.getElementsByClassName("flipCardBack")[0].style.background = "#53629E";
-      document.getElementsByClassName("flipCardBack")[0].style.color = "white";
+      document.getElementsByClassName("flipCardBack")[0].style.background = "#4D4B88";
       document.getElementsByClassName("flipCardInner")[0].style.transform = "rotateY("+180+"deg)";
       document.getElementsByClassName("flipCardFront")[0].style.background = "none";
       setTimeout(() => {
@@ -43,7 +42,6 @@ document.getElementById("flipID").addEventListener("click", function (e) {
 
         setTimeout(() => {
           document.getElementsByClassName("flipCardBack")[0].style.background = "rgba(255,255,255,0.3)";
-          document.getElementsByClassName("flipCardBack")[0].style.color = "black";
           document.getElementsByClassName("flipCardFront")[0].style.animation = "none";
           document.getElementsByClassName("flipCardBack")[0].style.animation = "none";
 
@@ -59,13 +57,12 @@ document.getElementById("flipBackID").addEventListener("click", function (e) {
   document.getElementsByClassName("flipCardBack")[0].style.animation = "cardFlipFade 0.3s 0.3s forwards";
 
     setTimeout(() => {
-      document.getElementsByClassName("flipCardBack")[0].style.background = "#53629E";
+      document.getElementsByClassName("flipCardBack")[0].style.background = "#4D4B88";
     }, 300);
 
     setTimeout(() => {
       document.getElementsByClassName("flipCardFront")[0].style.display = "flex";
-      document.getElementsByClassName("flipCardFront")[0].style.background = "#53629E";
-      document.getElementsByClassName("flipCardFront")[0].style.color = "white"; 
+      document.getElementsByClassName("flipCardFront")[0].style.background = "#4D4B88";
       document.getElementsByClassName("flipCardInner")[0].style.transform = "rotateY("+0+"deg)";
       document.getElementsByClassName("flipCardBack")[0].style.background = "none";
       document.getElementsByClassName("flipCardFront")[0].style.display = "flex";
@@ -75,7 +72,6 @@ document.getElementById("flipBackID").addEventListener("click", function (e) {
 
         setTimeout(() => {
           document.getElementsByClassName("flipCardFront")[0].style.background = "rgba(255,255,255,0.3)";
-          document.getElementsByClassName("flipCardFront")[0].style.color = "black";
           document.getElementsByClassName("flipCardBack")[0].style.animation = "none";
           document.getElementsByClassName("flipCardFront")[0].style.animation = "none";
           
