@@ -12,7 +12,10 @@
 <body>
     <header>
       <div class="topnav">
-        <a href="#home"><img src="images/rajz.png" alt="Icon" width="178px" height="98px"></a>
+        <a href="javascript:void(0);" class="icon" onclick="headerDropDown('search','user')">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="#home" id="home"><img src="images/rajz.png" alt="Icon" width="178px" height="98px"></a>
         <div  id="search">
           <form class="navsearch" action="/action_page.php">
             <input type="text" placeholder="Search.." name="search2">
@@ -21,12 +24,9 @@
         </div>
         <div id="user">
           <h2 id="username">Anonymous12345</h2>
-          <a href="#"><img src="images/LogOut.png" alt="LogOut" width="48px" height="48px"></a>
+          <a href="#" id="logOut"><img src="images/LogOut.png" alt="LogOut" width="48px" height="48px"></a>
         </div>
-        <a href="javascript:void(0);" class="icon" onclick="headerDropDown('search')">
-          <i class="fa fa-bars"></i>
-        </a>
-        <a href="javascript:void(0);" class="icon" onclick="headerDropDown('user')">
+        <a href="javascript:void(0);" class="icon" onclick="headerDropDown('user','search')">
           <i class="fa fa-bars"></i>
         </a>
       </div>

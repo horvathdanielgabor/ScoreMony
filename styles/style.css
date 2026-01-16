@@ -54,6 +54,7 @@ form.navsearch input[type=text] {
 }
 
 form.navsearch button {
+  display: block;
   float: left;
   width: 10%;
   padding: 10px;
@@ -70,7 +71,7 @@ form.navsearch button:hover {
 
 form.navsearch {
   display: flex;
-  justify-content: right;
+  justify-content: center;
   margin: 0px;
   width: 700px;
   max-width: 700px;
@@ -110,15 +111,29 @@ form.navsearch::after {
     align-items: center;
   }
 
-  .topnav a {
-    display: none;
-  }
-
   .topnav div {
     display: none;
   }
 
-  form.navsearch{
+  form.navsearch {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    width: auto;
+    max-width: 700px;
+  }
+
+  form.navsearch input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 0px solid transparent;
+    border-radius: 45px 45px 45px 45px;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+
+  form.navsearch button{
     display: none;
   }
 
