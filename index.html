@@ -12,21 +12,21 @@
 <body>
     <header>
       <div class="topnav">
-        <a href="javascript:void(0);" class="icon" onclick="headerDropDown('search','user')">
+        <a href="javascript:void(0);" class="icon search" onclick="headerDropDown('search','user')">
           <i class="fa fa-bars"></i>
         </a>
-        <a href="#home" id="home"><img src="images/rajz.png" alt="Icon" width="178px" height="98px"></a>
-        <div  id="search">
+        <a href="#home" id="home" class="head"><img src="images/rajz.png" alt="Icon" width="178px" height="98px"></a>
+        <div  id="search" class="head">
           <form class="navsearch" action="/action_page.php">
-            <input type="text" placeholder="Search.." name="search2">
+            <input type="text" placeholder="Search.." name="search">
             <button type="submit"><i class="fa fa-search"></i></button>
           </form>
         </div>
-        <div id="user">
+        <div id="user" class="head">
           <h2 id="username">Anonymous12345</h2>
           <a href="#" id="logOut"><img src="images/LogOut.png" alt="LogOut" width="48px" height="48px"></a>
         </div>
-        <a href="javascript:void(0);" class="icon" onclick="headerDropDown('user','search')">
+        <a href="javascript:void(0);" class="icon user" onclick="headerDropDown('user','search')">
           <i class="fa fa-bars"></i>
         </a>
       </div>
