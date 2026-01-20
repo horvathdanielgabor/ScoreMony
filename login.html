@@ -10,40 +10,42 @@
 <body>
     <form id="flipCard">
         <div class="flipCardInner">
-          <div class="flipCardFront">
-            <h1>Bejelentkezés</h1>
-            <div>
-                <label>Név</label>
-                <input type="text" name="loginName" id="loginName" class="textInput">
+            <div class="blurBgDiv"></div>
+            <div class="flipCardFront">
+                <h1>Bejelentkezés</h1>
+                <div>
+                    <label>Név</label>
+                    <input type="text" name="loginName" id="loginName" class="textInput" maxlength="32">
+                </div>
+                <div>
+                    <label>Jelszó</label>
+                    <input type="password" name="loginPass" id="loginPass" class="textInput" maxlength="32">
+                    <a href=""><img src="./images/eye.png" alt=""></a>
+                </div>
+                <input class="logRegBtn" type="submit" value="Bejelentkezés">
+                <input class="flipBtn" id="flipID" type="button" value="Regisztráció">
             </div>
-            <div>
-                <label>Jelszó</label>
-                <input type="password" name="loginPass" id="loginPass" class="textInput">
+            <div class="flipCardBack">
+                <h1>Regisztráció</h1>
+                <div>
+                    <label>Név</label>
+                    <input type="text" name="regName" id="regName" class="textInput" maxlength="32">
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="text" name="regEmail" id="regEmail" class="textInput" maxlength="32">
+                </div>
+                <div>
+                    <label>Jelszó</label>
+                    <input type="password" name="regPass" id="regPass" class="textInput" maxlength="32">
+                </div>
+                <div>
+                    <label>Jelszó ismétlése</label>
+                    <input type="password" name="regPassConf" id="regPassConf" class="textInput" maxlength="32">
+                </div>
+                <input class="logRegBtn" type="submit" value="Regisztráció">
+                <input class="flipBtn" id="flipBackID" type="button" value="Bejelentkezés">
             </div>
-            <input class="logRegBtn" type="submit" value="Bejelentkezés">
-            <input class="flipBtn" id="flipID" type="button" value="Regisztráció">
-          </div>
-          <div class="flipCardBack">
-            <h1>Regisztráció</h1>
-            <div>
-                <label>Név</label>
-                <input type="text" name="regName" id="regName" class="textInput">
-            </div>
-            <div>
-                <label>Email</label>
-                <input type="text" name="regEmail" id="regEmail" class="textInput">
-            </div>
-            <div>
-                <label>Jelszó</label>
-                <input type="password" name="regPass" id="regPass" class="textInput">
-            </div>
-            <div>
-                <label>Jelszó ismétlése</label>
-                <input type="password" name="regPassConf" id="regPassConf" class="textInput">
-            </div>
-            <input class="logRegBtn" type="submit" value="Regisztráció">
-            <input class="flipBtn" id="flipBackID" type="button" value="Bejelentkezés">
-          </div>
         </div>
     </form>
     <script src="app.js"></script>
