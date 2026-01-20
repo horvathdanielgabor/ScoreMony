@@ -20,7 +20,7 @@ window.addEventListener("resize", function(){
   };
 });
 
-
+/*  -----------------------------------  */
 
 document.getElementById("flipID").addEventListener("click", function (e) {
     console.log("before flip");

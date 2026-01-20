@@ -15,35 +15,37 @@
                 <h1>Bejelentkezés</h1>
                 <div>
                     <label>Név</label>
-                    <input type="text" name="loginName" id="loginName" class="textInput" maxlength="32">
+                    <input type="text" name="loginName" id="loginName" class="textInput" maxlength="20">
                 </div>
                 <div>
                     <label>Jelszó</label>
-                    <input type="password" name="loginPass" id="loginPass" class="textInput" maxlength="32">
-                    <a href=""><img src="./images/eye.png" alt=""></a>
+                    <div class="passCont">
+                        <input type="password" name="loginPass" id="loginPass" class="textInput" maxlength="20">
+                        <input class="passShowHideBtn" type="image" src="images/eye.png" alt="Szem">
+                    </div>
                 </div>
-                <input class="logRegBtn" type="submit" value="Bejelentkezés">
+                <input class="logRegBtn" id="" type="submit" value="Bejelentkezés">
                 <input class="flipBtn" id="flipID" type="button" value="Regisztráció">
             </div>
             <div class="flipCardBack">
                 <h1>Regisztráció</h1>
                 <div>
                     <label>Név</label>
-                    <input type="text" name="regName" id="regName" class="textInput" maxlength="32">
+                    <input type="text" name="regName" id="regName" class="textInput" maxlength="20">
                 </div>
                 <div>
                     <label>Email</label>
-                    <input type="text" name="regEmail" id="regEmail" class="textInput" maxlength="32">
+                    <input type="text" name="regEmail" id="regEmail" class="textInput" maxlength="20">
                 </div>
                 <div>
                     <label>Jelszó</label>
-                    <input type="password" name="regPass" id="regPass" class="textInput" maxlength="32">
+                    <input type="password" name="regPass" id="regPass" class="textInput" maxlength="20">
                 </div>
                 <div>
                     <label>Jelszó ismétlése</label>
-                    <input type="password" name="regPassConf" id="regPassConf" class="textInput" maxlength="32">
+                    <input type="password" name="regPassConf" id="regPassConf" class="textInput" maxlength="20">
                 </div>
-                <input class="logRegBtn" type="submit" value="Regisztráció">
+                <input class="logRegBtn" type="button" value="Regisztráció" onclick="document.getElementById('flipBackID').click()">
                 <input class="flipBtn" id="flipBackID" type="button" value="Bejelentkezés">
             </div>
         </div>
