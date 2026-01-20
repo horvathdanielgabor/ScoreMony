@@ -18,7 +18,6 @@ body {
   display: flex;
   color: black;
   text-align: center;
-  padding: 0px 16px;
   text-decoration: none;
   align-items: center;
   font-size: 17px;
@@ -45,11 +44,12 @@ body {
 
 form.navsearch input[type=text] {
   padding: 10px;
-  font-size: 17px;
+  font-size: 18px;
   border: 0px solid transparent;
   border-radius: 45px 0px 0px 45px;
   float: left;
-  width: 80%;
+  width: 90%;
+  max-width: 100%;
   background: #f1f1f1;
 }
 
@@ -57,8 +57,9 @@ form.navsearch button {
   display: block;
   float: left;
   width: 10%;
+  max-width: 100%;
   padding: 10px;
-  font-size: 17px;
+  font-size: 18px;
   border: 0px solid transparent;
   border-radius: 0px 45px 45px 0px;
   border-left: none;
@@ -73,8 +74,13 @@ form.navsearch {
   display: flex;
   justify-content: center;
   margin: 0px;
-  width: 700px;
-  max-width: 700px;
+  width: 100%;
+  max-width: 100%;
+}
+
+#search {
+  width: 65%;
+  max-width: 100%;
 }
 
 form.navsearch::after {
@@ -85,22 +91,63 @@ form.navsearch::after {
 
 #user{
   display: flex;
-  justify-content: space-between;
   flex-direction: row-reverse;
+  max-width: 100%;
+  width: 20%;
+}
+
+#user h2 {
+  max-width: 100%;
+  width: 80%;
+  font-size: 1.8dvw;
 }
 
 #user a{
-  padding-left: 10px;
+  padding: 0px, 0px;
+  padding: 0px 5px;
   display: flex;
   align-items: center;
+  max-width: 100%;
+  width: 20%;
+}
+
+#user a img{
+  max-width: 100%;
+  width: 100%;
+}
+
+#home {
+  max-width: 100%;
+  width: 15%;
+  padding: 0px 16px;
+}
+
+#home > img {
+  max-width: 100%;
+  width: 178px;
+  height: 98px;
 }
 
 .fa{
   font-size: 80%;
 }
 
+/*Tablet view*/
+@media screen and (max-width: 1030px){
+  #home {
+    width: 30%;
+  }
+
+  #home > img {
+    max-width: 100%;
+    width: 50dvw;
+    height: 10.75dvw;
+  }
+
+}
+
 /*phone view*/
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 450px) {
   /*header*/
   
   /* Add a black background color to the top navigation bar */
@@ -114,6 +161,17 @@ form.navsearch::after {
 
   .topnav div {
     display: none;
+  }
+
+  #home {
+    width: 80%;
+    justify-content: center;
+  }
+
+  #home > img {
+    max-width: 100%;
+    width: 178px;
+    height: 98px;
   }
 
   form.navsearch {
@@ -139,11 +197,33 @@ form.navsearch::after {
   }
 
   /* Hide the link that should open and close the topnav on small screens */
-  .topnav a.icon {
-    background: black;
+  .topnav > a.icon {
+    background: transparent;
     display: flex;
+    justify-content: center;
     right: 0;
     top: 0;
+    width: 30%;
+  }
+
+  #user{
+    max-width: 100%;
+    width: 60%;
+  }
+  
+  #user h2 {
+    max-width: 100%;
+    width: 80%;
+    font-size: 24px;
+  }
+
+  #user a{
+    padding: 0px, 0px;
+    padding: 0px 5px;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    width: 20%;
   }
 
   .topnav #search {
