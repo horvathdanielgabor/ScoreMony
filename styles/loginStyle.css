@@ -3,9 +3,10 @@
 html{
     background: blue;
     background-image: url(/images/coffee-3512027.jpg);
-    background-size: 100%;
-    background-position-x: 15%;
-    background-position-y: 10%;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
     font-family: Inter, sans-serif;
     font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
 }
@@ -41,10 +42,12 @@ html{
     display: flex;
     flex-direction: column;
     background: inherit;
-    background-color: rgba(255,255,255,0.3);
+    background-color: none;
     border-radius: 20px;
     align-items: center;
     justify-content: space-between;
+    -webkit-box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.3); 
+    box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.3);
 }
 
 .flipCardFront > div, .flipCardBack > div{
@@ -63,7 +66,11 @@ html{
 }
 
 .blurBgDiv{
-    filter: blur(8px);
+    background-color:  rgba(255,255,255,0.05);
+    filter: blur(3px);
+    width: 550px;
+    height: 700px;
+    position: absolute;
 }
 /* Flipcard Inner Elemenets */
 
@@ -77,7 +84,7 @@ input{
 
 h1{
     padding: 0;
-    margin: 7% 0 0 0;
+    margin: 13% 0 0 0;
     font-size: 45px;
 }
 
@@ -124,11 +131,22 @@ label{
     padding: 0 1%;
 }
 
+#flipID{
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    align-self: flex-start;
+}
+
+#flipBackID{
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
 /* Flipcard Animations */
 
 @keyframes cardFlipFade{
     from{
-        background-color: rgba(255,255,255,0.3);
+        background-color: rgba(255,255,255,0.0);
     }
     to{
         background: #4D4B88;
@@ -140,6 +158,6 @@ label{
         background: #4D4B88;
     }
     to{
-        background-color: rgba(255,255,255,0.3);
+        background-color: rgba(255,255,255,0.0);
     }
 }
