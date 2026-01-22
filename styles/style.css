@@ -98,12 +98,11 @@ form.navsearch::after {
 
 #user h2 {
   max-width: 100%;
-  width: 80%;
+  width: 75%;
   font-size: 1.8dvw;
 }
 
 #user a{
-  padding: 0px, 0px;
   padding: 0px 5px;
   display: flex;
   align-items: center;
@@ -135,7 +134,8 @@ form.navsearch::after {
 /*Tablet view*/
 @media screen and (max-width: 1030px){
   #home {
-    width: 30%;
+    width: 22.5%;
+    padding: 0px 5px;
   }
 
   #home > img {
@@ -144,6 +144,38 @@ form.navsearch::after {
     height: 10.75dvw;
   }
 
+  #search {
+    width: 50%;
+    max-width: 100%;
+  }
+
+  form.navsearch input[type=text]{
+    font-size: 1.75dvw;
+  }
+
+  form.navsearch button {
+    max-width: 100%;
+    width: 10%;
+    font-size: 1.75dvw;
+  }
+
+  #user{
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 100%;
+    width: 22.5%;
+  }
+
+  #user h2 {
+    max-width: 100%;
+    width: 90%;
+    font-size: 18px;
+  }
+
+  #user a{
+    padding: 0px 5px;
+    width: 20%;
+  }
 }
 
 /*phone view*/
