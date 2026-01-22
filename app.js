@@ -20,7 +20,7 @@ window.addEventListener("resize", function(){
   };
 });
 
-
+/*  -----------------------------------  */
 
 document.getElementById("flipID").addEventListener("click", function (e) {
     console.log("before flip");
@@ -41,7 +41,7 @@ document.getElementById("flipID").addEventListener("click", function (e) {
         document.getElementsByClassName("flipCardBack")[0].style.animation = "cardFlipFadeBack 0.3s 0.3s forwards";
 
         setTimeout(() => {
-          document.getElementsByClassName("flipCardBack")[0].style.background = "rgba(255,255,255,0.3)";
+          document.getElementsByClassName("flipCardBack")[0].style.background = "none";
           document.getElementsByClassName("flipCardFront")[0].style.animation = "none";
           document.getElementsByClassName("flipCardBack")[0].style.animation = "none";
 
@@ -71,7 +71,7 @@ document.getElementById("flipBackID").addEventListener("click", function (e) {
         document.getElementsByClassName("flipCardFront")[0].style.animation = "cardFlipFadeBack 0.3s 0.3s forwards";
 
         setTimeout(() => {
-          document.getElementsByClassName("flipCardFront")[0].style.background = "rgba(255,255,255,0.3)";
+          document.getElementsByClassName("flipCardFront")[0].style.background = "none";
           document.getElementsByClassName("flipCardBack")[0].style.animation = "none";
           document.getElementsByClassName("flipCardFront")[0].style.animation = "none";
           
