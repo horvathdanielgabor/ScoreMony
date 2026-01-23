@@ -4,9 +4,7 @@ html{
     background: blue;
     background-image: url(/images/coffee-3512027.jpg);
     min-height: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
+    background-size: cover;
     font-family: Inter, sans-serif;
     font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
 }

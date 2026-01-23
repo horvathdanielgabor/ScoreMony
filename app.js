@@ -21,6 +21,30 @@ window.addEventListener("resize", function(){
 });
 
 /*  -----------------------------------  */
+/* class for later */
+class User {
+  constructor(name, email, password) {
+    this.name = name;
+    this.email = email;
+    this.password = password;
+  }
+}
+
+let users = [new User("e", "ee@gmail.com", "e"), new User("a", "aa@gmail.com", "a")]
+
+/* Password hide button logic */
+let hideBtns = document.getElementsByClassName("passShowHideBtn");
+Array.from(hideBtns).forEach(element => {
+  element.addEventListener("click", function (e) {
+    console.log("e");
+  });
+});
+
+
+function Submit(){
+  console.log("Submit");
+}
+/* Login/Register flip */
 
 document.getElementById("flipID").addEventListener("click", function (e) {
     console.log("before flip");

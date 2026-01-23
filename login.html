@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/loginStyle.css">
 </head>
 <body>
-    <form id="flipCard">
+    <form id="flipCard" onsubmit="Submit()">
         <div class="flipCardInner">
             <div class="blurBgDiv"></div>
             <div class="flipCardFront">
@@ -39,11 +39,17 @@
                 </div>
                 <div>
                     <label>Jelszó</label>
-                    <input type="password" name="regPass" id="regPass" class="textInput" maxlength="20">
+                    <div class="passCont">
+                        <input type="password" name="loginPass" id="loginPass" class="textInput" maxlength="20">
+                        <input class="passShowHideBtn" type="image" src="images/eye.png" alt="Szem">
+                    </div>
                 </div>
                 <div>
                     <label>Jelszó ismétlése</label>
-                    <input type="password" name="regPassConf" id="regPassConf" class="textInput" maxlength="20">
+                    <div class="passCont">
+                        <input type="password" name="loginPass" id="loginPass" class="textInput" maxlength="20">
+                        <input class="passShowHideBtn" type="image" src="images/eye.png" alt="Szem">
+                    </div>
                 </div>
                 <input class="logRegBtn" type="button" value="Regisztráció" onclick="document.getElementById('flipBackID').click()">
                 <input class="flipBtn" id="flipBackID" type="button" value="Bejelentkezés">
