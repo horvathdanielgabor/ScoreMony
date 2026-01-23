@@ -79,7 +79,7 @@ form.navsearch {
 }
 
 #search {
-  width: 65%;
+  width: 50%;
   max-width: 100%;
 }
 
@@ -91,40 +91,31 @@ form.navsearch::after {
 
 #user{
   display: flex;
-  flex-direction: row-reverse;
-  max-width: 100%;
-  width: 20%;
+  flex-direction: row;
+  width: 280px;
 }
 
 #user h2 {
-  max-width: 100%;
-  width: 75%;
-  font-size: 1.8dvw;
+  width: 220px;
+  font-size: 28px;
 }
 
 #user a{
   padding: 0px 5px;
   display: flex;
   align-items: center;
-  max-width: 100%;
-  width: 20%;
 }
 
 #user a img{
-  max-width: 100%;
-  width: 100%;
+  width: 36px;
 }
 
 #home {
-  max-width: 100%;
-  width: 15%;
   padding: 0px 16px;
 }
 
 #home > img {
-  max-width: 100%;
-  width: 178px;
-  height: 98px;
+  width: 198px;
 }
 
 .fa{
@@ -133,15 +124,14 @@ form.navsearch::after {
 
 /*Tablet view*/
 @media screen and (max-width: 1030px){
+  /*header*/
   #home {
-    width: 22.5%;
+    width: 170px;
     padding: 0px 5px;
   }
 
   #home > img {
-    max-width: 100%;
-    width: 50dvw;
-    height: 10.75dvw;
+    width: 160px;
   }
 
   #search {
@@ -150,31 +140,72 @@ form.navsearch::after {
   }
 
   form.navsearch input[type=text]{
-    font-size: 1.75dvw;
+    font-size: 12px;
   }
 
   form.navsearch button {
     max-width: 100%;
     width: 10%;
-    font-size: 1.75dvw;
+    font-size: 12px;
   }
 
   #user{
     display: flex;
-    flex-direction: row-reverse;
     max-width: 100%;
-    width: 22.5%;
+    width: 180px;
   }
 
   #user h2 {
-    max-width: 100%;
-    width: 90%;
+    width: 140px;
     font-size: 18px;
   }
 
   #user a{
     padding: 0px 5px;
+  }
+
+  #user a img{
+    width: 28px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  #home {
+    width: 130px;
+    padding: 0px 5px;
+  }
+
+  #home > img {
+    width: 120px;
+  }
+
+  form.navsearch input[type=text]{
+    font-size: 10px;
+  }
+
+  form.navsearch button {
+    max-width: 100%;
     width: 20%;
+    font-size: 10px;
+  }
+
+  #user{
+    display: flex;
+    max-width: 100%;
+    width: 130px;
+  }
+
+  #user h2 {
+    width: 120px;
+    font-size: 14px;
+  }
+
+  #user a{
+    padding: 0px 2px;
+  }
+
+  #user a img{
+    width: 18px;
   }
 }
 
@@ -196,14 +227,13 @@ form.navsearch::after {
   }
 
   #home {
-    width: 80%;
+    width: 40%;
     justify-content: center;
   }
 
   #home > img {
     max-width: 100%;
     width: 178px;
-    height: 98px;
   }
 
   form.navsearch {
@@ -211,7 +241,7 @@ form.navsearch::after {
     justify-content: center;
     margin: 0px;
     width: auto;
-    max-width: 700px;
+    max-width: 100%;
   }
 
   form.navsearch input[type=text] {
@@ -220,7 +250,7 @@ form.navsearch::after {
     border: 0px solid transparent;
     border-radius: 45px 45px 45px 45px;
     float: left;
-    width: 80%;
+    width: 100%;
     background: #f1f1f1;
   }
 
@@ -235,27 +265,37 @@ form.navsearch::after {
     justify-content: center;
     right: 0;
     top: 0;
-    width: 30%;
+    width: 15%;
+  }
+
+  #search {
+    width: 70%;
+    max-width: 100%;
   }
 
   #user{
     max-width: 100%;
-    width: 60%;
+    width: 70%;
   }
   
   #user h2 {
     max-width: 100%;
     width: 80%;
     font-size: 24px;
+    text-align: right;
   }
 
   #user a{
-    padding: 0px, 0px;
     padding: 0px 5px;
     display: flex;
+    justify-content: center;
     align-items: center;
     max-width: 100%;
     width: 20%;
+  }
+
+  #user a img{
+    width: 28px;
   }
 
   .topnav #search {
