@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="styles/loginStyle.css">
 </head>
 <body>
-    <form id="flipCard" onsubmit="Submit()">
+    <div id="alert">
+        <span id="closebtn">&times;</span> 
+        <p><strong>Danger!</strong> Indicates a dangerous or potentially negative action.</p>
+    </div>
+    <form id="flipCard">
         <div class="flipCardInner">
             <div class="blurBgDiv"></div>
             <div class="flipCardFront">
@@ -21,10 +25,10 @@
                     <label>Jelszó</label>
                     <div class="passCont">
                         <input type="password" name="loginPass" id="loginPass" class="textInput" maxlength="20">
-                        <input class="passShowHideBtn" type="image" src="images/eye.png" alt="Szem">
+                        <button class="passShowHideBtn" type="button"><img src="images/eye.png" alt="Szem"></button>
                     </div>
                 </div>
-                <input class="logRegBtn" id="" type="submit" value="Bejelentkezés">
+                <input class="logRegBtn" id="submitBtn" type="submit" value="Bejelentkezés">
                 <input class="flipBtn" id="flipID" type="button" value="Regisztráció">
             </div>
             <div class="flipCardBack">
@@ -41,14 +45,14 @@
                     <label>Jelszó</label>
                     <div class="passCont">
                         <input type="password" name="loginPass" id="loginPass" class="textInput" maxlength="20">
-                        <input class="passShowHideBtn" type="image" src="images/eye.png" alt="Szem">
+                        <button class="passShowHideBtn" type="button"><img src="images/eye.png" alt="Szem"></button>
                     </div>
                 </div>
                 <div>
                     <label>Jelszó ismétlése</label>
                     <div class="passCont">
                         <input type="password" name="loginPass" id="loginPass" class="textInput" maxlength="20">
-                        <input class="passShowHideBtn" type="image" src="images/eye.png" alt="Szem">
+                        <button class="passShowHideBtn" type="button"><img src="images/eye.png" alt="Szem"></button>
                     </div>
                 </div>
                 <input class="logRegBtn" type="button" value="Regisztráció" onclick="document.getElementById('flipBackID').click()">
@@ -56,6 +60,6 @@
             </div>
         </div>
     </form>
-    <script src="app.js"></script>
+    <script src="loginApp.js"></script>
 </body>
 </html>
