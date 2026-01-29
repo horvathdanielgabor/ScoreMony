@@ -164,13 +164,20 @@ label{
     opacity: 1;
     transition: opacity 0.6s;
     margin-bottom: 5px;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#alert > span{
+    font-size: xx-large;
+    
 }
 
 #closebtn {
     margin-left: 15px;
     color: white;
     font-weight: bold;
-    float: right;
     font-size: 22px;
     line-height: 20px;
     cursor: pointer;
@@ -197,5 +204,73 @@ label{
     }
     to{
         background-color: rgba(255,255,255,0.0);
+    }
+}
+
+/* Tablet view */
+
+@media (max-width: 768px) {
+    #flipCard {
+        width: 575px;
+        height: 750px;
+        perspective: 1500px;
+    }
+
+    .blurBgDiv{
+        width: 575px;
+        height: 750px;
+    }
+}
+
+/* Mobile view */
+
+@media (max-width: 576px) {
+    #flipCard {
+        width: 100vw;
+        height: 75vh;
+        perspective: 600vw;
+    }
+
+    .flipCardFront, .flipCardBack{
+        border-radius: 0;
+        justify-content: space-evenly;
+    }
+
+    .blurBgDiv{
+        width: 100vw;
+        height: 75vh;
+    }
+
+    .flipBtn{
+        width: 75vw;
+        height: 8vh;
+        font-size: xx-large;
+        align-self: center !important;
+        border-radius: 0 0 15px 15px !important;
+        position: absolute;
+        top: 75vh;
+        box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.3);
+    }
+
+    .logRegBtn{
+        width: 65vw;
+    }
+
+    h1{
+        margin: 0;
+        font-size: 55px;
+    }
+
+    .textInput{
+        width: 85vw;
+        height: 6vh;
+    }
+
+    .passShowHideBtn{
+        height: 6vh;
+    }
+
+    label{
+        font-size: 38px;
     }
 }
