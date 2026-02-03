@@ -27,8 +27,9 @@ function checkData() {
     }
     else{
         document.getElementById("flipCard").reset();
-        document.getElementById("closebtn").innerText = "Helytelen felhasználónév vagy jelszó";
-        document.getElementById("alert").style.display = "block";
+        document.getElementById("closebtn").nextElementSibling.innerText = "Helytelen felhasználónév vagy jelszó";
+        document.getElementById("alert").style.display = "flex";
+        document.getElementById("alert").style.opacity = "1";
     }
 }
 
