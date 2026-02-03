@@ -1,13 +1,14 @@
 // Class
 class User {
-    constructor(name, email, password) {
+    constructor(id, name, email, password) {
+        this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
     }
 }
 // USERS
-const users = [new User("e", "ee@gmail.com", "e"), new User("a", "aa@gmail.com", "a")]
+const users = [new User(1, "e", "ee@gmail.com", "e"), new User(2, "a", "aa@gmail.com", "a")];
 
 // Submit/Login logic
 
@@ -33,6 +34,19 @@ function checkData() {
     }
 }
 
+function registerDataCheck() {
+    let nameIn = document.getElementById("regName").value;
+    let emailIn = document.getElementById("regEmail").value;
+    let passInOnce = document.getElementById("regPass").value;
+    let passInTwice = document.getElementById("regPassThe2nd").value;
+
+    try {
+        
+    } catch (error) {
+        
+    }
+}
+
 // Alerts
 document.getElementById("closebtn").onclick = function(){
     var div = this.parentElement;
@@ -44,6 +58,12 @@ document.getElementById("closebtn").onclick = function(){
 document.getElementById("flipCard").addEventListener("submit", (event) => {
     event.preventDefault();
     checkData();
+});
+
+// Register logic (only temporary new item)
+document.getElementById("regBtn").addEventListener("click", function (e) {
+    e.preventDefault();
+    registerDataCheck();
 });
 
 // Password hide button logic
