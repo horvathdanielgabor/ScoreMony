@@ -253,7 +253,7 @@ form.navsearch::after {
 
   form.navsearch input[type=text] {
     padding: 10px;
-    font-size: 17px;
+    font-size: 18px;
     border: 0px solid transparent;
     border-radius: 45px 45px 45px  45px;
     float: left;
@@ -263,6 +263,8 @@ form.navsearch::after {
 
   form.navsearch button{
     border-radius: 45px;
+    margin-left: 20%;
+    width: calc(height);
   }
 
   /* Hide the link that should open and close the topnav on small screens */
@@ -280,7 +282,7 @@ form.navsearch::after {
     max-width: 100%;
     width: 75%;
     font-size: 18px;
-    text-align: right;
+    text-align: center;
   }
 
   #user a{
@@ -299,7 +301,7 @@ form.navsearch::after {
   .topnav #search {
     display: none;
     justify-content: space-between;
-    width: 55%;
+    width: 70%;
     max-width: 100%;
   }
 
