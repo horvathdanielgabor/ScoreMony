@@ -26,6 +26,8 @@ window.addEventListener("resize", function(){
   {
     element.style.display = null
   };
+  document.getElementsByClassName("icon")[0].children[0].src = "images/SearchIcon.png"
+  document.getElementsByClassName("icon")[1].children[0].src = "images/UserIcon.png"
 });
 
 //  -----------------------------------
