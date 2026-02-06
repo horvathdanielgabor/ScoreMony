@@ -39,23 +39,23 @@
                 </div>
                 <div>
                     <label>Email</label>
-                    <input type="text" name="regEmail" id="regEmail" class="textInput" maxlength="20">
+                    <input type="text" name="regEmail" id="regEmail" class="textInput" maxlength="60">
                 </div>
                 <div>
                     <label>Jelszó</label>
                     <div class="passCont">
-                        <input type="password" name="loginPass" id="loginPass" class="textInput" maxlength="20">
+                        <input type="password" name="loginPass" id="regPass" class="textInput" maxlength="20">
                         <button class="passShowHideBtn" type="button"><img src="images/eye.png" alt="Szem"></button>
                     </div>
                 </div>
                 <div>
                     <label>Jelszó ismétlése</label>
                     <div class="passCont">
-                        <input type="password" name="loginPass" id="loginPass" class="textInput" maxlength="20">
+                        <input type="password" name="loginPass" id="regPassThe2nd" class="textInput" maxlength="20">
                         <button class="passShowHideBtn" type="button"><img src="images/eye.png" alt="Szem"></button>
                     </div>
                 </div>
-                <input class="logRegBtn" type="button" value="Regisztráció" onclick="document.getElementById('flipBackID').click()">
+                <input class="logRegBtn" id="regBtn" type="button" value="Regisztráció">
                 <input class="flipBtn" id="flipBackID" type="button" value="Bejelentkezés">
             </div>
         </div>
