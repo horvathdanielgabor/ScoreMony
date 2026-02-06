@@ -28,10 +28,14 @@ function checkData() {
     }
     else{
         document.getElementById("flipCard").reset();
-        document.getElementById("closebtn").nextElementSibling.innerText = "Helytelen felhasználónév vagy jelszó";
-        document.getElementById("alert").style.display = "flex";
-        document.getElementById("alert").style.opacity = "1";
+        RevealAlert("Helytelen felhasználónév vagy jelszó");
     }
+}
+
+function RevealAlert(errorString){
+    document.getElementById("closebtn").nextElementSibling.innerText = errorString;
+    document.getElementById("alert").style.display = "flex";
+    document.getElementById("alert").style.opacity = "1";
 }
 
 function registerDataCheck() {
@@ -40,10 +44,52 @@ function registerDataCheck() {
     let passInOnce = document.getElementById("regPass").value;
     let passInTwice = document.getElementById("regPassThe2nd").value;
 
+    let hasNumRegExp = /\d/;
+    let correctEmailRegExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
     try {
+        if (nameIn.length > 5 && nameIn.length <= 20 && isNaN(nameIn[0]) && nameIn[0].toUpperCase() == nameIn[0]) {
+            console.log("Name good");
+        }
+        else{
+            RevealAlert("Helytelen felhasználónév formátum");
+            throw("NAME BAD");
+        }
         
+        if (emailIn.length > 5 && emailIn.length < 253 && correctEmailRegExp.test(emailIn)) {
+            console.log("Email good");
+        }
+        else{
+            RevealAlert("Helytelen email formátum");
+            throw("EMAIL BAD");
+        }
+
+        let passHasUppercase = false
+        passInOnce.split("").forEach((e) => {
+            if (isNaN(e)) {
+                if (e.toUpperCase() == e) {
+                    passHasUppercase = true
+                }
+            }
+        })
+        if (passInOnce.length > 5 && passInOnce.length < 20 && hasNumRegExp.test(passInOnce) && isNaN(passInOnce[0]) && passHasUppercase) {
+            console.log("Pass good");
+        }
+        else{
+            RevealAlert("Helytelen jelszó formátum");
+            throw("PASS BAD");
+        }
+
+        if (passInOnce == passInTwice) {
+            console.log("Pass match good");
+        }
+        else{
+            RevealAlert("Két jelszó nem egyezik");
+            throw("PASS second BAD");
+        }
     } catch (error) {
-        
+        console.log(error);
+        console.log("you done fucked up now");
     }
 }
 
