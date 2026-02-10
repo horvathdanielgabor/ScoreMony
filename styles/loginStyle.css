@@ -120,6 +120,14 @@ label{
     width: 350px;
     height: 35px;
     padding: 6% 3%;
+    transition: 
+    background-color 0.5s,
+    transform 0.5s;
+    &:focus{
+        background-color: #4D4B88;
+        position: relative; 
+        transform: translate(0px, -5px);
+    }
 }
 
 .passCont{
