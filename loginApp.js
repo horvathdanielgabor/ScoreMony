@@ -32,10 +32,12 @@ function checkData() {
     }
 }
 
-function RevealAlert(errorString){
+function RevealAlert(errorString, isAlertNotMessage = true){
+    let alertElement = document.getElementById("alert");
     document.getElementById("closebtn").nextElementSibling.innerText = errorString;
-    document.getElementById("alert").style.display = "flex";
-    document.getElementById("alert").style.opacity = "1";
+    alertElement.style.background = (isAlertNotMessage ? "#f44336" : "#50C878");
+    alertElement.style.display = "flex";
+    alertElement.style.opacity = "1";
 }
 
 function registerDataCheck() {
@@ -87,6 +89,10 @@ function registerDataCheck() {
             RevealAlert("Két jelszó nem egyezik");
             throw("PASS second BAD");
         }
+
+        RevealAlert("Sikeres regisztráció!", false)
+        setTimeout(document.getElementById("flipBackID").click(), 500);
+        setTimeout(function(){flipCard.reset()}, 1500);
     } catch (error) {
         console.log(error);
         console.log("you done fucked up now");
@@ -106,7 +112,7 @@ document.getElementById("flipCard").addEventListener("submit", (event) => {
     checkData();
 });
 
-// Register logic (only temporary new item)
+// Register submission override
 document.getElementById("regBtn").addEventListener("click", function (e) {
     e.preventDefault();
     registerDataCheck();
@@ -158,9 +164,9 @@ document.getElementById("flipID").addEventListener("click", function (e) {
 });
 
 document.getElementById("flipBackID").addEventListener("click", function (e) {
-console.log("before flip back");
+    console.log("before flip back");
 
-document.getElementsByClassName("flipCardBack")[0].style.animation = "cardFlipFade 0.3s 0.3s forwards";
+    document.getElementsByClassName("flipCardBack")[0].style.animation = "cardFlipFade 0.3s 0.3s forwards";
 
     setTimeout(() => {
     document.getElementsByClassName("flipCardBack")[0].style.background = "#4D4B88";
