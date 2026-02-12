@@ -4,6 +4,12 @@ body {
 
 /*header*/
 /* Add a black background color to the top navigation bar */
+
+header {
+  position: relative;
+  z-index: 2;
+}
+
 .topnav {
   overflow: hidden;
   background-color: #53629E;
@@ -120,6 +126,33 @@ form.navsearch::after {
 #home > img {
   width: 198px;
   filter: drop-shadow(0px 0px 4px #BEEEE3);
+}
+
+/*Footer*/
+.bottomnav {
+  position: relative;
+  z-index: 2;
+}
+
+.bottomnav > div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.bottomnav > div > .links {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bottomnav .contact{
+  flex: 50%;
+  max-width: 50%;
+}
+
+.bottomnav .contact > p {
+  font-size: 24px;
+  width: auto;
 }
 
 /*Tablet view*/
