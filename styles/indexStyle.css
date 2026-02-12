@@ -19,7 +19,7 @@
     border-radius: 15px;
     margin-top: 3%;
     margin-left: 5%;
-    padding-bottom: 20%;
+    padding-bottom: 25%;
 }
 
 
@@ -32,4 +32,22 @@ h1{
 #udv_p{
     font-size: 1.5vw;
     text-align: center;
+}
+
+@media (max-width: 1290px) {
+    #udvozlo_szoveg{
+        width: 50%;
+        padding-bottom: 30%;
+        font-size: 0.8em;
+    }
+    h1{
+        padding-bottom: 10%;
+    }
+}
+
+@media (max-width: 577px) {
+    #udvozlo_szoveg{
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
