@@ -33,24 +33,25 @@ function checkData() {
 }
 
 function registerDataCheck() {
-    let nameIn = document.getElementById("regName").value;
-    let emailIn = document.getElementById("regEmail").value;
-    let passInOnce = document.getElementById("regPass").value;
-    let passInTwice = document.getElementById("regPassThe2nd").value;
+    let nameIn = document.getElementById("regName");
+    let emailIn = document.getElementById("regEmail");
+    let passInOnce = document.getElementById("regPass");
+    let passInTwice = document.getElementById("regPassThe2nd");
 
     let hasNumRegExp = /\d/;
     let correctEmailRegExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
     try {
-        if (nameIn.length > 5 && nameIn.length <= 20 && isNaN(nameIn[0]) && nameIn[0].toUpperCase() == nameIn[0]) {
+        if (nameIn.value.length > 5 && nameIn.value.length <= 20 && isNaN(nameIn.value[0]) && nameIn.value[0].toUpperCase() == nameIn.value[0]) {
             console.log("Name good");
         }
         else{
             RevealAlert("Helytelen felhasználónév formátum");
+            nameIn.style.background = "red;";
             throw("NAME BAD");
         }
         
-        if (emailIn.length > 5 && emailIn.length < 253 && correctEmailRegExp.test(emailIn)) {
+        if (emailIn.value.length > 5 && emailIn.value.length < 253 && correctEmailRegExp.test(emailIn.value)) {
             console.log("Email good");
         }
         else{
@@ -66,7 +67,7 @@ function registerDataCheck() {
                 }
             }
         })
-        if (passInOnce.length > 5 && passInOnce.length < 20 && hasNumRegExp.test(passInOnce) && isNaN(passInOnce[0]) && passHasUppercase) {
+        if (passInOnce.value.length > 5 && passInOnce.value.length < 20 && hasNumRegExp.test(passInOnce.value) && isNaN(passInOnce.value[0]) && passHasUppercase) {
             console.log("Pass good");
         }
         else{
@@ -74,7 +75,7 @@ function registerDataCheck() {
             throw("PASS BAD");
         }
 
-        if (passInOnce == passInTwice) {
+        if (passInOnce.value == passInTwice.value) {
             console.log("Pass match good");
         }
         else{
