@@ -32,14 +32,6 @@ function checkData() {
     }
 }
 
-function RevealAlert(errorString, isAlertNotMessage = true){
-    let alertElement = document.getElementById("alert");
-    document.getElementById("closebtn").nextElementSibling.innerText = errorString;
-    alertElement.style.background = (isAlertNotMessage ? "#f44336" : "#50C878");
-    alertElement.style.display = "flex";
-    alertElement.style.opacity = "1";
-}
-
 function registerDataCheck() {
     let nameIn = document.getElementById("regName").value;
     let emailIn = document.getElementById("regEmail").value;
@@ -104,6 +96,16 @@ document.getElementById("closebtn").onclick = function(){
     var div = this.parentElement;
     div.style.opacity = "0";
     setTimeout(function(){ div.style.display = "none"; }, 600);
+    alertElement.classList.remove("isShakingAnimated");
+}
+
+function RevealAlert(errorString, isAlertNotMessage = true){
+    let alertElement = document.getElementById("alert");
+    document.getElementById("closebtn").nextElementSibling.innerText = errorString;
+    alertElement.style.background = (isAlertNotMessage ? "#f44336" : "#50C878");
+    alertElement.style.display = "flex";
+    alertElement.style.opacity = "1";
+    alertElement.classList.add("isShakingAnimated");
 }
 
 // Submission override
