@@ -139,10 +139,30 @@ form.navsearch::after {
   justify-content: space-evenly;
 }
 
-.bottomnav > div > .links{
+.bottomnav .links {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.bottomnav .links > a {
+  font-size: 24px;
+  width: auto;
+}
+
+.bottomnav .contact{
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: left;
+  width: min-content;
+}
+
+.bottomnav .contact > p{
+  flex: 50%;
+  max-width: 50%;
+  font-size: 24px;
+  margin: 0px;
+  width: min-content;
 }
 
 /*Tablet view*/
