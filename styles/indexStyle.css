@@ -38,10 +38,13 @@ h1{
     #udvozlo_szoveg{
         width: 50%;
         padding-bottom: 30%;
-        font-size: 0.8em;
+        font-size: 0.74em;
     }
     h1{
-        padding-bottom: 10%;
+        padding-bottom: 15%;
+    }
+    #udv_p{
+        font-size: 1.8vw;
     }
 }
 
