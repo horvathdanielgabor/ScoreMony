@@ -13,12 +13,12 @@ const users = [new User(1, "e", "ee@gmail.com", "e"), new User(2, "a", "aa@gmail
 // Submit/Login logic
 
 function checkData() {
-    let nameIn = document.getElementById("loginName").value;
-    let passIn = document.getElementById("loginPass").value;
+    let nameIn = document.getElementById("loginName");
+    let passIn = document.getElementById("loginPass");
     let matchingBool = false;
 
     for (const el of users) {
-        if (el.name === nameIn && el.password === passIn) {
+        if (el.name === nameIn.value && el.password === passIn.value) {
             matchingBool = true;
         }
     }
@@ -28,6 +28,10 @@ function checkData() {
     }
     else{
         document.getElementById("flipCard").reset();
+        nameIn.style.border = "2px solid red";
+        setTimeout(() => nameIn.style.border = "2px solid rgba(0, 0, 0, 0)", 5000);
+        passIn.style.border = "2px solid red";
+        setTimeout(() => passIn.style.border = "2px solid rgba(0, 0, 0, 0)", 5000);
         RevealAlert("Helytelen felhasználónév vagy jelszó");
     }
 }
@@ -47,7 +51,8 @@ function registerDataCheck() {
         }
         else{
             RevealAlert("Helytelen felhasználónév formátum");
-            nameIn.style.background = "red;";
+            nameIn.style.border = "2px solid red";
+            setTimeout(() => nameIn.style.border = "2px solid rgba(0, 0, 0, 0)", 5000);
             throw("NAME BAD");
         }
         
@@ -56,11 +61,13 @@ function registerDataCheck() {
         }
         else{
             RevealAlert("Helytelen email formátum");
+            emailIn.style.border = "2px solid red";
+            setTimeout(() => emailIn.style.border = "2px solid rgba(0, 0, 0, 0)", 5000);
             throw("EMAIL BAD");
         }
 
         let passHasUppercase = false
-        passInOnce.split("").forEach((e) => {
+        passInOnce.value.split("").forEach((e) => {
             if (isNaN(e)) {
                 if (e.toUpperCase() == e) {
                     passHasUppercase = true
@@ -72,6 +79,8 @@ function registerDataCheck() {
         }
         else{
             RevealAlert("Helytelen jelszó formátum");
+            passInOnce.style.border = "2px solid red";
+            setTimeout(() => passInOnce.style.border = "2px solid rgba(0, 0, 0, 0)", 5000);
             throw("PASS BAD");
         }
 
@@ -80,6 +89,8 @@ function registerDataCheck() {
         }
         else{
             RevealAlert("Két jelszó nem egyezik");
+            passInTwice.style.border = "2px solid red";
+            setTimeout(() => passInTwice.style.border = "2px solid rgba(0, 0, 0, 0)", 5000);
             throw("PASS second BAD");
         }
 
