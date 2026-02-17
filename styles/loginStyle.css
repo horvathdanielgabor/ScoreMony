@@ -64,8 +64,7 @@ html{
 }
 
 .blurBgDiv{
-    background-color:  rgba(255,255,255,0.05);
-    filter: blur(3px);
+    filter: blur(10px);
     width: 550px;
     height: 700px;
     position: absolute;
@@ -139,6 +138,7 @@ label{
     padding: 6% 3%;
     color: #e6fff8;
     transition: 0.5s;
+    border: 2px solid rgba(0, 0, 0, 0);
     &:focus{
         background-color: #4D4B88;
         position: relative; 
@@ -155,6 +155,7 @@ label{
 button>img{
     transition: 0.5s;
     position: relative;
+    top: 2px;
 }
 
 .textInput:focus + button>img{
