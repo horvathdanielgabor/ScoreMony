@@ -132,6 +132,8 @@ form.navsearch::after {
 .bottomnav {
   position: relative;
   z-index: 2;
+  color: white;
+  background: linear-gradient(#53629E, #4D4B88);
 }
 
 .bottomnav > div {
@@ -148,21 +150,42 @@ form.navsearch::after {
 .bottomnav .links > a {
   font-size: 24px;
   width: auto;
+  text-decoration-line: none;
+  color: white;
+}
+
+.bottomnav .links > a:active {
+  color: white;
 }
 
 .bottomnav .contact{
   display: flex;
-  flex-wrap: wrap;
-  justify-items: left;
-  width: min-content;
+  justify-items: center;
+  align-content: center;
+  width: auto;
+  flex-flow: column wrap;
+  margin: auto 0px;
 }
 
-.bottomnav .contact > p{
-  flex: 50%;
-  max-width: 50%;
+.bottomnav .contact > div {
+  display: flex;
+  flex-direction: row;
+}
+
+.bottomnav .contact p{
   font-size: 24px;
-  margin: 0px;
-  width: min-content;
+  margin: 0px 5px 0px 0px;
+  width: auto;
+  text-align: left;
+}
+
+.bottomnav .icons{
+  display: flex;
+  justify-content: center;
+}
+
+.bottomnav .icons a{
+  margin: 0px 7px;
 }
 
 /*Tablet view*/
@@ -209,6 +232,15 @@ form.navsearch::after {
 
   #user a img{
     width: 28px;
+  }
+
+  /*Footer*/
+  .bottomnav .links > a {
+    font-size: 18px;
+  }
+
+  .bottomnav .contact p{
+    font-size: 18px;
   }
 }
 
