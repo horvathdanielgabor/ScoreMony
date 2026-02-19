@@ -1,6 +1,6 @@
 #udvozlo{
     width: 100%;
-    height: 80vh;
+    height: 50vw;
     background-image: url(/images/Sheet.jpg);
     background-size: cover;       
     background-repeat: no-repeat;
@@ -46,11 +46,40 @@ h1{
     h1{
         padding-bottom: 15%;
     }
+    #udvozlo
+    {
+        height: 65vw;
+    }
 }
 
-@media (max-width: 577px) {
+@media (max-width: 768px) {
+    #udv_p{
+        font-size: 20px;
+    }
     #udvozlo_szoveg{
+        width: 400px;
+        height: 400px;
+        margin-top: 5%;
+    }
+    h1{
+        font-size: 25px;
+        padding-bottom: 25%;
+    }
+}
+
+@media (max-width: 576px) {
+    #udv_p{
+        font-size: 15px;
+    }
+    #udvozlo_szoveg{
+        width: 85vw;
+        height: 30vh;
+        margin-top: 5%;
         margin-left: auto;
         margin-right: auto;
+    }
+    h1{
+        font-size: 18px;
+        padding-bottom: 20%;
     }
 }
