@@ -29,9 +29,9 @@ function checkData() {
     else{
         document.getElementById("flipCard").reset();
         nameIn.style.border = "2px solid red";
-        setTimeout(() => nameIn.style.border = "2px solid rgba(0, 0, 0, 0)", 5000);
+        setTimeout(() => nameIn.style.border = "2px solid rgba(0, 0, 0, 0)", 1500);
         passIn.style.border = "2px solid red";
-        setTimeout(() => passIn.style.border = "2px solid rgba(0, 0, 0, 0)", 5000);
+        setTimeout(() => passIn.style.border = "2px solid rgba(0, 0, 0, 0)", 1500);
         RevealAlert("Helytelen felhasználónév vagy jelszó");
     }
 }
@@ -52,7 +52,7 @@ function registerDataCheck() {
         else{
             RevealAlert("Helytelen felhasználónév formátum");
             nameIn.style.border = "2px solid red";
-            setTimeout(() => nameIn.style.border = "2px solid rgba(0, 0, 0, 0)", 5000);
+            setTimeout(() => nameIn.style.border = "2px solid rgba(0, 0, 0, 0)", 1500);
             throw("NAME BAD");
         }
         
@@ -62,7 +62,7 @@ function registerDataCheck() {
         else{
             RevealAlert("Helytelen email formátum");
             emailIn.style.border = "2px solid red";
-            setTimeout(() => emailIn.style.border = "2px solid rgba(0, 0, 0, 0)", 5000);
+            setTimeout(() => emailIn.style.border = "2px solid rgba(0, 0, 0, 0)", 1500);
             throw("EMAIL BAD");
         }
 
@@ -80,7 +80,7 @@ function registerDataCheck() {
         else{
             RevealAlert("Helytelen jelszó formátum");
             passInOnce.style.border = "2px solid red";
-            setTimeout(() => passInOnce.style.border = "2px solid rgba(0, 0, 0, 0)", 5000);
+            setTimeout(() => passInOnce.style.border = "2px solid rgba(0, 0, 0, 0)", 1500);
             throw("PASS BAD");
         }
 
@@ -90,7 +90,7 @@ function registerDataCheck() {
         else{
             RevealAlert("Két jelszó nem egyezik");
             passInTwice.style.border = "2px solid red";
-            setTimeout(() => passInTwice.style.border = "2px solid rgba(0, 0, 0, 0)", 5000);
+            setTimeout(() => passInTwice.style.border = "2px solid rgba(0, 0, 0, 0)", 1500);
             throw("PASS second BAD");
         }
 

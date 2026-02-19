@@ -20,6 +20,9 @@ html{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border-radius: 20px;
 }
 
 .flipCardInner {
@@ -39,8 +42,6 @@ html{
     backface-visibility: hidden;
     display: flex;
     flex-direction: column;
-    background: inherit;
-    background-color: none;
     border-radius: 20px;
     align-items: center;
     justify-content: space-between;
@@ -63,12 +64,6 @@ html{
     transform: rotateY(180deg);
 }
 
-.blurBgDiv{
-    filter: blur(10px);
-    width: 550px;
-    height: 700px;
-    position: absolute;
-}
 /* Flipcard Inner Elemenets */
 
 input{
@@ -257,10 +252,6 @@ button>img{
         perspective: 1500px;
     }
 
-    .blurBgDiv{
-        width: 575px;
-        height: 750px;
-    }
 }
 
 /* Mobile view */
@@ -268,18 +259,16 @@ button>img{
 @media (max-width: 576px) {
     #flipCard {
         width: 100vw;
-        height: 75vh;
+        height: 80vh;
         perspective: 600vw;
+        top: 45%;
+        left: 50%;
+        border-radius: 0;
     }
 
     .flipCardFront, .flipCardBack{
         border-radius: 0;
         justify-content: space-evenly;
-    }
-
-    .blurBgDiv{
-        width: 100vw;
-        height: 75vh;
     }
 
     .flipBtn{
@@ -289,7 +278,7 @@ button>img{
         align-self: center !important;
         border-radius: 0 0 15px 15px !important;
         position: absolute;
-        top: 75vh;
+        top: 100%;
         box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.3);
     }
 
