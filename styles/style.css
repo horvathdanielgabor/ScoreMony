@@ -133,12 +133,15 @@ form.navsearch::after {
   position: relative;
   z-index: 2;
   color: white;
-  background: linear-gradient(#53629E, #4D4B88);
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to top, #4d4b88 0%, #53629e 60%);
+  padding-bottom: 10px;
 }
 
 .bottomnav > div {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  flex-direction: row;
 }
 
 .bottomnav .links {
@@ -179,9 +182,16 @@ form.navsearch::after {
   text-align: left;
 }
 
+.bottomnav hr{
+  border: 3px solid #33325C;
+  width: 85%;
+  display: block;
+}
+
 .bottomnav .icons{
   display: flex;
   justify-content: center;
+  flex-direction: row;
 }
 
 .bottomnav .icons a{
@@ -284,6 +294,11 @@ form.navsearch::after {
   #user a img{
     width: 20px;
   }
+
+  .bottomnav .icons a > img{
+    width: 64.76px;
+    height: auto;
+  }
 }
 
 /*phone view*/
@@ -385,5 +400,17 @@ form.navsearch::after {
     flex-direction: row-reverse;
     max-width: 100%;
     width: 80%;
+  }
+
+  /*Footer*/
+  .bottomnav > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .bottomnav .contact > div{
+    justify-content: space-between;
   }
 }
