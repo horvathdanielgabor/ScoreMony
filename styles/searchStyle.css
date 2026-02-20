@@ -1,0 +1,9 @@
+.filterOpenCloseBtn{
+    border: none;
+    background: none;
+}
+
+.filterOpenCloseBtn > img{
+    width: 30px;
+    height: 30px;
+}

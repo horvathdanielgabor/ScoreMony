@@ -8,7 +8,44 @@
     <link rel="stylesheet" href="styles/searchStyle.css">
 </head>
 <body>
-    
+    <section id="middleContainer">
+        <div id="filterCont">
+            <div class="filterSection">
+                <h3 class="filterSectHeader">Hangszer</h3>
+                <button type="button" class="filterOpenCloseBtn" id="hangszerOpenCloseBtn">
+                    <img src="images/arrow-toggle-down.svg" alt="">
+                </button>
+                <div class="filterFieldCont">
+                    <img src="images/hangszerek/guitar.svg" alt="Gitár">
+                    <input type="checkbox" name="filtGuitar" id="checkFiltGuitar">
+                    <p>Gitár</p>
+                </div>
+                <div class="filterFieldCont">
+                    <img src="images/hangszerek/drum.svg" alt="Dob">
+                    <input type="checkbox" name="filtDrum" id="checkFiltDrum">
+                    <p>Dob</p>
+                </div>
+                <div class="filterFieldCont">
+                    <img src="images/hangszerek/grand-piano.svg" alt="Zongora">
+                    <input type="checkbox" name="filtGrandPiano" id="checkFiltGrandPiano">
+                    <p>Zongora</p>
+                </div>
+                <div class="filterFieldCont">
+                    <img src="images/hangszerek/violin.svg" alt="Hegedű">
+                    <input type="checkbox" name="filtViolin" id="checkFiltViolin">
+                    <p>Hegedű</p>
+                </div>
+                <div class="filterFieldCont">
+                    <img src="images/hangszerek/transverse-flute.svg" alt="Fuvola">
+                    <input type="checkbox" name="filtFlute" id="checkFiltFlute">
+                    <p>Fuvola</p>
+                </div>
+            </div>
+        </div>
+        <div id="resultCont">
+
+        </div>
+    </section>
     <script src="app.js"></script>
 </body>
 </html>
