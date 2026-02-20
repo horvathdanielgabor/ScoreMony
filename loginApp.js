@@ -46,7 +46,7 @@ function registerDataCheck() {
     let correctEmailRegExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
     try {
-        if (nameIn.value.length > 5 && nameIn.value.length <= 20 && isNaN(nameIn.value[0]) && nameIn.value[0].toUpperCase() == nameIn.value[0]) {
+        if (nameIn.value.length > 5 && nameIn.value.length <= 20 && isNaN(nameIn.value[0]) && nameIn.value[0].toUpperCase() == nameIn.value[0] && !nameIn.value.includes(' ')) {
             console.log("Name good");
         }
         else{
