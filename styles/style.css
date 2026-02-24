@@ -303,7 +303,7 @@ form.navsearch::after {
 
 /*phone view*/
 @media screen and (max-width: 425px) {
-  /*header*/
+  /*Start of header*/
   
   /* Add a black background color to the top navigation bar */
   .topnav {
@@ -402,7 +402,9 @@ form.navsearch::after {
     width: 80%;
   }
 
-  /*Footer*/
+  /*End of Header*/
+
+  /*Start of Footer*/
   .bottomnav > div {
     display: flex;
     justify-content: center;
@@ -439,5 +441,5 @@ form.navsearch::after {
     width: 100%;
   }
 
-  
+  /*End of Footer*/
 }
