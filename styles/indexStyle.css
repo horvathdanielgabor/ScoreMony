@@ -1,4 +1,7 @@
 /*Bevezető szöveg*/
+*{
+    font-family: sans-serif;
+}
 
 #udvozlo{
     width: 100%;
@@ -12,7 +15,6 @@
 }
 
 #udvozlo_szoveg{
-    font-family: sans-serif;
     width: 800px;
     height: 500px;
     text-align: center;
@@ -38,14 +40,24 @@ h1{
 
 /*Ajánlott kották listája*/
 
-#ajanlott_kottak_listaja
+#ajanlott_kottak_listaja_p
 {
     position: relative;
     z-index: 0;
     font-size: 3vh;
+    width: 35%;
+    background-color: #BEEEE3;
+    margin: -5% 0% 0% 0%;
+    height: 60px;
+    border-radius: 0 45px 0 0;
+    text-align: center;
+    padding-top: 13px;
 }
 
 
+
+
+/*Media query-k*/
 
 @media (max-width: 1150px) {
     #udv_p{
