@@ -410,7 +410,34 @@ form.navsearch::after {
     flex-direction: column;
   }
 
+  .bottomnav .contact{
+    margin: 10px 0px;
+  }
+
   .bottomnav .contact > div{
     justify-content: space-between;
   }
+
+  .bottomnav hr{
+    visibility: hidden;
+  }
+
+  .bottomnav .icons{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0px 70px;
+  }
+
+  .bottomnav .icons a{
+    max-width: 25%;
+    flex: 25%;
+  }
+
+  .bottomnav .icons a > img{
+    width: 100%;
+  }
+
+  
 }
