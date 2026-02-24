@@ -1,3 +1,44 @@
+/* Heighest level containers */
+#middleContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Individual sections */
+#filterCont{            /* The entire filter section */
+    background-color: #53629E;
+    width: 20%;
+    height: 100vh;
+}
+
+.filterSection{         /* Individual filter groups */
+    display: flex;
+    flex-direction: column;
+}
+
+.filterWithoutPicture{
+    padding-left: 30px;
+}
+
+/* Filter section elements */
+.filterDropDownCont{    /* The header container*/
+    display: flex;
+    flex-direction: row;
+    padding: 5% 3%;
+}
+
+h3{
+    font-size: xx-large;/* The header*/
+    color: #f0f1ff;
+    height: 5%;
+    margin: 0;
+}
+
+.filterFieldCont{       /* Element container */
+    display: flex;
+    flex-direction: row;
+}
+
 .filterOpenCloseBtn{
     border: none;
     background: none;
@@ -6,4 +47,31 @@
 .filterOpenCloseBtn > img{
     width: 30px;
     height: 30px;
+}
+
+/* Filter elements */
+
+.filterFieldCont > img{
+    width: 30px;
+    height: auto;
+}
+
+input{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 8px;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    &:checked{
+        background-color: gray;
+    }
+}
+
+p{
+    color: aliceblue;
 }
