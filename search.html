@@ -11,10 +11,12 @@
     <section id="middleContainer">
         <div id="filterCont">
             <div class="filterSection">
-                <h3 class="filterSectHeader">Hangszer</h3>
-                <button type="button" class="filterOpenCloseBtn" id="hangszerOpenCloseBtn">
-                    <img src="images/arrow-toggle-down.svg" alt="">
-                </button>
+                <div class="filterDropDownCont">
+                    <h3 class="filterSectHeader">Hangszer</h3>
+                    <button type="button" class="filterOpenCloseBtn" id="hangszerOpenCloseBtn">
+                        <img src="images/arrow-toggle-down.svg" alt="">
+                    </button>
+                </div>
                 <div class="filterFieldCont">
                     <img src="images/hangszerek/guitar.svg" alt="Gitár">
                     <input type="checkbox" name="filtGuitar" id="checkFiltGuitar">
@@ -39,6 +41,57 @@
                     <img src="images/hangszerek/transverse-flute.svg" alt="Fuvola">
                     <input type="checkbox" name="filtFlute" id="checkFiltFlute">
                     <p>Fuvola</p>
+                </div>
+            </div>
+            <div class="filterSection">
+                <div class="filterDropDownCont">
+                    <h3 class="filterSectHeader">Hangszer</h3>
+                    <button type="button" class="filterOpenCloseBtn" id="hangszerOpenCloseBtn">
+                        <img src="images/arrow-toggle-down.svg" alt="">
+                    </button>
+                </div>
+                <div class="filterFieldCont filterWithoutPicture">
+                    <input type="checkbox" name="filtGuitar" id="checkFiltGuitar">
+                    <p>Rock</p>
+                </div>
+                <div class="filterFieldCont filterWithoutPicture">
+                    <input type="checkbox" name="filtDrum" id="checkFiltDrum">
+                    <p>Klasszikus</p>
+                </div>
+                <div class="filterFieldCont filterWithoutPicture">
+                    <input type="checkbox" name="filtGrandPiano" id="checkFiltGrandPiano">
+                    <p>Jazz</p>
+                </div>
+                <div class="filterFieldCont filterWithoutPicture">
+                    <input type="checkbox" name="filtViolin" id="checkFiltViolin">
+                    <p>Pop</p>
+                </div>
+                <div class="filterFieldCont filterWithoutPicture">
+                    <input type="checkbox" name="filtFlute" id="checkFiltFlute">
+                    <p>Zenés Színház</p>
+                </div>
+            </div>
+            <div class="filterSection">
+                <div class="filterDropDownCont">
+                    <h3 class="filterSectHeader">Hangszer</h3>
+                    <button type="button" class="filterOpenCloseBtn" id="hangszerOpenCloseBtn">
+                        <img src="images/arrow-toggle-down.svg" alt="">
+                    </button>
+                </div>
+                <div class="filterFieldCont">
+                    <img src="images/hangszerek/guitar.svg" alt="Zöld kör">
+                    <input type="checkbox" name="filtGuitar" id="checkFiltGuitar">
+                    <p>Kezdő</p>
+                </div>
+                <div class="filterFieldCont">
+                    <img src="images/hangszerek/drum.svg" alt="Sárga kör">
+                    <input type="checkbox" name="filtDrum" id="checkFiltDrum">
+                    <p>Közép</p>
+                </div>
+                <div class="filterFieldCont">
+                    <img src="images/hangszerek/grand-piano.svg" alt="Piros kör">
+                    <input type="checkbox" name="filtGrandPiano" id="checkFiltGrandPiano">
+                    <p>Haladó</p>
                 </div>
             </div>
         </div>
