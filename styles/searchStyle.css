@@ -7,7 +7,7 @@
 /* Individual sections */
 #filterCont{            /* The entire filter section */
     background-color: #53629E;
-    width: 20%;
+    width: 17vw;
     height: 100vh;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .filterWithoutPicture{
-    padding-left: 30px;
+    padding-left: 65px;
 }
 
 /* Filter section elements */
@@ -27,38 +27,51 @@
     padding: 5% 3%;
 }
 
+.filterElementsCont{    /* Entire holder container for dropdown control*/
+    height: 100%;
+    transition: all 0.5s;
+}
+
 h3{
     font-size: xx-large;/* The header*/
     color: #f0f1ff;
-    height: 5%;
     margin: 0;
 }
 
 .filterFieldCont{       /* Element container */
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .filterOpenCloseBtn{
     border: none;
     background: none;
+    width: 40px;
+    height: 40px;
+    margin: auto 0;
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 .filterOpenCloseBtn > img{
-    width: 30px;
-    height: 30px;
+    width: inherit;
+    height: inherit;
 }
 
 /* Filter elements */
 
 .filterFieldCont > img{
-    width: 30px;
-    height: auto;
+    width: 35px;
+    height: 35px;
+    margin: 0 15px;
 }
 
 input{
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
+    margin: 0 15px 0 0;
     background-color: white;
     border-radius: 8px;
     vertical-align: middle;
@@ -67,11 +80,44 @@ input{
     -webkit-appearance: none;
     outline: none;
     cursor: pointer;
+    transition: 0.2s;
+    &:hover{
+        background-color: rgb(186, 186, 186);
+    }
     &:checked{
-        background-color: gray;
+        background-color: red;
+    }
+    &:checked:hover{
+        background-color: rgb(255, 81, 0);
     }
 }
 
 p{
     color: aliceblue;
+}
+
+.spinEffect {
+    animation: spin 0.5s ease-in-out forwards;
+}
+
+.spinEffectBack {
+    animation: spinBack 0.5s ease-in-out forwards;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-90deg);
+    }
+}
+
+@keyframes spinBack {
+    0% {
+        transform: rotate(-90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
