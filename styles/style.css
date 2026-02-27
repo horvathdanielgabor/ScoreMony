@@ -301,6 +301,46 @@ form.navsearch::after {
   }
 }
 
+@media (max-width: 576px) {
+  #home:nth-last-child() {
+    width: 120px;
+  }
+
+  /*Start of Footer*/
+  .bottomnav .links > a {
+    font-size: 14px;
+  }
+
+  .bottomnav .contact{
+    justify-content: center;
+    align-content: center;
+  }
+
+  .bottomnav .contact{
+    margin: 10px 0px;
+  }
+
+  .bottomnav .contact p{
+    font-size: 12px;
+  }
+
+  .bottomnav .icons{
+    margin: 0px 70px;
+  }
+
+  .bottomnav .icons a{
+    max-width: 25%;
+    flex: 25%;
+  }
+
+  .bottomnav .icons a > img{
+    width: 60px;
+    height: auto;
+  }
+
+  /*End of Footer*/
+}
+
 /*phone view*/
 @media screen and (max-width: 425px) {
   /*Start of header*/

@@ -1,6 +1,6 @@
 var containOriginal;
 
-function headerDropDown(myBlock, offBlock) {
+function headerSlidePush(myBlock, offBlock) {
   var turnOn = document.getElementById(myBlock);
   var change1 = document.getElementsByClassName(myBlock)[0].children[0];
   var turnOff = document.getElementById(offBlock);
