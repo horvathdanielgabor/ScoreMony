@@ -13,8 +13,6 @@ header {
 .topnav {
   overflow: hidden;
   background-color: #53629E;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   border: solid black 4px;
   box-shadow: 0px 10px 15px black;
@@ -33,6 +31,10 @@ header {
 
 .topnav div {
   display: flex;
+  justify-content: space-between;
+  overflow-x: hidden;
+  transition: 0.5s;
+  
 }
 
 /* Hide the link that should open and close the topnav on small screens */
@@ -44,7 +46,7 @@ header {
   box-sizing: border-box;
 }
 
-form.navsearch input[type=text] {
+#search input[type=text] {
   padding: 10px;
   font-size: 18px;
   border: 0px solid transparent;
@@ -54,7 +56,7 @@ form.navsearch input[type=text] {
   max-width: 100%;
 }
 
-form.navsearch button {
+#search button {
   display: block;
   float: left;
   width: 10%;
@@ -67,37 +69,32 @@ form.navsearch button {
   cursor: pointer;
 }
 
-form.navsearch button:hover {
+#search button:hover {
   background: #cefdf1;
 }
 
-form.navsearch {
+#search {
   display: flex;
   justify-content: center;
+  align-self: center;
   margin: 0px;
-  width: 100%;
-  max-width: 100%;
-}
-
-form.navsearch > *{
-  background-color: #BEEEE3;
-}
-
-#search {
   width: 50%;
   max-width: 100%;
+  height: 50px;  
+  overflow-x: hidden;
+  transition: 0.5s;
 }
 
-form.navsearch::after {
-  content: "";
-  clear: both;
-  display: table;
+#search > *{
+  background-color: #BEEEE3;
 }
 
 #user{
   display: flex;
   flex-direction: row;
-  width: auto;
+  width: auto;  
+  overflow-x: hidden;
+  transition: 0.5s;
 }
 
 #user h2 {
@@ -107,6 +104,7 @@ form.navsearch::after {
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400;
   text-align: right;
+  margin: auto;
 }
 
 #user a{
@@ -120,7 +118,9 @@ form.navsearch::after {
 }
 
 #home {
-  padding: 0px 16px;
+  padding: 0px 16px;  
+  overflow-x: hidden;
+  transition: 0.5s;
 }
 
 #home > img {
@@ -190,11 +190,13 @@ form.navsearch::after {
 
 .bottomnav .icons{
   display: flex;
-  justify-content: center;
+  justify-self: center;
   flex-direction: row;
 }
 
 .bottomnav .icons a{
+  display: flex;
+  justify-content: center;
   margin: 0px 7px;
 }
 
@@ -254,116 +256,37 @@ form.navsearch::after {
   }
 }
 
-@media screen and (max-width: 768px){
-  #home {
-    width: 130px;
-    padding: 0px 5px;
-  }
-
-  #home > img {
-    width: 120px;
-  }
-
-  form.navsearch input[type=text]{
-    font-size: 10px;
-    width: 80%;
-  }
-
-  form.navsearch button {
-    max-width: 100%;
-    width: 25%;
-    font-size: 10px;
-  }
-
-  #user{
-    display: flex;
-    max-width: 100%;
-    width: auto;
-  }
-
-  #user h2 {
-    padding-left: 3px;
-    width: auto;
-    font-size: 12px;
-  }
-
-  #user a{
-    padding: 0px 2px;
-  }
-
-  #user a img{
-    width: 20px;
-  }
-
-  .bottomnav .icons a > img{
-    width: 64.76px;
-    height: auto;
-  }
-}
-
-@media (max-width: 576px) {
-  #home:nth-last-child() {
-    width: 120px;
-  }
-
-  /*Start of Footer*/
-  .bottomnav .links > a {
-    font-size: 14px;
-  }
-
-  .bottomnav .contact{
-    justify-content: center;
-    align-content: center;
-  }
-
-  .bottomnav .contact{
-    margin: 10px 0px;
-  }
-
-  .bottomnav .contact p{
-    font-size: 12px;
-  }
-
-  .bottomnav .icons{
-    margin: 0px 70px;
-  }
-
-  .bottomnav .icons a{
-    max-width: 25%;
-    flex: 25%;
-  }
-
-  .bottomnav .icons a > img{
-    width: 60px;
-    height: auto;
-  }
-
-  /*End of Footer*/
-}
-
 /*phone view*/
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   /*Start of header*/
   
   /* Add a black background color to the top navigation bar */
   .topnav {
-    overflow: hidden;
     background-color: #53629E;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 94px;
     border: solid black 0px;
-  box-shadow: 0px 0px 0px black;
+    box-shadow: 0px 0px 0px black;
   }
 
-  .topnav div {
-    display: none;
+  .topnav > div {
+    justify-content: center;
+    width: 60%;
+  }
+
+  .topnav > div > div {
+    height: 100%;
+    flex-direction: row-reverse;
+    overflow-x: hidden;
+    transition: 0.5s;
   }
 
   #home {
-    width: 40%;
     justify-content: center;
+    order: 1;
+    padding: 0px;
   }
 
   #home > img {
@@ -372,39 +295,49 @@ form.navsearch::after {
     height: 94px;
   }
 
-  form.navsearch {
+  #search {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
     margin: 0px;
     max-width: 100%;
-    width: auto;
-    height: auto;
+    width: 0%;
+    order: 0;
   }
 
-  form.navsearch input[type=text] {
-    padding: 10px;
+  #search > * {
+    height: 50px;
+  }
+
+  #search input[type=text] {
+    padding: 10px 7px;
     font-size: 18px;
     border: 0px solid transparent;
     border-radius: 45px 45px 45px  45px;
     float: left;
-    width: 100%;
-    height: auto;
+    width: 70%;
   }
 
-  form.navsearch button{
+  #search button {
     border-radius: 45px;
-    margin-left: 20%;
-    width: calc(height);
+    width: 50px;
   }
-
-  /* Hide the link that should open and close the topnav on small screens */
+  
   .topnav > a.icon {
     background: transparent;
     display: flex;
     justify-content: center;
-    right: 0;
-    top: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
     width: 20%;
+  }
+
+  #user {
+    flex-direction: row-reverse;
+    align-self: center;
+    order: 2;
+    width: 0%;
   }
   
   #user h2 {
@@ -428,20 +361,6 @@ form.navsearch::after {
     width: 54px;
   }
 
-  .topnav #search {
-    display: none;
-    justify-content: space-between;
-    width: 70%;
-    max-width: 100%;
-  }
-
-  .topnav #user {
-    display: none;
-    flex-direction: row-reverse;
-    max-width: 100%;
-    width: 80%;
-  }
-
   /*End of Header*/
 
   /*Start of Footer*/
@@ -452,16 +371,23 @@ form.navsearch::after {
     flex-direction: column;
   }
 
+  .bottomnav .links{
+    margin: 30px 0px 30px;
+  }
+
   .bottomnav .contact{
     margin: 10px 0px;
+    width: 85%;
+    align-content: normal;
   }
 
   .bottomnav .contact > div{
+    margin: 3px 0px;
     justify-content: space-between;
   }
 
-  .bottomnav hr{
-    visibility: hidden;
+  .bottomnav .contact p{
+    margin: 0px;
   }
 
   .bottomnav .icons{
@@ -478,8 +404,25 @@ form.navsearch::after {
   }
 
   .bottomnav .icons a > img{
-    width: 100%;
+    width: 6rem;
   }
 
   /*End of Footer*/
+}
+
+@media screen and (max-width: 425px) {
+  .bottomnav .icons a{
+    max-width: 25%;
+    flex: 25%;
+  }
+
+  .bottomnav .icons a > img{
+    width: 4rem;
+  }
+
+  .bottomnav .contact{
+    margin: 10px 0px;
+    width: 95%;
+    align-content: normal;
+  }
 }

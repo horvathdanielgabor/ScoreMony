@@ -12,21 +12,21 @@
 <body>
     <header>
       <div class="topnav">
-        <a href="javascript:void(0);" class="icon search head" onclick="headerSlidePush('search','user')">
+        <a href="javascript:void(0);" class="icon search" onclick="headerSlidePush('search')">
           <img src="images/SearchIcon.png" alt="">
         </a>
-        <a href="index.html" id="home" class="head"><img src="images/rajz.png" alt="Icon"></a>
-        <div  id="search" class="head">
-          <form class="navsearch" action="/action_page.php">
+        <div class="search user">
+          <a href="index.html" id="home"><img src="images/rajz.png" alt="Icon"></a>
+          <div id="search" class="slide search">
             <input type="text" placeholder="Search.." name="search">
             <button type="submit"><i class="fa fa-search"></i></button>
-          </form>
+          </div>
+          <div id="user" class="slide user">
+            <h2 id="username">Anonymous12345</h2>
+            <a href="login.html" id="logOut"><img src="images/LogOut.png" alt="LogOut"></a>
+          </div>
         </div>
-        <div id="user" class="head">
-          <h2 id="username">Anonymous12345</h2>
-          <a href="login.html" id="logOut"><img src="images/LogOut.png" alt="LogOut"></a>
-        </div>
-        <a href="javascript:void(0);" class="icon user head" onclick="headerSlidePush('user','search')">
+        <a href="javascript:void(0);" class="icon user" onclick="headerSlidePush('user')">
           <img src="images/UserIcon.png" alt="">
         </a>
       </div>

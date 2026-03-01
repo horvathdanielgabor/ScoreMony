@@ -1,33 +1,72 @@
 var containOriginal;
 
-function headerSlidePush(myBlock, offBlock) {
-  var turnOn = document.getElementById(myBlock);
-  var change1 = document.getElementsByClassName(myBlock)[0].children[0];
-  var turnOff = document.getElementById(offBlock);
-  var change2 = document.getElementsByClassName(offBlock)[0];
-  if (turnOn.style.display === "flex") {
-    turnOn.style.display = null;
-    change1.src = containOriginal;
-    document.getElementById("home").style.display = "flex";
-    turnOff.style.display = null;
-    change2.style.display = null;
-  } else {
-    turnOn.style.display = "flex";
-    containOriginal = change1.src;
-    change1.src = "images/CloseIcon.png";
-    document.getElementById("home").style.display = "none";
-    turnOff.style.display = "none";
-    change2.style.display = "none";
+function headerSlidePush(onBlock) {
+  var allFound = document.getElementsByClassName(onBlock);
+  var turnOn = Array(...allFound).find(item => item.className.includes("slide"));
+  var change = Array(...allFound).find(item => item.className.includes("icon")).children[0];
+
+  if (turnOn.style.width == "") {
+    containOriginal = change.src;
+    change.src = "images/CloseIcon.png";
+
+    for (const element of document.getElementsByClassName("topnav")[0].children)
+    {
+      if (!element.className.includes(onBlock))
+      {
+        element.style.width = "0%";
+      }
+      else
+      {
+        for (const innerElement of element.children)
+        {
+          if (!innerElement.className.includes(onBlock) && innerElement.tagName != "IMG")
+          {
+            innerElement.style.width = "0%";
+            innerElement.style.order = 1
+          }
+        }
+      }
+    }
+
+    document.getElementsByClassName("topnav")[0].children[1].style.width = "80%"
+    turnOn.style.order = onBlock == "search"? 2 : 0
+    turnOn.style.width = "80%";
+  }
+  else
+  {
+    change.src = containOriginal;
+    document.getElementsByClassName("topnav")[0].children[1].style.width = "60%"
+
+    for (const element of document.getElementsByClassName("topnav")[0].children)
+    {
+      element.style.width = null;
+      for (const innerElement of element.children)
+      {
+        innerElement.style.width = null;
+        for (const child of innerElement.children) {child.style.width = null};
+        innerElement.style.order = null;
+      }
+    }
   }
 }
 
 window.addEventListener("resize", function(){
-  for (let element of document.getElementsByClassName("head"))
+  if (this.screen.width > 768)
   {
-    element.style.display = null
-  };
-  document.getElementsByClassName("icon")[0].children[0].src = "images/SearchIcon.png"
-  document.getElementsByClassName("icon")[1].children[0].src = "images/UserIcon.png"
+    console.log("resize");
+    for (let element of document.getElementsByClassName("topnav"))
+    {
+      element.style = null;
+      for (const innerElement of element.children)
+      {
+        innerElement.style = null;
+        for (const child of innerElement.children) {child.style = null};
+        innerElement.style = null;
+      }
+    };
+    document.getElementsByClassName("icon")[0].children[0].src = "images/SearchIcon.png"
+    document.getElementsByClassName("icon")[1].children[0].src = "images/UserIcon.png"
+  }
 });
 
 //  -----------------------------------
