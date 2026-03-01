@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>ScoreMony</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/homeStyle.css">
+</head>
+<body>
+    <header>
+      <div class="topnav">
+        <a href="javascript:void(0);" class="icon search" onclick="headerSlidePush('search')">
+          <img src="images/SearchIcon.png" alt="">
+        </a>
+        <div class="search user">
+          <a href="home.html" id="home"><img src="images/rajz.png" alt="Icon"></a>
+          <div id="search" class="slide search">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </div>
+          <div id="user" class="slide user">
+            <h2 id="username">Anonymous12345</h2>
+            <a href="login.html" id="logOut"><img src="images/LogOut.png" alt="LogOut"></a>
+          </div>
+        </div>
+        <a href="javascript:void(0);" class="icon user" onclick="headerSlidePush('user')">
+          <img src="images/UserIcon.png" alt="">
+        </a>
+      </div>
+    </header>
+    <div id="udvozlo">
+      <div id="udvozlo_szoveg">
+        <h1>Üdvözöllek a ScoreMony oldalán!</h1>
+        <p id="udv_p">Itt könnyedén találhatsz kottákat különböző hangszerekhez, és kiválaszthatod a szintedhez illő darabokat. Segítünk, hogy a zenetanulás egyszerűbb és inspirálóbb legyen.</p>
+      </div>
+    </div>
+      <p id="ajanlott_kottak_listaja_p">Ajánlott kották listája</p>
+      <div id="ajanlott_kottak_listaja">
+        <div id="kotta">
+          <img src="/IKT_kották/Dob/Jazz/Haladó/Képek/Jazz Vespas/Jazz-Vespas-Drums_page-0001.jpg" alt="Jazz Vespas">
+          <h4>Tim Davies-Jazz Vespas</h4>
+          <p>Dobfelszerelés</p>
+        </div>
+      </div>
+
+    <footer class="bottomnav">
+      <div>
+        <a href="home.html" id="home" class="head"><img src="images/rajz.png" alt="Icon"></a>
+        <div class="links">
+          <a href="home.html">Főoldal</a>
+          <a href="search.html">Kottakereső</a>
+        </div>
+        <div class="contact">
+          <div>
+            <p>Tel.:</p>
+            <p>+381 69 4206663</p>
+          </div>
+          <div>
+            <p>E-mail:</p>
+            <p>scoremony.support@notfake.com</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="icons">
+        <a href=""><img src="images/Tiktok.png" alt="Tiktok"></a>
+        <a href=""><img src="images/Facebook.png" alt="Tiktok"></a>
+        <a href=""><img src="images/Instagram.png" alt="Tiktok"></a>
+        <a href=""><img src="images/X.png" alt="Tiktok"></a>
+        <a href=""><img src="images/Youtube.png" alt="Tiktok"></a>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

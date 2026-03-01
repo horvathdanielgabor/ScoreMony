@@ -1,56 +1,42 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>ScoreMony</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/indexStyle.css">
+    <title>Document</title>
 </head>
 <body>
-    <header>
-      <div class="topnav">
-        <a href="javascript:void(0);" class="icon search" onclick="headerSlidePush('search')">
-          <img src="images/SearchIcon.png" alt="">
-        </a>
-        <div class="search user">
-          <a href="index.html" id="home"><img src="images/rajz.png" alt="Icon"></a>
-          <div id="search" class="slide search">
-            <input type="text" placeholder="Search.." name="search">
-            <button type="submit"><i class="fa fa-search"></i></button>
-          </div>
-          <div id="user" class="slide user">
-            <h2 id="username">Anonymous12345</h2>
-            <a href="login.html" id="logOut"><img src="images/LogOut.png" alt="LogOut"></a>
-          </div>
+    <div id="hero">
+        <div>
+            <header>
+                <div href="" id="home"><img src="/images/rajz.png"  alt=""></div>
+                <a href="">Funkciók</a>
+                <a href="#advantages">Előnyök</a>
+                <a href="">Bejelentkezés →</a>
+            </header>
+
+            <h2>Némítsd le a nagyvilágot, Találd meg a saját szimfóniád</h2>
+            <p>Az ideális kottakereső oldal minden tapasztalatú zenész számára. A zongora művészektől a dobkirályokig, a kezdőktől az igazi művészekig, mindenki megtalálhatja a kedvenc dalát.</p>
+            <button>Regisztráció →</button>
         </div>
-        <a href="javascript:void(0);" class="icon user" onclick="headerSlidePush('user')">
-          <img src="images/UserIcon.png" alt="">
-        </a>
-      </div>
-    </header>
-    <div id="udvozlo">
-      <div id="udvozlo_szoveg">
-        <h1>Üdvözöllek a ScoreMony oldalán!</h1>
-        <p id="udv_p">Itt könnyedén találhatsz kottákat különböző hangszerekhez, és kiválaszthatod a szintedhez illő darabokat. Segítünk, hogy a zenetanulás egyszerűbb és inspirálóbb legyen.</p>
-      </div>
     </div>
-      <p id="ajanlott_kottak_listaja_p">Ajánlott kották listája</p>
-      <div id="ajanlott_kottak_listaja">
-        <div id="kotta">
-          <img src="/IKT_kották/Dob/Jazz/Haladó/Képek/Jazz Vespas/Jazz-Vespas-Drums_page-0001.jpg" alt="Jazz Vespas">
-          <h4>Tim Davies-Jazz Vespas</h4>
-          <p>Dobfelszerelés</p>
+
+    <div></div>
+
+    <div id="advantages">
+        <div>
+            <h2>Miért a ScoreMony?</h2>
+            <h3>Miért a zene?</h3>
         </div>
-      </div>
+    </div>
 
     <footer class="bottomnav">
       <div>
-        <a href="index.html" id="home" class="head"><img src="images/rajz.png" alt="Icon"></a>
+        <a href="home.html" id="home" class="head"><img src="images/rajz.png" alt="Icon"></a>
         <div class="links">
-          <a href="index.html">Főoldal</a>
+          <a href="home.html">Főoldal</a>
           <a href="search.html">Kottakereső</a>
         </div>
         <div class="contact">
@@ -73,6 +59,5 @@
         <a href=""><img src="images/Youtube.png" alt="Tiktok"></a>
       </div>
     </footer>
-    <script src="app.js"></script>
 </body>
 </html>
