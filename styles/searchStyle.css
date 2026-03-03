@@ -28,8 +28,9 @@
 }
 
 .filterElementsCont{    /* Entire holder container for dropdown control*/
-    height: 100%;
-    transition: all 0.5s;
+    max-height: 500px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
 
 h3{
@@ -94,6 +95,7 @@ input{
 
 p{
     color: aliceblue;
+    padding: 0 1%;
 }
 
 .spinEffect {
@@ -102,6 +104,14 @@ p{
 
 .spinEffectBack {
     animation: spinBack 0.5s ease-in-out forwards;
+}
+
+/* Search result container */
+
+#resultCont{
+    width: 100%;
+    background: #6D8EB1;
+    background: linear-gradient(135deg, rgba(109, 142, 177, 1) 20%, rgba(77, 75, 136, 1) 100%);
 }
 
 @keyframes spin {
