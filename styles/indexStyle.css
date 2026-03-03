@@ -16,7 +16,7 @@ body{
     flex-direction: column;
     width: auto;
     background:
-    linear-gradient(-75deg,#020036 25%,#4D4B88 80%,#6D8EB1 100%) center/cover no-repeat;
+    linear-gradient(-75deg,#020036 25%,#4D4B88 80%,#6D8EB1 100%) right/cover no-repeat;
 
     mask: linear-gradient(-75deg, transparent 40%, white 40%);
 }
@@ -82,15 +82,18 @@ header a::after{
 #functions{
     display: flex;
     flex-flow: column wrap;
-    align-items: left;
     justify-content: center;
+    align-content: center;
     position: absolute;
     left: 5%;
     right: 5%;
+    top: 100%;
     z-index: 1;
     color: white;
     background-color: #53629E;
-    padding: 50px 50px;
+    height: 560px;
+    border-radius: 30px;
+    box-shadow: 0px 8px 3px 2px rgba(0, 0, 0, 0.25);
 }
 
 #functions > h2{
@@ -107,6 +110,7 @@ header a::after{
 #functions > div{
     display: flex;
     flex-flow: row wrap;
+    margin-top: 64px;
 }
 
 #functions > div > div{
@@ -206,6 +210,8 @@ header a::after{
     height: 490px;
     align-items: center;
     justify-content: center;
+    flex-flow: column wrap;
+    margin-top: 14px;
 }
 
 #advantages > div > div:nth-child(3) > div{
@@ -213,6 +219,16 @@ header a::after{
     justify-content: space-between;
     width: 1170px;
     margin: 20px 0px;
+}
+
+#advantages > div > div:nth-child(3) > div > div > img{
+    width: 150px;
+    height: 150px;
+}
+
+#advantages > div > div:nth-child(3) > div > div > p{
+    font-size: 24px;
+    margin: 20px 0px 0px;
 }
 
 #advantages div:last-child > h2{
@@ -233,3 +249,14 @@ header a::after{
     margin: 0px 0px 20px;
 }
 /*advantages end*/
+
+@media screen and (max-width: 1315px){
+    #hero > div{
+        height: 876px;
+    }
+    
+    #functions{
+        height: 417px;
+        
+    }
+}
