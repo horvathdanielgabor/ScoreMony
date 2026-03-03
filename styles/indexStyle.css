@@ -1,5 +1,6 @@
 body{
     background-color: #6D8EB1;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*hero start*/
@@ -77,6 +78,42 @@ header a::after{
 }
 /*hero end*/
 
+/*functions start*/
+#functions{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: left;
+    justify-content: center;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    z-index: 1;
+    color: white;
+    background-color: #53629E;
+    padding: 50px 50px;
+}
+
+#functions > h2{
+    font-weight: 100;
+    font-size: 70px;
+    margin: 0px;
+}
+
+#functions > hr{
+    margin: 0px;
+    border: solid 2px white;
+}
+
+#functions > div{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#functions > div > div{
+    width: 382px;
+}
+/*functions end*/
+
 /*advantages start*/
 #advantages{
     display: flex;
@@ -84,14 +121,108 @@ header a::after{
     align-items: center;
     color: black;
     text-align: center;
+    flex-direction: column;
 }
 
-#advantages div:first{
+#advantages > div:first-child{
     flex-direction: column;
     width: max-content;
+    margin-top: 459px;
 }
 
-#advantages h2{
+#advantages > div{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 4%;
+}
+
+#advantages > div:last-child{
+    margin-bottom: 131px;
+}
+
+#advantages > div > div{
+    margin: 5px;
+    display: flex;
+    flex-flow: column wrap;
+    background-color: #BEEEE3;
+    border-radius: 20px;
+    height: min-content;
+    text-align: left;
+    box-shadow: 0px 8px 3px 2px rgba(0, 0, 0, 0.25);
+    flex: 35%;
+}
+
+#advantages > div > div:nth-child(1){
+    width: 810px;
+    height: 434px;
+    align-items: start;
+    justify-content: center;
+    padding: 65px 183px 65px 38px;
+}
+
+#advantages > div > div:nth-child(1) h1{
+    color: #53629E;
+    font-size: 128px;
+    font-weight: 100;
+    width: 589px;
+    margin: 18px 0px 18px 0px;
+}
+
+#advantages > div > div:nth-child(1) > p{
+    font-size: 48px;
+    width: 589px;
+    margin: 0px;
+}
+
+#advantages > div > div:nth-child(2){
+    flex-direction: unset;
+    width: 460px;
+    align-content: center;
+    height: 434px;
+    justify-content: center;
+    justify-items: left;
+}
+
+#advantages > div > div:nth-child(2) > h2{
+    font-size: 48px;
+    width: 267px;
+    margin: 0px;
+}
+
+#advantages > div > div:nth-child(2) > img{
+    width: 100px;
+    height: 100px;
+    margin: 0px;
+}
+
+#advantages > div > div:nth-child(2) > p{
+    font-size: 36px;
+    width: 380px;
+    margin: 0px;
+}
+
+#advantages > div > div:nth-child(3){
+    width: 1306px;
+    height: 490px;
+    align-items: center;
+    justify-content: center;
+}
+
+#advantages > div > div:nth-child(3) > div{
+    display: flex;
+    justify-content: space-between;
+    width: 1170px;
+    margin: 20px 0px;
+}
+
+#advantages div:last-child > h2{
+    display: flex;
+    align-items: end;
+    margin: 0px;
+    font-size: 64px;
+}
+
+#advantages > div > h2{
     font-size: 70px;
     margin: 0px;
 }
