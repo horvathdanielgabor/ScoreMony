@@ -82,16 +82,16 @@ header a::after{
 #functions{
     display: flex;
     flex-flow: column wrap;
+    justify-self: center;
     justify-content: center;
     align-content: center;
-    position: absolute;
-    left: 5%;
-    right: 5%;
-    top: 100%;
+    position: relative;
+    margin-top: -12%;
     z-index: 1;
     color: white;
     background-color: #53629E;
     height: 560px;
+    width: 95%;
     border-radius: 30px;
     box-shadow: 0px 8px 3px 2px rgba(0, 0, 0, 0.25);
 }
@@ -129,18 +129,16 @@ header a::after{
 }
 
 #advantages > div:first-child{
-    flex-direction: column;
     width: max-content;
-    margin-top: 459px;
+    flex-flow: column wrap;
+    margin: 50px 0px 0px 0px;
 }
 
 #advantages > div{
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin: 0px 4%;
-}
-
-#advantages > div:last-child{
     margin-bottom: 131px;
 }
 
@@ -157,11 +155,11 @@ header a::after{
 }
 
 #advantages > div > div:nth-child(1){
-    width: 810px;
     height: 434px;
     align-items: start;
     justify-content: center;
-    padding: 65px 183px 65px 38px;
+    width: 60%;
+    padding: 0px 0px 0px 38px;
 }
 
 #advantages > div > div:nth-child(1) h1{
@@ -180,11 +178,11 @@ header a::after{
 
 #advantages > div > div:nth-child(2){
     flex-direction: unset;
-    width: 460px;
     align-content: center;
     height: 434px;
     justify-content: center;
     justify-items: left;
+    width: 40%;
 }
 
 #advantages > div > div:nth-child(2) > h2{
@@ -206,7 +204,7 @@ header a::after{
 }
 
 #advantages > div > div:nth-child(3){
-    width: 1306px;
+    width: 100%;
     height: 490px;
     align-items: center;
     justify-content: center;
@@ -246,7 +244,7 @@ header a::after{
 #advantages h3{
     font-size: 40px;
     color: white;
-    margin: 0px 0px 20px;
+    margin: 0px 0px 30px;
 }
 /*advantages end*/
 
@@ -257,6 +255,69 @@ header a::after{
     
     #functions{
         height: 417px;
-        
+        margin-top: -4%;
     }
+    
+    /*advantages start*/
+    
+    #advantages > div > div:nth-child(1) h1{
+        color: #53629E;
+        font-size: 114px;
+        font-weight: 100;
+        width: 578px;
+        margin: 18px 0px 18px 0px;
+    }
+    
+    #advantages > div > div:nth-child(1) > p{
+        font-size: 44px;
+        width: 538px;
+        margin: 0px;
+    }
+    
+    #advantages > div > div:nth-child(2) > h2{
+        font-size: 48px;
+        width: 267px;
+        margin: 0px;
+    }
+    
+    #advantages > div > div:nth-child(2) > img{
+        width: 100px;
+        height: 100px;
+        margin: 0px;
+    }
+    
+    #advantages > div > div:nth-child(2) > p{
+        font-size: 36px;
+        width: 380px;
+        margin: 0px;
+    }
+    
+    #advantages > div > div:nth-child(3) > div{
+        display: flex;
+        justify-content: space-between;
+        width: 1170px;
+        margin: 20px 0px;
+    }
+    
+    #advantages > div > div:nth-child(3) > div > div > img{
+        width: 150px;
+        height: 150px;
+    }
+    
+    #advantages > div > div:nth-child(3) > div > div > p{
+        font-size: 24px;
+        margin: 20px 0px 0px;
+    }
+    
+    #advantages > div > h2{
+        font-size: 70px;
+        margin: 0px;
+    }
+    
+    #advantages h3{
+        font-size: 40px;
+        color: white;
+        margin: 0px 0px 30px;
+    }
+    /*advantages end*/
 }
