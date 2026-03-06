@@ -9,6 +9,7 @@
     background-color: #53629E;
     width: 17vw;
     height: 100vh;
+    transition: all 0.5s;
 }
 
 .filterSection{         /* Individual filter groups */
@@ -94,6 +95,10 @@ input{
     }
 }
 
+.activeMenu{
+    width: 100vw;
+}
+
 p{
     color: aliceblue;
     padding: 0 1%;
@@ -154,6 +159,7 @@ p{
     width: 75%;
     transform: rotate(-90deg);
     transition: all 0.5s;
+    z-index: 80;
 }
 
 @media (max-width: 1180px) {
@@ -176,6 +182,8 @@ p{
 
     #filterCont{
         display: none;
+        width: 0;
+        position: absolute;
     }
 }
 

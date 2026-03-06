@@ -20,3 +20,33 @@ function filterDropDownTrigger(el){
         }, 500)
     }
 }
+
+function menuOpenClose(){
+    let menuEl = document.getElementById("filterCont");
+    console.log("btn");
+    if (!menuEl.classList.contains("activeMenu")) {
+        menuEl.style.display = "block";
+        menuEl.style.width = 0;
+        setTimeout(() => {
+            menuEl.style.width = 100 + "vw";
+        }, 10);
+        menuEl.classList.add("activeMenu");
+    }
+    else {
+        menuEl.classList.remove("activeMenu");
+        menuEl.style.width = 0;
+        setTimeout(() => {
+            menuEl.style.display = "none";
+        }, 500);
+    }
+}
+
+window.addEventListener("resize", () => {
+    console.log("resize");
+    if (document.body.clientWidth > 1180) {
+        let menuEl = document.getElementById("filterCont");
+        menuEl.style.display = "block";
+        menuEl.classList.remove("activeMenu");
+        menuEl.style.width = '';
+    }
+});
