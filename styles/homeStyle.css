@@ -65,10 +65,12 @@ h1{
 /*Kotta*/
 
 .kotta{
-    width: 450px;
+    width: 20vw;
+    height: 20vw;
     background-color: white;
     border: 5px solid #000000;
     border-radius: 45px;
+    margin: 2%;
     overflow: hidden;
     font-family: 'Arial', sans-serif;
     display: flex;
@@ -76,9 +78,8 @@ h1{
 }
 
 .kotta_inf{
-    background-color: #C3E9E9;
+    background-color: #BEEEE3;
     text-align: center;
-    padding: 30px 10px;
     border-top: 5px solid #000000;
 }
 
@@ -96,17 +97,28 @@ h1{
     color: #000000;
 }
 
+.kotta_footer{
+    display: flex;
+    height: 10vw;
+    border-top: 5px solid black;
+}
+
+.zene_stilus{
+    background-color: #6D8EB1;
+    border-right: 5px solid black;
+}
+
+.zene_nehezseg
+{
+    background-color: #F20000;
+}
+
 .kotta_kep{
-    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 180px;
-}
-
-div > img{
-    max-width: 100%;
-    height: auto;
+    background-image: url();
 }
 
 /*Media query-k*/
