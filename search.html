@@ -9,7 +9,7 @@
 </head>
 <body>
     <section id="middleContainer">
-        <div id="filterMenuTriggerCont">
+        <div id="filterMenuTriggerCont" onclick="menuOpenClose()">
             <img id="arrowCont" src="images/arrow-toggle-down.svg" alt="Lefele nyíl"></img>
         </div>
         <div id="filterCont">
@@ -50,7 +50,7 @@
             </div>
             <div class="filterSection">
                 <div class="filterDropDownCont">
-                    <h3 class="filterSectHeader">Hangszer</h3>
+                    <h3 class="filterSectHeader">Stílus</h3>
                     <button type="button" class="filterOpenCloseBtn" id="genreOpenCloseBtn" onclick="filterDropDownTrigger(this)">
                         <img src="images/arrow-toggle-down.svg" alt="Le nyíl">
                     </button>
@@ -80,7 +80,7 @@
             </div>
             <div class="filterSection">
                 <div class="filterDropDownCont">
-                    <h3 class="filterSectHeader">Hangszer</h3>
+                    <h3 class="filterSectHeader">Nehézség</h3>
                     <button type="button" class="filterOpenCloseBtn" id="nehezsegOpenCloseBtn" onclick="filterDropDownTrigger(this)">
                         <img src="images/arrow-toggle-down.svg" alt="Le nyíl">
                     </button>
@@ -108,7 +108,7 @@
 
         </div>
     </section>
-    <script src="app.js"></script>
+    <!-- <script src="app.js"></script> -->
     <script src="searchScript.js"></script>
 </body>
 </html>
