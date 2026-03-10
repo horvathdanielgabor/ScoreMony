@@ -66,7 +66,7 @@ h1{
 
 .kotta{
     width: 20vw;
-    height: 20vw;
+    height: 35vh;
     background-color: white;
     border: 5px solid #000000;
     border-radius: 45px;
@@ -99,7 +99,7 @@ h1{
 
 .kotta_footer{
     display: flex;
-    height: 10vw;
+    height: 5vw;
     background-color: #BEEEE3;
 }
 
@@ -118,7 +118,7 @@ h1{
     justify-content: center;
     align-items: center;
     min-height: 180px;
-    background-image: url(/IKT_kották/Dob/Jazz/Haladó/Képek/Jazz_Vespas/Jazz-Vespas-Drums_page-0001.jpg);
+    background-image: url(/IKT_kották/Dob/Jazz/Haladó/Képek/Jazz_Vespas/Jazz_Vespas_Drums_page_0001.jpg);
     background-size: cover;
 }
 
