@@ -109,9 +109,8 @@ header a::after{
 
 #functions > div{
     display: flex;
-    flex-flow: row nowrap;
-    justify-self: center;
-    width: max-content;
+    flex-flow: row;
+    justify-content: space-between;
     margin-top: 64px;
 }
 
@@ -119,15 +118,19 @@ header a::after{
     display: flex;
     flex-flow: column wrap;
     align-items: start;
+    align-self: center;
+    width: 380px;
 }
 
 #functions > div > div > h3{
     font-size: 36px;
     margin: 20px 0px;
+    max-width: fit-content;
+    width: calc(100% + 46px);
 }
 
 #functions > div > div > p{
-    width: 380px;
+    width: calc(100% - 64px);
     font-size: 24px;
     margin: 0px;
 }
@@ -168,6 +171,7 @@ header a::after{
     text-align: left;
     box-shadow: 0px 8px 3px 2px rgba(0, 0, 0, 0.25);
     flex: 35%;
+    margin: 0px;
 }
 
 #advantages > div > div:nth-child(1){
@@ -175,6 +179,7 @@ header a::after{
     align-items: start;
     justify-content: center;
     padding: 0px 0px 0px 38px;
+    margin-right: 7px;
     flex-grow: 9;
 }
 
@@ -198,6 +203,7 @@ header a::after{
     height: 434px;
     justify-content: center;
     justify-items: left;
+    margin-left: 7px;
     flex-grow: 1;
 }
 
@@ -255,11 +261,13 @@ header a::after{
 
 #advantages > div > h2{
     font-size: 70px;
+    font-weight: 100;
     margin: 0px;
 }
 
 #advantages h3{
     font-size: 40px;
+    font-weight: 100;
     color: white;
     margin: 0px 0px 30px;
 }
@@ -271,11 +279,14 @@ header a::after{
     }
     
     #functions{
-        height: 417px;
         margin-top: -4%;
     }
     
     /*advantages start*/
 
     /*advantages end*/
+}
+
+@media screen and (max-width: 1315px){
+    
 }
