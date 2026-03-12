@@ -101,16 +101,32 @@ h1{
     display: flex;
     height: 5vw;
     background-color: #BEEEE3;
+    justify-content: space-between;
+    padding: 3px 20px;
+    text-align: center;
+    
 }
 
 .zene_stilus{
     background-color: #6D8EB1;
     border-right: 5px solid black;
+    flex: 1;
+            padding: 25px 10px;
+            font-size: 1.6rem;
+            font-weight: bold;
+            text-align: center;
+            color: #000;
 }
 
 .zene_nehezseg
 {
     background-color: #F20000;
+    flex: 1;
+            padding: 25px 10px;
+            font-size: 1.6rem;
+            font-weight: bold;
+            text-align: center;
+            color: #000;
 }
 
 .kotta_kep{
