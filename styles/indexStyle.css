@@ -75,6 +75,7 @@ header a::after{
     padding: 10px;
     border-radius: 21px;
     margin-bottom: 350px;
+    border: 0px;
 }
 /*hero end*/
 
@@ -111,7 +112,9 @@ header a::after{
     display: flex;
     flex-flow: row;
     justify-content: space-between;
+    align-self: center;
     margin-top: 64px;
+    width: calc(93%);
 }
 
 #functions > div > div{
@@ -119,18 +122,17 @@ header a::after{
     flex-flow: column wrap;
     align-items: start;
     align-self: center;
-    width: 380px;
 }
 
 #functions > div > div > h3{
     font-size: 36px;
     margin: 20px 0px;
     max-width: fit-content;
-    width: calc(100% + 46px);
+    width: max-content;
 }
 
 #functions > div > div > p{
-    width: calc(100% - 64px);
+    width: 332px;
     font-size: 24px;
     margin: 0px;
 }
@@ -287,6 +289,21 @@ header a::after{
     /*advantages end*/
 }
 
-@media screen and (max-width: 1315px){
-    
+@media screen and (max-width: 1280px){
+    /*functions start*/
+    #functions{
+        width: 100%;
+    }
+    /*functions end*/
+}
+
+@media screen and (max-width: 1170px){
+    #advantages > div{
+        width: 100%;
+        margin: 0px;
+    }
+
+    #advantages > div > div:nth-child(3) > div{
+        width: 100%;
+    }
 }
