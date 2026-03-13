@@ -279,14 +279,14 @@ header a::after{
     #hero > div{
         height: 876px;
     }
+
+    #hero h2{
+        margin: 10% 0px 0px;
+    }
     
     #functions{
         margin-top: -4%;
     }
-    
-    /*advantages start*/
-
-    /*advantages end*/
 }
 
 @media screen and (max-width: 1280px){
@@ -294,16 +294,95 @@ header a::after{
     #functions{
         width: 100%;
     }
+
+    #functions > h2{
+        font-size: 64px;
+    }
+
+    #functions > div > div > h3{
+        font-size: 32px;
+    }
+
+    #functions > div > div > p{
+        font-size: 20px;
+        width: 300px;
+    }
     /*functions end*/
 }
 
 @media screen and (max-width: 1170px){
+    /*functions start*/
+    #functions > h2{
+        font-size: 48px;
+    }
+
+    #functions > div > div > h3{
+        font-size: 28px;
+    }
+
+    #functions > div > div > p{
+        font-size: 18px;
+        width: 250px;
+    }
+    /*functions end*/
+
+
     #advantages > div{
         width: 100%;
         margin: 0px;
     }
 
+    #advantages > div > div:nth-child(1){
+        width: 40%;
+        padding: 0px 0px 0px 3px;
+        height: calc(42vw);
+    }
+
+    #advantages > div > div:nth-child(2){
+        height: calc(42vw);
+    }
+
+    #advantages > div > div:nth-child(2) > h2{
+        width: min-content;
+    }
+
     #advantages > div > div:nth-child(3) > div{
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    /*functions start*/
+    #functions > h2{
+        font-size: 36px;
+    }
+
+    #functions > div > div{
+        align-self: auto;
+    }
+
+    #functions > div > div > p{
+        width: 85%;
+    }
+    /*functions end*/
+
+    #advantages{
+        background-color: #4d4b88;
+        position: relative;
+        z-index: 2;
+    }
+
+    #advantages > div{
+        flex-direction: column;
+    }
+
+    #advantages > div > div:nth-child(1){
+        width: auto;
+        margin: 0px;
+    }
+
+    #advantages > div > div:nth-child(2){
+        margin: 14px 0px 0px;
     }
 }
