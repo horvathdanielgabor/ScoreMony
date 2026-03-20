@@ -51,6 +51,10 @@ header a::after{
     box-shadow: none;
 }
 
+.tableLink{
+    display: none;
+}
+
 #hero h2{
     margin: 250px 0px 0px;
     font-size: 55px;
@@ -424,21 +428,45 @@ header a::after{
     #hero > div{
         background: linear-gradient( 180deg,rgba(77, 75, 136, 0.75), rgba(83, 98, 158, 0.75));
         mask: linear-gradient(black, white);
+        padding-left: 0px;
+        align-items: center;
+    }
+
+    #hero > div > *{
+        text-shadow: 2px 2px 4px black;
+    }
+
+    header{
+        width: 100%;
+        background-color: #4D4B88;
+    }
+
+    header a{
+        display: none;
     }
 
     #home{
         order: 0;
     }
 
+    .tableLink{
+        display: block;
+    }
+
     #hero p{
         color: #ECECEC;
+    }
+
+    #hero button{
+        background-color: #4D4B88;
+        text-shadow: none;
     }
     /*hero end*/
 
     /*functions start*/
     #functions{
         border-radius: 30px 30px 0px 0px;
-        box-shadow: 0px 0px 0px 0px black;
+        box-shadow: none;
         background-color: #6D8EB1;
     }
 
@@ -468,7 +496,7 @@ header a::after{
     }
 
     #advantages > div > div{
-        box-shadow: 0px 0px 0px 0px black;
+        box-shadow: none;
     }
 
     #advantages > div > div:nth-child(1){
@@ -478,8 +506,32 @@ header a::after{
 
     #advantages > div > div:nth-child(2){
         margin: 14px 0px 0px;
+        flex-wrap: wrap;
     }
 
+    #advantages > div > div:nth-child(2) > h2{
+        font-size: 48px;
+    }
+
+    #advantages div:last-child > h2 > *:nth-child(1){
+        display: none;
+    }
+
+    #advantages > div > div:nth-child(2) > p{
+        font-size: 36px;
+        width: 380px;
+    }
+
+    #advantages > div > div:nth-child(3) > div{
+        margin: 0px 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 55%;
+    }
+
+    #advantages > div > div:nth-child(3) > div > *{
+        margin: 0px 5px 10px;
+    }
     /*footer start*/
     .bottomnav{
         background: linear-gradient(to top, #6D8EB1 0%, #4d4b88 60%);
