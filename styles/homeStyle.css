@@ -58,9 +58,8 @@ h1{
     width: 100%;
     height: 20%;
     background: linear-gradient(to right, #53629E 0%, #1D2338);
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr;
+    display: flex;
+    justify-content: space-around;
 }
 
 /*Kotta*/
@@ -110,7 +109,6 @@ h1{
     display: grid;
     gap: 20px;
     /* Alapértelmezett mobil nézet: 1 oszlop */
-    grid-template-columns: repeat(1, 1fr);
 }
 
 .sheet-card {
@@ -162,16 +160,10 @@ h1{
 
 /* Tablet nézet (600px felett) */
 @media (min-width: 600px) {
-    .sheet-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 /* Asztali gép nézet (1024px felett) */
 @media (min-width: 1024px) {
-    .sheet-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
     .navbar {
         padding: 10px 10%;
     }
