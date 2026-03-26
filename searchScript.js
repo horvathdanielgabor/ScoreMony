@@ -16,8 +16,8 @@ class Score {
 // All of the scores, cuz we don't have a database, so we need to hardcode them in :D
 // This is the only part done by AI, cuz I am too lazy to write them all, cry about it
 const scores = [
-    new Score("All Of Me", "Various", "Hegedű", "Jazz", "Kezdő", "A major", 108.81, 1, "IKT_kották/Hegedű/Jazz/Kezdő/Képek/All_of_me.jpg"),
-    new Score("All I Want For Christmas Is You", "Various", "Fuvola", "Pop", "Közép", "A major", 39.34, 1, "IKT_kották/Fuvola/Pop/Középhaladó/Képek/All_i_want_fo_christmas_is_you.jpg"),
+    new Score("All Of Me", "Various", "Hegedű", "Jazz", "Kezdő", "A major", 108.81, 1, "IKT_kották/Hegedű/Jazz/Kezdő/Képek/All_of_me/All_of_me.jpg"),
+    new Score("All I Want For Christmas Is You", "Various", "Fuvola", "Pop", "Közép", "A major", 39.34, 1, "IKT_kották/Fuvola/Pop/Középhaladó/Képek/All_i_want_for_christmas_is_you/all_i_want_for_christmas_is_you.jpg"),
     new Score("American Idiot", "Green Day", "Dob", "Rock", "Haladó", "Fm", 63.79, 2, "IKT_kották/Dob/Rock/Haladó/Képek/American_idiot/american_idiot_green_day_drum_transcription_page_0001.jpg"),
     new Score("Ave Maria", "Schubert", "Hegedű", "Klasszikus", "Közép", "B major", 144.90, 1, "IKT_kották/Hegedű/Klasszikus/Középhaladó/Képek/Ave_Maria/schubert_ave_maria_violin_page_0001.jpg"),
     new Score("Barney Brallaghan", "Various", "Fuvola", "Klasszikus", "Kezdő", "C major", 47.99, 1, "IKT_kották/Fuvola/Klasszikus/Kezdő/Képek/Barney_Brallaghan/barney_brallaghan_page_0001.jpg"),
