@@ -39,7 +39,7 @@ header a{
 
 header a:hover{
     color: rgb(210, 210, 210);
-    box-shadow: black -2px -2px 1px inset;
+    text-shadow: 2px 2px black;
     border-radius: 20px;
 }
 
@@ -49,6 +49,10 @@ header a::after{
 
 #home{
     box-shadow: none;
+}
+
+.tableLink{
+    display: none;
 }
 
 #hero h2{
@@ -114,7 +118,7 @@ header a::after{
     justify-content: space-between;
     align-self: center;
     margin-top: 64px;
-    width: calc(93%);
+    width: 93%;
 }
 
 #functions > div > div{
@@ -189,7 +193,7 @@ header a::after{
     color: #53629E;
     font-size: 128px;
     font-weight: 100;
-    width: 589px;
+    width: max-content;
     margin: 18px 0px 18px 0px;
 }
 
@@ -203,8 +207,8 @@ header a::after{
     flex-direction: unset;
     align-content: center;
     height: 434px;
-    justify-content: center;
     justify-items: left;
+    padding-left: 30px;
     margin-left: 7px;
     flex-grow: 1;
 }
@@ -333,13 +337,16 @@ header a::after{
     }
 
     #advantages > div > div:nth-child(1){
-        width: 40%;
         padding: 0px 0px 0px 3px;
-        height: calc(42vw);
+        height: 42vw;
     }
 
     #advantages > div > div:nth-child(2){
-        height: calc(42vw);
+        height: 42vw;
+    }
+
+    #advantages > div > div:nth-child(2) > img{
+        margin-left: 20px;
     }
 
     #advantages > div > div:nth-child(2) > h2{
@@ -351,9 +358,118 @@ header a::after{
     }
 }
 
+@media screen and (max-width: 1024px){
+    /*hero start*/
+    #hero > div{
+        height: 652px;
+    }
+
+    header{
+        width: 70%;
+    }
+
+    header a{
+        font-size: 20px;
+    }
+
+    #hero h2{
+        font-size: 42px;
+    }
+
+    #hero p{
+        font-size: 20px;
+    }
+    /*hero end*/
+
+    
+    /*functions start*/
+    /*functions end*/
+
+    /*advantages start*/
+    #advantages > div > div:nth-child(1){
+        padding-left: 20px;
+    }
+
+    #advantages > div > div:nth-child(1) h1{
+        font-size: 100px;
+    }
+
+    #advantages > div > div:nth-child(1) p{
+        font-size: 36px;
+        width: 456px;
+    }
+
+    #advantages > div > div:nth-child(2) > h2{
+        font-size: 36px;
+    }
+
+    #advantages > div > div:nth-child(2) > p{
+        font-size: 28px;
+        width: 294px;
+    }
+
+    #advantages div:last-child > h2{
+        font-size: 48px;
+    }
+
+    #advantages > div > div:nth-child(3) > div > div > img{
+        height: 100px;
+        width: 100px;
+    }
+    /*advantages end*/
+}
+
 @media screen and (max-width: 768px){
+    body{
+        background-color: #6D8EB1;
+    }
+
+    /*hero start*/
+    #hero > div{
+        background: linear-gradient( 180deg,rgba(77, 75, 136, 0.75), rgba(83, 98, 158, 0.75));
+        mask: linear-gradient(black, white);
+        padding-left: 0px;
+        align-items: center;
+    }
+
+    #hero > div > *{
+        text-shadow: 2px 2px 4px black;
+    }
+
+    header{
+        width: 100%;
+        background-color: #4D4B88;
+    }
+
+    header a{
+        display: none;
+    }
+
+    #home{
+        order: 0;
+    }
+
+    .tableLink{
+        display: block;
+    }
+
+    #hero p{
+        color: #ECECEC;
+    }
+
+    #hero button{
+        background-color: #4D4B88;
+        text-shadow: none;
+    }
+    /*hero end*/
 
     /*functions start*/
+    #functions{
+        border-radius: 30px 30px 0px 0px;
+        box-shadow: none;
+        background-color: #6D8EB1;
+    }
+
     #functions > h2{
         font-size: 36px;
     }
@@ -371,10 +487,16 @@ header a::after{
         background-color: #4d4b88;
         position: relative;
         z-index: 2;
+        border-radius: 30px 30px 0px 0px;
     }
 
     #advantages > div{
         flex-direction: column;
+        width: calc(100% - 20px);
+    }
+
+    #advantages > div > div{
+        box-shadow: none;
     }
 
     #advantages > div > div:nth-child(1){
@@ -384,5 +506,35 @@ header a::after{
 
     #advantages > div > div:nth-child(2){
         margin: 14px 0px 0px;
+        flex-wrap: wrap;
     }
+
+    #advantages > div > div:nth-child(2) > h2{
+        font-size: 48px;
+    }
+
+    #advantages div:last-child > h2 > *:nth-child(1){
+        display: none;
+    }
+
+    #advantages > div > div:nth-child(2) > p{
+        font-size: 36px;
+        width: 380px;
+    }
+
+    #advantages > div > div:nth-child(3) > div{
+        margin: 0px 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 55%;
+    }
+
+    #advantages > div > div:nth-child(3) > div > *{
+        margin: 0px 5px 10px;
+    }
+    /*footer start*/
+    .bottomnav{
+        background: linear-gradient(to top, #6D8EB1 0%, #4d4b88 60%);
+    }
+    /*footer end*/
 }
