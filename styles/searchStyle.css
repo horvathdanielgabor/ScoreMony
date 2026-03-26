@@ -107,6 +107,7 @@ p{
     color: aliceblue;
     padding: 0 1%;
     font-size: medium;
+    justify-self: center;
 }
 
 .spinEffect {
@@ -127,8 +128,8 @@ p{
     padding-top: 80px;
     padding-bottom: 40px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
     align-content: start;
     padding-left: 20px;
     padding-right: 20px;
@@ -192,9 +193,9 @@ p{
         right: 0;
         width: 100%;
         margin: 0;
-        padding: 15px 20px;
+        padding: 12px 7px;
         background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
-        gap: 20px;
+        gap: 0;
     }
     &:hover .scoreCornerLeft{
         animation: slideInLeft 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
@@ -261,11 +262,11 @@ p{
 }
 
 .scoreResultCorner {
-    font-size: 12px;
+    font-size: 2px;
     font-weight: 800;
     color: #f0f1ff;
     background: #53629E80;
-    padding: 6px 16px;
+    padding: 6px 10px;
     border-radius: 4px;
     transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -273,7 +274,6 @@ p{
 .scoreResultCorner p {
     margin: 0;
     padding: 0;
-    font-size: larger;
 }
 
 .scoreGenre {
@@ -302,7 +302,7 @@ p{
     font-size: 13px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0;
     transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: absolute;
     top: 25%;
@@ -344,7 +344,7 @@ p{
 
 .scoreResultMetadata {
     display: flex;
-    gap: 15px;
+    gap: 0;
     margin: 0 0 8px 0;
 }
 
@@ -418,6 +418,14 @@ p{
     .filterWithoutPicture {
         padding-left: 15px;
     }
+    .scoreResult:hover .scoreResultBottom{
+        padding: 10px 3px;
+        gap: 0;
+    }
+    .scoreResultCorner{
+        padding: 5px 10px;
+        font-size: 10px;
+    }
 }
 
 /* MD view */
@@ -484,6 +492,7 @@ p{
     #resultCont {
         width: calc(100% - 4.5vw);
         margin-left: 4.5vw;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -570,7 +579,7 @@ p{
         width: 100%;
         padding: 0;
         background: none;
-        gap: 8px;
+        gap: 0;
         margin: 5% 0 0 0;
         }
         &:hover .scoreCornerLeft{
@@ -621,7 +630,7 @@ p{
 
     .scoreResultBottom {
         flex-direction: row;
-        gap: 8px;
+        gap: 0;
         justify-content: space-between;
         margin: 5% 0 0 0;
         order: 2;
