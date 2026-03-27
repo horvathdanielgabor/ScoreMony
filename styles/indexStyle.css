@@ -176,20 +176,10 @@ header a::after{
     height: min-content;
     text-align: left;
     box-shadow: 0px 8px 3px 2px rgba(0, 0, 0, 0.25);
-    flex: 35%;
     margin: 0px;
 }
 
-#advantages > div > div:nth-child(1){
-    height: 434px;
-    align-items: start;
-    justify-content: center;
-    padding: 0px 0px 0px 38px;
-    margin-right: 7px;
-    flex-grow: 9;
-}
-
-#advantages > div > div:nth-child(1) h1{
+#advantages > div > div h1{
     color: #53629E;
     font-size: 128px;
     font-weight: 100;
@@ -197,26 +187,48 @@ header a::after{
     margin: 18px 0px 18px 0px;
 }
 
-#advantages > div > div:nth-child(1) > p{
-    font-size: 48px;
-    width: 589px;
+#advantages > div > div > p{
+    font-size: 36px;
+    width: 85%;
     margin: 0px;
 }
 
+#advantages > div > div > h2{
+    width: 80%;
+    font-size: 48px;
+    margin: 0px;
+    justify-content: center;
+}
+
+#advantages > div > div > img{
+    width: 100px;
+    height: 100px;
+    margin-left: 75px;
+}
+
+#advantages > div > div:nth-child(1){
+    flex: 55%;
+    width: 55%;
+    height: 434px;
+    align-items: start;
+    justify-content: center;
+    padding: 0px 0px 0px 38px;
+    margin-right: 7px;
+}
+
 #advantages > div > div:nth-child(2){
+    flex: 35%;
+    width: 35%;
     flex-direction: unset;
     align-content: center;
     height: 434px;
     justify-items: left;
     padding-left: 30px;
     margin-left: 7px;
-    flex-grow: 1;
 }
 
 #advantages > div > div:nth-child(2) > h2{
-    font-size: 48px;
-    width: 267px;
-    margin: 0px;
+    width: min-content;
 }
 
 #numberPosition{
@@ -226,19 +238,8 @@ header a::after{
     line-height: 0.8;
 }
 
-#advantages > div > div:nth-child(2) > img{
-    width: 100px;
-    height: 100px;
-    margin: 0px;
-}
-
-#advantages > div > div:nth-child(2) > p{
-    font-size: 36px;
-    width: 380px;
-    margin: 0px;
-}
-
 #advantages > div > div:nth-child(3){
+    flex: 100%;
     width: 100%;
     height: 490px;
     align-items: center;
@@ -337,14 +338,13 @@ header a::after{
     }
     /*functions end*/
 
-
+    /*advantages start*/
     #advantages > div{
         width: 100%;
         margin: 0px;
     }
 
     #advantages > div > div:nth-child(1){
-        padding: 0px 0px 0px 3px;
         height: 42vw;
     }
 
@@ -352,17 +352,18 @@ header a::after{
         height: 42vw;
     }
 
-    #advantages > div > div:nth-child(2) > img{
+    #advantages > div > div > img{
         margin-left: 20px;
     }
 
-    #advantages > div > div:nth-child(2) > h2{
+    #advantages > div > div > h2{
         width: min-content;
     }
 
     #advantages > div > div:nth-child(3) > div{
         width: 100%;
     }
+    /*advantages end*/
 }
 
 @media screen and (max-width: 1024px){
@@ -398,24 +399,18 @@ header a::after{
         font-size: 100px;
     }
 
-    
-
     #advantages > div > div:nth-child(1){
         padding-left: 20px;
     }
 
-    #advantages > div > div:nth-child(1) p{
+    #advantages > div > div p{
         font-size: 36px;
         width: 456px;
     }
 
-    #advantages > div > div:nth-child(2) > h2{
+    #advantages > div > div > h2{
         font-size: 36px;
-    }
-
-    #advantages > div > div:nth-child(2) > p{
-        font-size: 28px;
-        width: 294px;
+        width: auto;
     }
 
     #advantages div:last-child > h2{
@@ -512,6 +507,7 @@ header a::after{
     }
 
     #functions > div > div > p{
+        font-size: 32px;
         width: 85%;
     }
     /*functions end*/
