@@ -219,6 +219,13 @@ header a::after{
     margin: 0px;
 }
 
+#numberPosition{
+    color: #6D8EB1;
+    margin: 0px 6px;
+    font-size: 200px;
+    line-height: 0.8;
+}
+
 #advantages > div > div:nth-child(2) > img{
     width: 100px;
     height: 100px;
@@ -386,12 +393,15 @@ header a::after{
     /*functions end*/
 
     /*advantages start*/
-    #advantages > div > div:nth-child(1){
-        padding-left: 20px;
+    #advantages > div > div h1{
+        
+        font-size: 100px;
     }
 
-    #advantages > div > div:nth-child(1) h1{
-        font-size: 100px;
+    
+
+    #advantages > div > div:nth-child(1){
+        padding-left: 20px;
     }
 
     #advantages > div > div:nth-child(1) p{
@@ -468,14 +478,37 @@ header a::after{
         border-radius: 30px 30px 0px 0px;
         box-shadow: none;
         background-color: #6D8EB1;
+        height: auto;
     }
 
     #functions > h2{
+        margin-top: 30px;
         font-size: 36px;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.45);
+    }
+
+    #functions > hr{
+        display: none;
+    }
+
+    #functions > div{
+        flex-direction: column;
+        margin-top: 10px;
+        margin-bottom: 30px;
     }
 
     #functions > div > div{
         align-self: auto;
+        width: 100%;
+        border-radius: 20px;
+        background-color: #53629E;
+        padding: 10px;
+        margin: 10px 0px;
+        box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.45);
+    }
+
+    #functions > div > div > h3{
+        margin: 10px 0px;
     }
 
     #functions > div > div > p{
@@ -493,14 +526,23 @@ header a::after{
     #advantages > div{
         flex-direction: column;
         width: calc(100% - 20px);
+        align-items: center;
     }
 
     #advantages > div > div{
         box-shadow: none;
+        width: 360px;
+    }
+
+    #advantages > div > div > h1{
+        font-size: 70px;
+    }
+
+    #advantages > div > div > p{
+        font-size: 36px;
     }
 
     #advantages > div > div:nth-child(1){
-        width: auto;
         margin: 0px;
     }
 
@@ -513,6 +555,14 @@ header a::after{
         font-size: 48px;
     }
 
+    #numberPosition{
+        margin-top: 2px;
+        padding: 0px 15px;
+        background-color: #53629E;
+        border-radius: 20px;
+        color: white;
+    }
+
     #advantages div:last-child > h2 > *:nth-child(1){
         display: none;
     }
@@ -520,6 +570,10 @@ header a::after{
     #advantages > div > div:nth-child(2) > p{
         font-size: 36px;
         width: 380px;
+    }
+
+    #advantages > div > div:nth-child(3) > h2{
+        text-align: center;
     }
 
     #advantages > div > div:nth-child(3) > div{
