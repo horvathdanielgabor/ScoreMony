@@ -1,3 +1,9 @@
+html{
+    scrollbar-width: thin;
+    scrollbar-color: #6D8EB1 #53629E;
+    scrollbar-arrow-color: none;
+}
+
 /* Heighest level containers */
 #middleContainer{
     display: flex;
@@ -274,6 +280,7 @@ p{
 .scoreResultCorner p {
     margin: 0;
     padding: 0;
+    font-size: medium;
 }
 
 .scoreGenre {
@@ -493,6 +500,16 @@ p{
         width: calc(100% - 4.5vw);
         margin-left: 4.5vw;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .scoreResultCorner p{
+        font-size: medium;
+        font-weight: 50;
+    }
+}
+@media (max-width: 860px) {
+    .scoreResultCorner p{
+        font-size: small;
     }
 }
 
