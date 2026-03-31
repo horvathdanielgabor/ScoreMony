@@ -248,7 +248,7 @@ header a::after{
     margin-top: 14px;
 }
 
-#advantages > div > div:nth-child(3) > div{
+#advantages > div > div > div{
     display: flex;
     justify-content: space-between;
     width: 1170px;
@@ -260,7 +260,7 @@ header a::after{
     height: 150px;
 }
 
-#advantages > div > div:nth-child(3) > div > div > p{
+#advantages > div > div > div > div > p{
     font-size: 24px;
     margin: 20px 0px 0px;
     text-align: center;
@@ -360,7 +360,7 @@ header a::after{
         width: min-content;
     }
 
-    #advantages > div > div:nth-child(3) > div{
+    #advantages > div > div > div{
         width: 100%;
     }
     /*advantages end*/
@@ -403,18 +403,28 @@ header a::after{
         padding-left: 20px;
     }
 
-    #advantages > div > div p{
-        font-size: 36px;
+    #advantages > div > div > p{
+        font-size: 28px;
         width: 456px;
+        text-align: left;
     }
 
     #advantages > div > div > h2{
-        font-size: 36px;
+        font-size: 32px;
         width: auto;
     }
 
     #advantages div:last-child > h2{
         font-size: 48px;
+    }
+
+    #advantages > div > div > img{
+        height: 80px;
+        width: 80px;
+    }
+
+    #advantages > div > div > div{
+        margin: 0px 2px;
     }
 
     #advantages > div > div:nth-child(3) > div > div > img{
@@ -538,17 +548,8 @@ header a::after{
         font-size: 36px;
     }
 
-    #advantages > div > div:nth-child(1){
+    #advantages > div > div{
         margin: 0px;
-    }
-
-    #advantages > div > div:nth-child(2){
-        margin: 14px 0px 0px;
-        flex-wrap: wrap;
-    }
-
-    #advantages > div > div:nth-child(2) > h2{
-        font-size: 48px;
     }
 
     #numberPosition{
@@ -563,23 +564,28 @@ header a::after{
         display: none;
     }
 
-    #advantages > div > div:nth-child(2) > p{
+    #advantages > div > div > div > div > p{
+        margin: 2px 0px 0px;
+    }
+
+    #advantages > div > div > div > p{
         font-size: 36px;
         width: 380px;
     }
 
-    #advantages > div > div:nth-child(3) > h2{
+    #advantages > div > div > h2{
         text-align: center;
     }
 
-    #advantages > div > div:nth-child(3) > div{
-        margin: 0px 30px;
+    #advantages > div > div > div{
+        margin-top: 30px;
+        width: 70%;
         flex-wrap: wrap;
         justify-content: center;
-        width: 55%;
+        justify-items: center;
     }
 
-    #advantages > div > div:nth-child(3) > div > *{
+    #advantages > div > div > div > *{
         margin: 0px 5px 10px;
     }
     /*footer start*/
