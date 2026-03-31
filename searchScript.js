@@ -208,8 +208,8 @@ function performSearch() {
 
     if (searchInput.trim() !== "") {
         filteredScores = filteredScores.filter(score =>
-            score.name.toLowerCase().includes(searchInput) ||
-            score.artist.toLowerCase().includes(searchInput)
+            score.name.toLowerCase().trim().includes(searchInput) ||
+            score.artist.toLowerCase().trim().includes(searchInput)
         );
     }
 
@@ -316,14 +316,16 @@ function handleCloseClick(e) {
 // Search on Enter key and setup checkbox listeners
 document.addEventListener('DOMContentLoaded', function() { // I can explain, this is here for a reason: it doesn't work without it :>
     const searchInput = document.getElementById("searchInput");
-    if (searchInput) {
-        searchInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                performSearch();
-            }
-        });
-    }
+    searchInput.addEventListener('keypress', function(e) {
+        // But what if ALL key presses did that?
+        // performSearch();
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
 
+
+    
     const allCheckboxes = document.querySelectorAll('input[type="checkbox"]');
     allCheckboxes.forEach(checkbox => {
         checkbox.addEventListener('change', function() {
