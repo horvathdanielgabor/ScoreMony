@@ -62,6 +62,37 @@ h1{
     justify-content: space-around;
 }
 
+
+/*Nyílak*/
+
+#bal{
+    border-radius: 0px 40px 40px 0px;
+}
+
+#jobb{
+    border-radius: 40px 0px 0px 40px;
+}
+
+.arrow-box {
+  background-color: #BEEEE3;
+  padding: 2vw 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+}
+
+#jobb_nyil_span{
+    transform: rotate(180deg);
+}
+
+
+
 /*Kotta*/
 
 .sheet-image{
@@ -114,9 +145,10 @@ h1{
 .sheet-card {
     background: var(--card-bg);
     color: var(--text-dark);
-    border-radius: 10px;
+    border-radius: 30px;
     overflow: hidden;
     transition: transform 0.2s;
+    border: black solid 4px;
 }
 
 .sheet-preview {
@@ -125,7 +157,6 @@ h1{
 }
 
 .sheet-details {
-    padding: 15px;
     position: relative;
     z-index: 6;
     background-color: #BEEEE3;
@@ -135,6 +166,8 @@ h1{
 .sheet-details h3 {
     font-size: 1rem;
     margin: 0 0 10px 0;
+    border-top: black solid 4px;
+    padding-top: 2%;
 }
 
 /* Címkék (nem gombok) */
@@ -146,15 +179,14 @@ h1{
 .tag {
     display: inline-block;
     padding: 4px 10px;
-    border-radius: 5px;
     font-size: 0.8rem;
-    margin-right: 5px;
-    background-color: #F20000;
+    width: 40%;
 }
 
 .level-easy { background: #d4edda; color: black; }
 .level-medium { background: #fff3cd; color: black; }
-.style { background: #6D8EB1; color: black; }
+.level-hard { background-color: #F20000; border-top-left-radius: 30px; border-top: black solid 4px; border-left: black solid 4px;}
+.style { background: #6D8EB1; color: black; border-top-right-radius: 30px; border-top: black solid 4px; border-right: black solid 4px;}
 
 /* --- RESZPONZIVITÁS --- */
 
