@@ -60,6 +60,9 @@ h1{
     background: linear-gradient(to right, #53629E 0%, #1D2338);
     display: flex;
     justify-content: space-around;
+    position: relative;
+    align-items: center;
+    padding: 0 20px; /* Opcionális: egy kis biztonsági távolság a szélektől */
 }
 
 
@@ -67,28 +70,40 @@ h1{
 
 #bal{
     border-radius: 0px 40px 40px 0px;
+    left: 0;
 }
 
 #jobb{
     border-radius: 40px 0px 0px 40px;
+    right: 0;
 }
 
 .arrow-box {
   background-color: #BEEEE3;
-  padding: 2vw 1vw;
+  padding: 2vw 0.5vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  top: 50%;
+  top: 50%;
+  transform: translateY(-50%); /* Tökéletes függőleges középre igazítás */
+  z-index: 10;
+  height: 10vh;
 }
 
-.arrow {
-  font-size: 30px;
-  font-weight: bold;
-  color: black;
-}
 
-#jobb_nyil_span{
+
+#jobb_nyil_kep{
     transform: rotate(180deg);
+    margin-left: 25%;
+    padding-top: 1vh;
+}
+
+#bal_nyil_kep
+{
+    margin-right: 25%;
+    padding-top: 1vh;
 }
 
 
@@ -187,6 +202,80 @@ h1{
 .level-medium { background: #fff3cd; color: black; }
 .level-hard { background-color: #F20000; border-top-left-radius: 30px; border-top: black solid 4px; border-left: black solid 4px;}
 .style { background: #6D8EB1; color: black; border-top-right-radius: 30px; border-top: black solid 4px; border-right: black solid 4px;}
+
+/* Nemrég megnyitott kották listája  */
+
+#Nemreg_megnyitott_kottak_listaja{
+    height: 30vh;
+    width: 100%;
+    background-image: url(/images/Nemreg_megnyitott_kottak_listaja.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: center;
+}
+
+
+/* Gitár kották  */
+
+#Gitar_kottak{
+    height: 30vh;
+    width: 100%;
+    background-image: url(/images/gitar_kottak.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: center;
+}
+
+/* Dob kották */
+
+#Dob_kottak{
+    height: 30vh;
+    width: 100%;
+    background-image: url(/images/dob_kottak.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: center;
+}
+
+/* Zongora kották */
+
+#Zongora_kottak{
+    height: 30vh;
+    width: 100%;
+    background-image: url(/images/zongora_kottak.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: center;
+}
+
+/* Hegedű kották */
+
+#Hegedu_kottak{
+    height: 30vh;
+    width: 100%;
+    background-image: url(/images/hegedu_kottak.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: center;
+}
+
+/* Fuvola kották */
+
+#Fuvola_kottak{
+    height: 30vh;
+    width: 100%;
+    background-image: url(/images/fuvola_kottak.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: center;
+}
+
 
 /* --- RESZPONZIVITÁS --- */
 
