@@ -2,6 +2,29 @@ body {
   margin: 0px;
 }
 
+/*Color palette*/
+:root{
+  --Priority1-bg-color: #4D4B88;
+  --Priority2-bg-color: #53629E;
+  --Priority3-bg-color: #6D8EB1;
+  --Priority4-bg-color: #BEEEE3;
+}
+
+.junior{
+  background-color: #7ADB24;
+  color: black;
+}
+
+.medior{
+  background-color: #F8F855;
+  color: black;
+}
+
+.senior{
+  background-color: #F20000;
+  color: black;
+}
+
 /*header*/
 /* Add a black background color to the top navigation bar */
 

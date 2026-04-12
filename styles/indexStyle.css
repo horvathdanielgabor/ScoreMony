@@ -1,11 +1,11 @@
 body{
-    background-color: #6D8EB1;
+    background-color: var(--Priority3-bg-color);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 /*hero start*/
 #hero{
-    background: url("/images/landingBackground.png") right no-repeat;
+    background: url("/images/landingBackground.png") right border-box no-repeat;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -14,9 +14,10 @@ body{
     padding-left: 10px;
     display: flex;
     flex-direction: column;
-    width: auto;
+    width: 100%;
+    height: min-content;
     background:
-    linear-gradient(-75deg,#020036 25%,#4D4B88 80%,#6D8EB1 100%) right/cover no-repeat;
+    linear-gradient(-75deg,#020036 25%,var(--Priority1-bg-color, #4D4B88) 80%,var(--Priority3-bg-color, #6D8EB1) 100%) right/cover no-repeat;
 
     mask: linear-gradient(-75deg, transparent 40%, white 40%);
 }
@@ -25,7 +26,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 60%;
+    width: 67.75%;
     height: 90px;
 }
 
@@ -73,7 +74,7 @@ header a::after{
 
 #hero button{
     color: white;
-    background-color: #6D8EB1;
+    background-color: var(--Priority3-bg-color);
     font-size: 40px;
     width: fit-content;
     padding: 10px;
@@ -94,11 +95,11 @@ header a::after{
     margin-top: -10%;
     z-index: 1;
     color: white;
-    background-color: #53629E;
+    background-color: var(--Priority2-bg-color);
     height: 560px;
     width: 95%;
     border-radius: 30px;
-    box-shadow: 0px 8px 3px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 8px 3px 2px rgba(0, 0, 0, 0.45);
 }
 
 #functions > h2{
@@ -140,7 +141,6 @@ header a::after{
     font-size: 24px;
     margin: 0px;
 }
-
 /*functions end*/
 
 /*advantages start*/
@@ -151,6 +151,7 @@ header a::after{
     color: black;
     text-align: center;
     flex-direction: column;
+    margin: 0px 0px 100px;
 }
 
 #advantages > div:first-child{
@@ -164,23 +165,23 @@ header a::after{
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0px 4%;
-    margin-bottom: 131px;
 }
 
 #advantages > div > div{
     margin: 5px;
     display: flex;
     flex-flow: column wrap;
-    background-color: #BEEEE3;
+    background-color: var(--Priority4-bg-color);
     border-radius: 20px;
     height: min-content;
+    height: 434px;
     text-align: left;
     box-shadow: 0px 8px 3px 2px rgba(0, 0, 0, 0.25);
     margin: 0px;
 }
 
 #advantages > div > div h1{
-    color: #53629E;
+    color: var(--Priority2-bg-color);
     font-size: 128px;
     font-weight: 100;
     width: max-content;
@@ -208,8 +209,6 @@ header a::after{
 
 #advantages > div > div:nth-child(1){
     flex: 55%;
-    width: 55%;
-    height: 434px;
     align-items: start;
     justify-content: center;
     padding: 0px 0px 0px 38px;
@@ -218,10 +217,8 @@ header a::after{
 
 #advantages > div > div:nth-child(2){
     flex: 35%;
-    width: 35%;
     flex-direction: unset;
     align-content: center;
-    height: 434px;
     justify-items: left;
     padding-left: 30px;
     margin-left: 7px;
@@ -232,7 +229,7 @@ header a::after{
 }
 
 #numberPosition{
-    color: #6D8EB1;
+    color: var(--Priority3-bg-color);
     margin: 0px 6px;
     font-size: 200px;
     line-height: 0.8;
@@ -240,8 +237,6 @@ header a::after{
 
 #advantages > div > div:nth-child(3){
     flex: 100%;
-    width: 100%;
-    height: 490px;
     align-items: center;
     justify-content: center;
     flex-flow: column wrap;
@@ -344,14 +339,6 @@ header a::after{
         margin: 0px;
     }
 
-    #advantages > div > div:nth-child(1){
-        height: 42vw;
-    }
-
-    #advantages > div > div:nth-child(2){
-        height: 42vw;
-    }
-
     #advantages > div > div > img{
         margin-left: 20px;
     }
@@ -368,12 +355,12 @@ header a::after{
 
 @media screen and (max-width: 1024px){
     /*hero start*/
-    #hero > div{
-        height: 652px;
+    #hero{
+        width: 100%;
     }
 
-    header{
-        width: 70%;
+    #hero > div{
+        height: 652px;
     }
 
     header a{
@@ -391,9 +378,16 @@ header a::after{
 
     
     /*functions start*/
+    #functions > div{
+        width: 95%;
+    }
     /*functions end*/
 
     /*advantages start*/
+    #advantages > div > div{
+        width: min-content;
+    }
+
     #advantages > div > div h1{
         
         font-size: 100px;
@@ -404,14 +398,13 @@ header a::after{
     }
 
     #advantages > div > div > p{
-        font-size: 28px;
-        width: 456px;
+        font-size: 26px;
         text-align: left;
     }
 
     #advantages > div > div > h2{
         font-size: 32px;
-        width: auto;
+        width: fit-content;
     }
 
     #advantages div:last-child > h2{
@@ -423,10 +416,6 @@ header a::after{
         width: 80px;
     }
 
-    #advantages > div > div > div{
-        margin: 0px 2px;
-    }
-
     #advantages > div > div:nth-child(3) > div > div > img{
         height: 100px;
         width: 100px;
@@ -436,12 +425,17 @@ header a::after{
 
 @media screen and (max-width: 768px){
     body{
-        background-color: #6D8EB1;
+        background-color: var(--Priority3-bg-color);
+    }
+
+    #hero{
+        background: linear-gradient( 180deg,var(--Priority1-bg-color), var(--Priority3-bg-color));
     }
 
     /*hero start*/
     #hero > div{
-        background: linear-gradient( 180deg,rgba(77, 75, 136, 0.75), rgba(83, 98, 158, 0.75));
+        height: auto;
+        background: url("/images/landingBackground.png") right border-box no-repeat;
         mask: linear-gradient(black, white);
         padding-left: 0px;
         align-items: center;
@@ -453,7 +447,7 @@ header a::after{
 
     header{
         width: 100%;
-        background-color: #4D4B88;
+        background-color: var(--Priority1-bg-color);
     }
 
     header a{
@@ -462,10 +456,15 @@ header a::after{
 
     #home{
         order: 0;
+        margin: 10px;
     }
 
     .tableLink{
         display: block;
+    }
+
+    #hero > h2{
+        font-size: 40px;
     }
 
     #hero p{
@@ -473,16 +472,18 @@ header a::after{
     }
 
     #hero button{
-        background-color: #4D4B88;
+        background-color: var(--Priority1-bg-color);
         text-shadow: none;
+        margin-bottom: 80px;
     }
     /*hero end*/
 
     /*functions start*/
     #functions{
+        margin-top: -1px;
         border-radius: 30px 30px 0px 0px;
         box-shadow: none;
-        background-color: #6D8EB1;
+        background-color: var(--Priority3-bg-color);
         height: auto;
     }
 
@@ -506,7 +507,7 @@ header a::after{
         align-self: auto;
         width: 100%;
         border-radius: 20px;
-        background-color: #53629E;
+        background-color: var(--Priority2-bg-color);
         padding: 10px;
         margin: 10px 0px;
         box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.45);
@@ -522,11 +523,13 @@ header a::after{
     }
     /*functions end*/
 
+    /*advantages start*/
     #advantages{
-        background-color: #4d4b88;
+        background-color: var(--Priority1-bg-color);
         position: relative;
         z-index: 2;
         border-radius: 30px 30px 0px 0px;
+        margin: 0px;
     }
 
     #advantages > div{
@@ -537,31 +540,65 @@ header a::after{
 
     #advantages > div > div{
         box-shadow: none;
-        width: 360px;
+        width: 95%;
+        padding: 20px 30px;
+        align-items: center;
+        justify-content: center;
     }
 
-    #advantages > div > div > h1{
-        font-size: 70px;
+    #advantages > div > div > h2{
+        font-size: 48px;
     }
 
     #advantages > div > div > p{
         font-size: 36px;
-    }
-
-    #advantages > div > div{
-        margin: 0px;
+        width: 100%;
     }
 
     #numberPosition{
         margin-top: 2px;
-        padding: 0px 15px;
-        background-color: #53629E;
+        padding: 0px 25px;
+        background-color: var(--Priority2-bg-color);
         border-radius: 20px;
         color: white;
     }
 
+    #advantages div:last-child > h2 > div:last-child{
+        text-align: center;
+        width: min-content;
+        align-self: center;
+    }
+
+    #advantages > div > div:nth-child(1){
+        flex: 100%;
+        margin: 10px 0px;
+        padding: 20px 30px;
+    }
+
+    #advantages > div > div:nth-child(2){
+        flex: 100%;
+        margin: 10px 0px;
+    }
+
+    #advantages > div > div:nth-child(3){
+        flex: 100%;
+        margin: 10px 0px;
+    }
+
     #advantages div:last-child > h2 > *:nth-child(1){
         display: none;
+    }
+
+    #advantages > div > div:nth-child(3){
+        height: auto;
+    }
+
+    #advantages > div > div > div{
+        margin-top: 30px;
+        width: 400px;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-items: center;
     }
 
     #advantages > div > div > div > div > p{
@@ -573,24 +610,83 @@ header a::after{
         width: 380px;
     }
 
-    #advantages > div > div > h2{
+    #advantages > div > div:nth-child(2) > h2{
         text-align: center;
-    }
-
-    #advantages > div > div > div{
-        margin-top: 30px;
-        width: 70%;
-        flex-wrap: wrap;
-        justify-content: center;
-        justify-items: center;
+        background-color: var(--Priority2-bg-color);
+        color: white;
+        padding: 10px;
+        border-radius: 30px;
     }
 
     #advantages > div > div > div > *{
         margin: 0px 5px 10px;
     }
+    /*advantages end*/
+
     /*footer start*/
     .bottomnav{
-        background: linear-gradient(to top, #6D8EB1 0%, #4d4b88 60%);
+        background: linear-gradient(to top, var(--Priority3-bg-color) 0%, var(--Priority1-bg-color) 60%);
     }
     /*footer end*/
+}
+
+@media screen and (max-width: 624px){
+    /*hero start*/
+
+    #hero h2{
+        width: 95%;
+    }
+
+    #hero p{
+        width: 95%;
+    }
+    /*hero end*/
+
+    /*advantages start*/
+    #advantages > div > h2{
+        font-size: 36px;
+    }
+
+    #advantages h3{
+        font-size: 20px;
+    }
+
+    #advantages > div > div{
+        padding: 20px 5px;
+        width: 98%;
+    }
+
+    #advantages div:last-child > h2 > div:last-child{
+        font-size: 32px;
+    }
+
+    #advantages > div > div:nth-child(3) > div > div > img{
+        width: 75px;
+        height: 75px;
+    }
+
+    #advantages > div > div > div{
+        width: 320px;
+    }
+
+    #advantages > div > div h1{
+        font-size: 70px;
+    }
+
+    #advantages > div > div > h2{
+        font-size: 36px;
+    }
+
+    #advantages > div > div > p{
+        font-size: 32px;
+    }
+
+    #numberPosition{
+        font-size: 150px;
+    }
+
+    #advantages div:last-child > h2{
+        font-size: 36px;
+    }
+    /*advantages end*/
 }
