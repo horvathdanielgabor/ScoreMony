@@ -72,7 +72,7 @@ header a::after{
     width: 55%;
 }
 
-#hero button{
+#hero div > a{
     color: white;
     background-color: var(--Priority3-bg-color);
     font-size: 40px;
@@ -81,6 +81,11 @@ header a::after{
     border-radius: 21px;
     margin-bottom: 350px;
     border: 0px;
+    text-decoration: none;
+}
+
+#hero div > a::after{
+    text-decoration: none;
 }
 /*hero end*/
 
@@ -471,7 +476,7 @@ header a::after{
         color: #ECECEC;
     }
 
-    #hero button{
+    #hero div > a{
         background-color: var(--Priority1-bg-color);
         text-shadow: none;
         margin-bottom: 80px;
@@ -480,7 +485,7 @@ header a::after{
 
     /*functions start*/
     #functions{
-        margin-top: -1px;
+        margin-top: -25px;
         border-radius: 30px 30px 0px 0px;
         box-shadow: none;
         background-color: var(--Priority3-bg-color);
