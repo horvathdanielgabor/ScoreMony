@@ -8,7 +8,60 @@
     <link rel="stylesheet" href="styles/sheetStyle.css">
 </head>
 <body>
-    
+    <header>
+      <div class="topnav">
+        <a href="javascript:void(0);" class="icon search" onclick="headerSlidePush('search')">
+          <img src="images/SearchIcon.png" alt="">
+        </a>
+        <div class="search user">
+          <a href="home.html" id="home"><img src="images/Icon.png" alt="Icon"></a>
+          <div id="search" class="slide search">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </div>
+          <div id="user" class="slide user">
+            <h2 id="username">Anonymous12345</h2>
+            <a href="login.html" id="logOut"><img src="images/LogOut.png" alt="LogOut"></a>
+          </div>
+        </div>
+        <a href="javascript:void(0);" class="icon user" onclick="headerSlidePush('user')">
+          <img src="images/UserIcon.png" alt="">
+        </a>
+      </div>
+    </header>
+    <div id="main">
+        <iframe id="sheet" src="IKT_kották\Fuvola\Zenés színház\Kezdő\PDF\The_phantom_of_the_opera.pdf" title="The phantom of the opera"></iframe>
+        <div class="details">
+            <div id="details">
+                <div>
+                    <p>Név:</p>
+                    <p></p>
+                </div>
+                <div>
+                    <p>Stílus:</p>
+                    <p></p>
+                </div>
+                <div>
+                    <p>Zeneszerző:</p>
+                    <p></p>
+                </div>
+                <div>
+                    <p>Hangszer:</p>
+                    <p></p>
+                </div>
+                <div>
+                    <p>Kulcs:</p>
+                    <p></p>
+                </div>
+                <div>
+                    <p>Nehézség:</p>
+                    <p></p>
+                </div>
+            </div>
+            <div id="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto vel ducimus, cupiditate reiciendis earum, dicta voluptate cum, magnam illo aspernatur ex modi fugiat laboriosam sint. Ad amet consectetur labore dignissimos! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto vel ducimus, cupiditate reiciendis earum, dicta</div>
+            <a id="downloadPDF" href="IKT_kották\Fuvola\Zenés színház\Kezdő\PDF\The_phantom_of_the_opera.pdf" download>Letöltés<img src="images/downloadIcon.svg" title="download icon" alt="download icon"></a>
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
