@@ -31,6 +31,10 @@ h1{
     padding-bottom: 15%;
 }
 
+.szalag{
+    display: flex;
+}
+
 
 #udv_p{
     font-size: 30px;
