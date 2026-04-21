@@ -24,7 +24,7 @@ function checkData() {
     }
 
     if (matchingBool) {
-        window.location.replace("index.html");
+        window.location.replace("home.html");
     }
     else{
         document.getElementById("flipCard").reset();
