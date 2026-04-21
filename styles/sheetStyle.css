@@ -5,8 +5,12 @@
 
 #sheet{
     flex: 75%;
-    border-width: 0px;
+    border: none;
     height: calc(100vh - 117px);
+}
+
+#sheet img{
+    max-width: 100%;
 }
 
 .details{
@@ -34,7 +38,8 @@
     width: 85%;
     font-size: 24px;
     border-radius: 35px;
-    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    scrollbar-color: var(--Priority4-bg-color) transparent;
 }
 
 .details > div:nth-child(1){
