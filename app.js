@@ -1,4 +1,20 @@
 var containOriginal;
+let searchIn = document.getElementById("search").children[0];
+let searchBtn = document.getElementById("search").children[1];
+
+searchIn.addEventListener("keypress", key => {
+  if (key.code == "Enter") {
+    enterSearchWithQuery();
+  }
+});
+
+searchBtn.addEventListener("click", () => {
+  enterSearchWithQuery();
+})
+
+function enterSearchWithQuery() {
+  window.location.replace(`search.html`);
+}
 
 function headerSlidePush(onBlock) {
   var allFound = document.getElementsByClassName(onBlock);
