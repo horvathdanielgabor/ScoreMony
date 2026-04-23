@@ -3,13 +3,14 @@ let details = document.getElementById("details");
 let description = document.getElementById("description");
 let collector = [];
 
-async function loadIn(SheetSoucreDetails, Details, Description) {
-    collector = []
-    let fileName = SheetSoucreDetails.splice(-2,1)[0];
-    let fileType = SheetSoucreDetails.splice(-1)[0];
-    let path = "IKT_kották\\" + SheetSoucreDetails.reduce((accumulator, item) => accumulator + "\\" + item);
+async function loadIn(Details, Description) {
+    collector = ;
+    let path = "IKT_kották\\" + Details.filter().reduce((accumulator, item) => accumulator + "\\" + item);
     console.log(path);
     console.log(fileName);
+
+    collector = new FileList((path + "//"));
+
     do
     {
         try
@@ -40,4 +41,4 @@ async function loadIn(SheetSoucreDetails, Details, Description) {
     description.children[0].innerText = await Description;
 }
 
-loadIn(["Gitár","Rock","Haladó","Love_for_sale",".jpg"],["da","da","da","da","da","Az micsoda?"],"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum modi, atque laborum similique quas laboriosam adipisci illum quaerat, aperiam odio ut repellat id optio corrupti deleniti impedit quidem nisi officia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum modi, atque laborum similique quas laboriosam adipisci illum quaerat, aperiam odio ut repellat id optio corrupti deleniti impedit quidem nisi officia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum modi, atque laborum similique quas laboriosam adipisci illum quaerat, aperiam odio ut repellat id optio corrupti deleniti impedit quidem nisi officia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum modi, atque laborum similique quas laboriosam adipisci illum quaerat, aperiam odio ut repellat id optio corrupti deleniti impedit quidem nisi officia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum modi, atque laborum similique quas laboriosam adipisci illum quaerat, aperiam odio ut repellat id optio corrupti deleniti impedit quidem nisi officia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum modi, atque laborum similique quas laboriosam adipisci illum quaerat, aperiam odio ut repellat id optio corrupti deleniti impedit quidem nisi officia.")
+loadIn(["Név","Stílus","Zeneszerző","Hangszer","Kulcs","Kezdő"],"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum modi, atque laborum similique quas laboriosam adipisci illum quaerat, aperiam odio ut repellat id optio corrupti deleniti impedit quidem nisi officia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum modi, atque laborum similique quas laboriosam adipisci illum quaerat, aperiam odio ut repellat id optio corrupti deleniti impedit quidem nisi officia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum modi, atque laborum similique quas laboriosam adipisci illum quaerat, aperiam odio ut repellat id optio corrupti deleniti impedit quidem nisi officia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum modi, atque laborum similique quas laboriosam adipisci illum quaerat, aperiam odio ut repellat id optio corrupti deleniti impedit quidem nisi officia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum modi, atque laborum similique quas laboriosam adipisci illum quaerat, aperiam odio ut repellat id optio corrupti deleniti impedit quidem nisi officia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum modi, atque laborum similique quas laboriosam adipisci illum quaerat, aperiam odio ut repellat id optio corrupti deleniti impedit quidem nisi officia.")
