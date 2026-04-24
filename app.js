@@ -13,7 +13,8 @@ searchBtn.addEventListener("click", () => {
 })
 
 function enterSearchWithQuery() {
-  window.location.replace(`search.html`);
+  window.history = `search.html?query=${searchIn.value}`;
+  console.log(`search.html?query=${searchIn.value}`)
 }
 
 function headerSlidePush(onBlock) {
