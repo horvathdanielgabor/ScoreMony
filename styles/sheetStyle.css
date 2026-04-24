@@ -47,9 +47,7 @@
 .details > div:nth-child(1){
     display: flex;
     flex-direction: column;
-}
-
-.details > div:nth-child(2){
+    justify-content: space-evenly;
     height: calc(100% - 350px);
 }
 
@@ -66,6 +64,22 @@
 
 .details > div > div > p:last-child{
     text-align: left;
+}
+
+.details > div:nth-child(2){
+    display: flex;
+    justify-content: center;
+}
+
+.details > div > div > h2{
+    background-color: var(--Priority1-bg-color);
+    border-radius: 20px;
+    padding: 0px 10px;
+    font-weight: 100;
+}
+
+.details > div > div > h2:last-child{
+    background-color: transparent;
 }
 
 .details > a{
