@@ -68,7 +68,15 @@
 
 .details > div:nth-child(2){
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+.details > div:nth-child(2) > div{
+    justify-content: space-evenly;
+    padding: 5px 0px;
+    width: 75%;
 }
 
 .details > div > div > h2{
@@ -76,10 +84,32 @@
     border-radius: 20px;
     padding: 0px 10px;
     font-weight: 100;
+    font-size: 40px;
 }
 
 .details > div > div > h2:last-child{
     background-color: transparent;
+    font-size: 36px;
+    padding: 0px;
+}
+
+.details input[type="range"]{
+    width: 80%;
+    -webkit-appearance: none;
+    height: 7px;
+    border-radius: 5px;
+    background: var(--Priority4-bg-color);
+    outline: none;
+}
+
+.details input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: black;
+    cursor: pointer;
 }
 
 .details > a{
