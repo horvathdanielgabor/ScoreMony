@@ -4,12 +4,7 @@ let description = document.getElementById("description");
 let collector = [];
 
 async function loadIn(Details, Description) {
-    collector = ;
-    let path = "IKT_kották\\" + Details.filter().reduce((accumulator, item) => accumulator + "\\" + item);
-    console.log(path);
-    console.log(fileName);
-
-    collector = new FileList((path + "//"));
+    //let path = "IKT_kották\\" + Details.filter().reduce((accumulator, item) => accumulator + "\\" + item);
 
     do
     {
@@ -38,7 +33,7 @@ async function loadIn(Details, Description) {
         }
     }
 
-    description.children[0].innerText = await Description;
+    //description.children[0].innerText = await Description;
 }
 
-loadIn(["Név","Stílus","Zeneszerző","Hangszer","Kulcs","Kezdő"],"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum modi, atque laborum similique quas laboriosam adipisci illum quaerat, aperiam odio ut repellat id optio corrupti deleniti impedit quidem nisi officia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum modi, atque laborum similique quas laboriosam adipisci illum quaerat, aperiam odio ut repellat id optio corrupti deleniti impedit quidem nisi officia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum modi, atque laborum similique quas laboriosam adipisci illum quaerat, aperiam odio ut repellat id optio corrupti deleniti impedit quidem nisi officia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum modi, atque laborum similique quas laboriosam adipisci illum quaerat, aperiam odio ut repellat id optio corrupti deleniti impedit quidem nisi officia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum modi, atque laborum similique quas laboriosam adipisci illum quaerat, aperiam odio ut repellat id optio corrupti deleniti impedit quidem nisi officia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum modi, atque laborum similique quas laboriosam adipisci illum quaerat, aperiam odio ut repellat id optio corrupti deleniti impedit quidem nisi officia.")
+loadIn(["Név","Stílus","Zeneszerző","Hangszer","Kulcs","Kezdő"])
