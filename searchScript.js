@@ -265,43 +265,45 @@ function isSmView() {
 function attachSmViewHandlers() {
     const cards = document.querySelectorAll('.scoreResult');
     cards.forEach(card => {
-        card.removeEventListener('click', handleCardClick);
-        if (isSmView()) {
-            card.addEventListener('click', handleCardClick);
-        }
+        card.addEventListener('click', handleCardClick);
     });
 }
 
 function handleCardClick(e) {
-    if (!isSmView()) return;
+    const scoreData = {
+        name: this.querySelector('.scoreName')?.textContent || '',
+        artist: this.querySelector('.scoreArtist')?.textContent || '',
+        instrument: this.querySelector('.scoreInstrument')?.textContent || '',
+        genre: this.querySelector('.scoreGenre')?.textContent || '',
+        difficulty: this.querySelector('.scoreDifficulty')?.textContent || '',
+        key: this.querySelector('.scoreKey')?.textContent || '',
+        imgName: this.querySelector('.scoreResultImage')?.style.backgroundImage.slice(5, -2) || '',
+    };
+    const regexToHelp = /^[\w+\/]+$/;
+    let pdfName = this.querySelector('.scoreResultImage')?.style.backgroundImage.slice(5, -2).match(regexToHelp) || '';
 
-    // Don't expand if clicking the close button
-    if (e.target.classList.contains('scoreResultCloseBtn')) return;
-
-    const isExpanded = this.classList.contains('expanded');
-
-    if (!isExpanded) {
-        // Not expanded yet - close other cards and expand this one
-        document.querySelectorAll('.scoreResult.expanded').forEach(card => {
-            card.classList.remove('expanded');
-        });
-        this.classList.add('expanded');
-    } else {
-        // Already expanded - redirect to sheet.html
-        const scoreData = {
-            name: this.querySelector('.scoreName')?.textContent || '',
-            artist: this.querySelector('.scoreArtist')?.textContent || '',
-            instrument: this.querySelector('.scoreInstrument')?.textContent || '',
-            genre: this.querySelector('.scoreGenre')?.textContent || '',
-            difficulty: this.querySelector('.scoreDifficulty')?.textContent || '',
-            key: this.querySelector('.scoreKey')?.textContent || '',
-            fileSize: this.querySelector('.scoreFileSize')?.textContent || '',
-            pageCount: this.querySelector('.scorePages')?.textContent || '',
-            fileName: this.style.backgroundImage?.match(/url\(['"]?([^'")]+)['"]?\)/)?.[1] || ''
-        };
-
-        sessionStorage.setItem('selectedScore', JSON.stringify(scoreData));
+    if (!isSmView()) {
+        localStorage.setItem('selectedScore', JSON.stringify(scoreData));
+        localStorage.setItem("pdfName", pdfName);
         window.location.href = 'sheet.html';
+    }
+    else{
+        // Don't expand if clicking the close button
+        if (e.target.classList.contains('scoreResultCloseBtn')) return;
+
+        const isExpanded = this.classList.contains('expanded');
+
+        if (!isExpanded) {
+            // Not expanded yet - close other cards and expand this one
+            document.querySelectorAll('.scoreResult.expanded').forEach(card => {
+                card.classList.remove('expanded');
+            });
+            this.classList.add('expanded');
+        } else {
+            localStorage.setItem('selectedScore', JSON.stringify(scoreData));
+            localStorage.setItem("pdfName", pdfName);
+            window.location.href = 'sheet.html';
+        }
     }
 }
 
