@@ -60,7 +60,7 @@ const scores = [
     new Score("Maple Leaf Rag", "Joplin", "Zongora", "Jazz", "Haladó", "A major", 114.49, 4, "IKT_kották/Zongora/Jazz/Haladó/Képek/Maple_leaf_rag/Maple_Leaf_Rag_page_0001.jpg"),
     new Score("Minor Swing", "Django Reinhardt", "Hegedű", "Jazz", "Közép", "D minor", 158.78, 1, "IKT_kották/Hegedű/Jazz/Középhaladó/Képek/Minor_swing.jpg"),
     new Score("Moeller Jam", "Various", "Dob", "Klasszikus", "Haladó", "G major", 19.28, 1, "IKT_kották/Dob/Klasszikus/Haladó/Képek/Moeller_Jam/moeller_jam_page_0001.jpg"),
-    new Score("Moonlight Serenade", "Glenn Miller", "Fuvola", "Jazz", "Közép", "G major", 508.60, 1, "IKT_kották/Fuvola/Jazz/Középhaladó/Képek/Moonlight_Serenade/[Free_scores.com]_miller_glenn_moonlight_serenade_112285_page_0002.jpg"),
+    new Score("Moonlight Serenade", "Glenn Miller", "Fuvola", "Jazz", "Közép", "G major", 508.60, 1, "IKT_kották/Fuvola/Jazz/Középhaladó/Képek/Moonlight_Serenade/miller_glenn_moonlight_serenade_112285_page_0002.jpg"),
     new Score("Never Enough", "The Greatest Showman", "Hegedű", "Zenés színház", "Közép", "Cm", 69.51, 1, "IKT_kották/Hegedű/Zenés_színház/Középhaladó/Képek/Never_Enough.jpg"),
     new Score("Nothing Else Matters", "Metallica", "Gitár", "Rock", "Haladó", "Em", 110.56, 1, "IKT_kották/Gitár/Rock/Haladó/Képek/Nothing_else_matters.jpg"),
     new Score("Nuvole Bianche", "Einaudi", "Zongora", "Klasszikus", "Kezdő", "E major", 42.19, 1, "IKT_kották/Zongora/Klasszikus/Kezdő/Képek/Nuvole_Bianche.jpg"),
@@ -273,18 +273,15 @@ function handleCardClick(e) {
     const scoreData = {
         name: this.querySelector('.scoreName')?.textContent || '',
         artist: this.querySelector('.scoreArtist')?.textContent || '',
-        instrument: this.querySelector('.scoreInstrument')?.textContent || '',
+        instrument: this.querySelector('.scoreInstrument')?.innerHTML.split(">")[2].trim() || '',
         genre: this.querySelector('.scoreGenre')?.textContent || '',
         difficulty: this.querySelector('.scoreDifficulty')?.textContent || '',
-        key: this.querySelector('.scoreKey')?.textContent || '',
+        key: this.querySelector('.scoreKey')?.textContent.split(": ")[1] || '',
         imgName: this.querySelector('.scoreResultImage')?.style.backgroundImage.slice(5, -2) || '',
     };
-    const regexToHelp = /^[\w+\/]+$/;
-    let pdfName = this.querySelector('.scoreResultImage')?.style.backgroundImage.slice(5, -2).match(regexToHelp) || '';
 
     if (!isSmView()) {
         localStorage.setItem('selectedScore', JSON.stringify(scoreData));
-        localStorage.setItem("pdfName", pdfName);
         window.location.href = 'sheet.html';
     }
     else{
