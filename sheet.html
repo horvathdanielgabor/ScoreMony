@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ScoreMony - n</title>
+    <link rel="icon" type="image/x-icon" href="/images/Icon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/sheetStyle.css">
 </head>
@@ -68,7 +70,7 @@
                 <input id="metronomeSpeedSlider" name="inp" type="range" min="40" max="218" value="100">
               </div>
               <div>
-                <button type="button" id="metronomeToggle" onclick="metronomeFlipflop(true)"><img src="images/start.svg"></button>
+                <button type="button" id="metronomeToggle" onclick="metronomeFlipflop()"><img src="images/start.svg"></button>
               </div>
             </form>
             <a id="downloadPDF" href="" download>Letöltés<img src="images/downloadIcon.svg" alt="download icon"></a>

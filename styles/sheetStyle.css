@@ -137,7 +137,13 @@
 
 #metronomeToggle{
     background-color: transparent;
-    border: none;
+    border: solid 3px transparent;
     cursor: pointer;
-    border-radius: 30px;
+    border-radius: 160px;
+    padding: 0px;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
