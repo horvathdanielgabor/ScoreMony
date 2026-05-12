@@ -23,6 +23,7 @@ body {
 /* Individual sections */
 #filterCont{            /* The entire filter section */
     background-color: #53629E;
+    background: linear-gradient(180deg,rgba(77, 75, 136, 1) 0%, rgba(109, 142, 177, 1) 90%);
     width: 17vw;
     height: 100vh;
     transition: all 0.5s;
@@ -292,7 +293,8 @@ p{
 .scoreResultCorner p {
     margin: 0;
     padding: 0;
-    font-size: medium;
+    font-size: 1.09vw;
+    font-weight: 200;
 }
 
 .scoreGenre {
@@ -461,7 +463,7 @@ p{
     z-index: 80;
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1350px) {
     #filterMenuTriggerCont{
         position: fixed;
         display: flex;
@@ -493,6 +495,7 @@ p{
         left: 5%;
         z-index: 50;
         transition: width 0.5s ease-out;
+        background: linear-gradient(90deg,rgba(77, 75, 136, 1) 0%, rgba(109, 142, 177, 1) 90%);
     }
 
     .filterDropDownCont{
@@ -689,6 +692,7 @@ p{
         width: 50px;
         height: 50px;
         font-size: 40px;
+        line-height: 52px;
     }
 
     .scoreResult.expanded .scoreResultCloseBtn {
