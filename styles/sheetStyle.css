@@ -8,12 +8,15 @@
     border: none;
     height: calc(100vh - 117px);
     overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
 }
 
-#sheet img{
-    max-width: 100%;
+#sheet > *{
+    width: 100%;
     height: auto;
-    width: max-content;
 }
 
 .details{
@@ -56,12 +59,15 @@
 
 .details > div > div > p{
     text-align: right;
-    flex: 50%;
+    flex: 45%;
     margin: 3px;
+    align-self: center;
+
 }
 
 .details > div > div > p:last-child{
     text-align: left;
+    flex: 55%;
 }
 
 .details > *:nth-child(2){
