@@ -82,4 +82,5 @@ function metronomeFlipflop(){
     }
 }
 
-loadIn(localStorage.selectedScore,"IKT_kották/Dob/Pop/Középhaladó/PDF/rolling_in_the_deep.pdf")
+loadIn(localStorage.selectedScore, localStorage.pdfLink)
+/*"IKT_kották/Dob/Pop/Középhaladó/PDF/rolling_in_the_deep.pdf"*/
