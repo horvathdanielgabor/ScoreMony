@@ -359,7 +359,6 @@ document.addEventListener('DOMContentLoaded', function() { // I can explain, thi
 
 function filterDropDownTrigger(el){
     holderParent = el.parentElement.nextSibling.nextSibling;
-    console.log(holderParent);
     if (!el.classList.contains("spinEffect")) {
         el.classList.add("spinEffect");
         holderParent.style.maxHeight = 0;
@@ -384,15 +383,30 @@ function menuOpenClose(){
     let menuEl = document.getElementById("filterCont");
     let btnEl = document.getElementById("filterMenuTriggerCont");
     let searchBarEl = document.getElementById("searchBarContainer");
+    let btnIcon = document.getElementById("arrowCont");
 
     if (!menuEl.classList.contains("activeMenu")) {
         menuEl.classList.add("activeMenu");
+        if (document.body.clientWidth > 768) {
+            btnIcon.style.transform = "rotate(90deg)";
+        }
+        else {
+            btnIcon.style.transform = "rotate(180deg)";
+        }
+
         if (searchBarEl) {
             searchBarEl.classList.remove("menu-closed");
         }
     }
     else {
         menuEl.classList.remove("activeMenu");
+        if (document.body.clientWidth > 768) {
+            btnIcon.style.transform = "rotate(-90deg)";
+        }
+        else {
+            btnIcon.style.transform = "rotate(0deg)";
+        }
+
         if (searchBarEl) {
             searchBarEl.classList.add("menu-closed");
         }
@@ -400,9 +414,9 @@ function menuOpenClose(){
 }
 
 window.addEventListener("resize", () => {
-    console.log("resize");
+    let menuEl = document.getElementById("filterCont");
+    let btnIcon = document.getElementById("arrowCont");
     if (document.body.clientWidth > 1180) {
-        let menuEl = document.getElementById("filterCont");
         menuEl.style.display = "block";
         menuEl.classList.remove("activeMenu");
         menuEl.style.width = '';
@@ -415,8 +429,8 @@ window.addEventListener("resize", () => {
             card.classList.remove('expanded');
         });
     } else if (document.body.clientWidth > 768) {
-        let menuEl = document.getElementById("filterCont");
         menuEl.classList.remove("activeMenu");
+        btnIcon.style.transform = "rotate(-90deg)";
         let searchBarEl = document.getElementById("searchBarContainer");
         if (searchBarEl) {
             searchBarEl.classList.add("menu-closed");
@@ -428,5 +442,6 @@ window.addEventListener("resize", () => {
     } else if (document.body.clientWidth <= 768) {
         // Reattach handlers when resizing into SM view
         attachSmViewHandlers();
+        btnIcon.style.transform = "rotate(0deg)";
     }
 });
