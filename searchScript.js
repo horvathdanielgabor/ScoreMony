@@ -114,12 +114,30 @@ const difficultyMappings = {
 function createScoreElement(score) {
     const scoreElement = document.createElement('div');
     scoreElement.classList.add('scoreResult');
+    let instrumentIcon;
+    switch (score.instrument) {
+        case 'Hegedű': instrumentIcon = 'images/hangszerek/violin.svg';
+            break;
+        case 'Fuvola': instrumentIcon = 'images/hangszerek/transverse-flute.svg';
+            break;
+        case 'Gitár': instrumentIcon = 'images/hangszerek/guitar.svg';
+            break;
+        case 'Dob': instrumentIcon = 'images/hangszerek/drum.svg';
+            break;
+        case 'Zongora': instrumentIcon = 'images/hangszerek/grand-piano.svg';
+            break;
+        default: instrumentIcon = 'images/reloadIcon.svg';
+    }
     scoreElement.innerHTML = `
         <div class="scoreResultImage" style="background-image: url('${score.fileName}');"></div>
         <div class="scoreResultInfo">
             <div class="scoreResultTop">
                 <h2 class="scoreName">${score.name}</h2>
-                <p class="scoreArtist">${score.artist}</p>
+                <div class="scoreArtistContainer">
+                    <img class="scoreInstrumentIcon" src="${instrumentIcon}" alt="${score.instrument} icon">
+                    <p class="scoreArtist">${score.artist}</p>
+                </div>
+
             </div>
             <div class="scoreResultBottom">
                 <div class="scoreResultCorner scoreCornerLeft">
