@@ -725,14 +725,24 @@ p{
         flex: 1;
     }
 
+    .scoreArtistContainer{
+        gap: 10px;
+    }
+
     .scoreArtist {
         font-size: 20px;
+        text-align: end;
+        padding: 0px;
     }
 }
 
 @media (max-width: 550px) {
     .scoreResult{
         height: 110px;
+    }
+
+    .scoreArtist {
+        font-size: 18px;
     }
 }
 
