@@ -39,14 +39,14 @@ function headerSlidePush(onBlock) {
           if (!innerElement.className.includes(onBlock) && innerElement.tagName != "IMG")
           {
             innerElement.style.width = "0%";
-            innerElement.style.order = 1
+            innerElement.style.order = 4
           }
         }
       }
     }
 
     document.getElementsByClassName("topnav")[0].children[1].style.width = "80%"
-    turnOn.style.order = onBlock == "search"? 2 : 0
+    turnOn.style.order = onBlock == "search"? 2 : 4
     turnOn.style.width = "80%";
   }
   else
@@ -70,7 +70,6 @@ function headerSlidePush(onBlock) {
 window.addEventListener("resize", function(){
   if (this.screen.width > 768)
   {
-    console.log("resize");
     for (let element of document.getElementsByClassName("topnav"))
     {
       element.style = null;
@@ -81,7 +80,7 @@ window.addEventListener("resize", function(){
         innerElement.style = null;
       }
     };
-    document.getElementsByClassName("icon")[0].children[0].src = "images/SearchIcon.png"
+    document.getElementsByClassName("icon")[0].children[0].src = "images/SearchIcon.svg"
     document.getElementsByClassName("icon")[1].children[0].src = "images/UserIcon.png"
   }
 });
