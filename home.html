@@ -32,6 +32,7 @@
         </a>
       </div>
     </header>
+
     <div id="udvozlo">
       <div id="udvozlo_szoveg">
         <h1>Üdvözöllek a ScoreMony oldalán!</h1>
@@ -44,44 +45,45 @@
       <input type="radio" name="slider" id="item-1" checked>
       <input type="radio" name="slider" id="item-2">
       <input type="radio" name="slider" id="item-3">
-    <div class="cards">
-      <label class="card" for="item-1" id="song-1">
-        <div class="sidebar">
-          <p class="song_name">Various - Jazz Vespas</p>
-          <img class="instrument" src="/images/hangszerek/drum.svg" alt="">
-        </div>
-        <img src="/IKT_kották/Dob/Jazz/Haladó/Képek/Jazz_Vespas/Jazz_Vespas_Drums_page_0001.jpg" alt="song">
-        <p class="genre">Jazz</p>
-        <p class="level-hard">Haladó</p>
-      </label>
-      <label class="card" for="item-2" id="song-2">
-        <div class="sidebar">
-          <p class="song_name">Various - Jazz Independence Exercises</p>
-          <img class="instrument" src="/images/hangszerek/drum.svg" alt="">
-        </div>
-        <img src="/IKT_kották/Dob/Jazz/Kezdő/Képek/Jazz_exercises_1/jazz_independence_exercises_1_page_0001.jpg" alt="song">
-        <p class="genre">Jazz</p>
-        <p class="level-easy">Kezdő</p>
-      </label>
-      <label class="card" for="item-3" id="song-3">
-        <div class="sidebar">
-          <p class="song_name">Various - Jazz Independence Exercises/Combos</p>
-          <img class="instrument" src="/images/hangszerek/drum.svg" alt="">
-        </div>
-        <img src="/IKT_kották/Dob/Jazz/Középhaladó/Képek/Jazz_independence_exercises_2/jazz_independence_exercises_2_page_0001.jpg" alt="song">
-        <p class="genre">Jazz</p>
-        <p class="level-medium">Középhaladó</p>
-      </label>
+      <div class="cards">
+        <label class="card" for="item-1" id="song-1">
+          <div class="sidebar">
+            <p class="song_name">Various - Jazz Vespas</p>
+            <img class="instrument" src="/images/hangszerek/drum.svg" alt="">
+          </div>
+          <img src="/IKT_kották/Dob/Jazz/Haladó/Képek/Jazz_Vespas/Jazz_Vespas_Drums_page_0001.jpg" alt="song">
+          <p class="genre">Jazz</p>
+          <p class="level-hard">Haladó</p>
+        </label>
+        <label class="card" for="item-2" id="song-2">
+          <div class="sidebar">
+            <p class="song_name">Various - Jazz Independence Exercises</p>
+            <img class="instrument" src="/images/hangszerek/drum.svg" alt="">
+          </div>
+          <img src="/IKT_kották/Dob/Jazz/Kezdő/Képek/Jazz_exercises_1/jazz_independence_exercises_1_page_0001.jpg" alt="song">
+          <p class="genre">Jazz</p>
+          <p class="level-easy">Kezdő</p>
+        </label>
+        <label class="card" for="item-3" id="song-3">
+          <div class="sidebar">
+            <p class="song_name">Various - Jazz Independence Exercises/Combos</p>
+            <img class="instrument" src="/images/hangszerek/drum.svg" alt="">
+          </div>
+          <img src="/IKT_kották/Dob/Jazz/Középhaladó/Képek/Jazz_independence_exercises_2/jazz_independence_exercises_2_page_0001.jpg" alt="song">
+          <p class="genre">Jazz</p>
+          <p class="level-medium">Középhaladó</p>
+        </label>
+      </div>
     </div>
-</div>
+
         <div id="bal_nyil">
-          <div id="bal" class="arrow-box">
+          <div id="bal" class="arrow-box" onclick="moveCar(-1)">
               <img id="bal_nyil_kep" src="./images/Arrow.svg" alt="">
           </div>
         </div>
         
         <div id="jobbnyil">
-            <div id="jobb" class="arrow-box">
+            <div id="jobb" class="arrow-box" onclick="moveCar(1)">
               <img id="jobb_nyil_kep" src="./images/Arrow.svg" alt="">
             </div>
         </div>
@@ -763,5 +765,6 @@
       </div>
     </footer>
     <script src="app.js"></script>
+    <script src="homeSearch.js"></script>
 </body>
 </html>
