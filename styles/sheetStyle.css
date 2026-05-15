@@ -3,7 +3,7 @@
     flex-direction: row;
 }
 
-#sheet{
+.sheet{
     flex: 70%;
     border: none;
     height: calc(100vh - 117px);
@@ -12,11 +12,43 @@
     flex-direction: column;
     justify-items: center;
     align-items: center;
+    transition: 150ms;
 }
 
-#sheet > *{
+.sheet > *{
     width: 100%;
     height: auto;
+}
+
+.fixedIcons{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 100%;
+    background-color: var(--Priority2-bg-color);
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.fixedIcons > *{
+    max-width: 44px;
+    max-height: 44px;
+    color: var(--Priority4-bg-color);
+    font-size: 44px;
+}
+
+#download{
+    bottom: 10px;
+    left: 10px;
+}
+
+#maximize{
+    bottom: 10px;
+    right: calc(10px + 30%);
+    transition: 100ms;
 }
 
 .details{
@@ -27,6 +59,8 @@
     align-items: center;
     background: linear-gradient(-177deg, var(--Priority3-bg-color) 24%, var(--Priority1-bg-color) 100%);
     height: calc(100vh - 117px);
+    overflow: hidden;
+    transition: 150ms;
 }
 
 .details *{
@@ -123,6 +157,7 @@
     font-size: 48px;
     padding: 7px;
     width: 75%;
+    overflow: hidden;
 }
 
 .details > a::after{
@@ -152,6 +187,22 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    overflow: hidden;
+}
+
+.collapse-menu{
+    flex: 0%;
+    background: linear-gradient(-177deg, var(--Priority3-bg-color) 24%, var(--Priority1-bg-color) 100%);
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    transition: 150ms;
+}
+
+.collapse-menu > *{
+    font-size: 64px;
 }
 
 @media screen and (max-width: 1330px){
@@ -161,5 +212,32 @@
 }
 
 @media screen and (max-width: 1280px){
-    
+    .collapse-menu{
+        flex: 5%;
+    }
+
+    #sheet{
+        flex: 95%;
+    }
+
+    .details{
+        flex: 0%;
+    }
+
+    #maximize{
+    bottom: 10px;
+    right: calc(10px + 5%);
+    }
+
+    .details > a{
+        display: none;
+    }
+
+    .details > * > div > output{
+        padding: 0px 20px;
+    }
+
+    .details input[type="range"]{
+        width: 85%;
+    }
 }

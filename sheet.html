@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ScoreMony - n</title>
+    <title>ScoreMony</title>
     <link rel="icon" type="image/x-icon" href="/images/Icon.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/sheetStyle.css">
 </head>
@@ -13,13 +14,15 @@
     <header>
       <div class="topnav">
         <a href="javascript:void(0);" class="icon search" onclick="headerSlidePush('search')">
-          <img src="images/searchIcon.svg" alt="">
+          <img src="images/searchIcon.svg">
         </a>
         <div class="search user">
           <a href="home.html" id="home"><img src="images/Icon.png" alt="Icon"></a>
           <div id="search" class="slide search">
             <input type="text" placeholder="Search.." name="search">
-            <button type="submit"><i class="fa fa-search"></i></button>
+            <button type="submit">
+              <span class="material-symbols-outlined">search</span>
+            </button>
           </div>
           <div id="user" class="slide user">
             <h2 id="username">Anonymous12345</h2>
@@ -27,12 +30,18 @@
           </div>
         </div>
         <a href="javascript:void(0);" class="icon user" onclick="headerSlidePush('user')">
-          <img src="images/UserIcon.png" alt="">
+          <img src="images/UserIcon.png">
         </a>
       </div>
     </header>
     <div id="main">
-        <div id="sheet">
+        <div id="sheet" class="sheet">
+          <button class="fixedIcons" id="download">
+            <img src="images/downloadIcon2.svg">
+          </button>
+          <button class="fixedIcons" id="maximize" onclick="toggleFullscreen()">
+            <span class="material-symbols-outlined">zoom_out_map</span>
+          </button>
         </div>
         <div class="details">
             <div id="details">
@@ -75,6 +84,11 @@
             </form>
             <a id="downloadPDF" href="" download>Letöltés<img src="images/downloadIcon.svg" alt="download icon"></a>
         </div>
+        <button class="collapse-menu" onclick="openDetails()">
+          <span class="material-symbols-outlined">
+            chevron_backward
+          </span>
+        </button>
     </div>
     <script src="app.js"></script>
     <script src="sheet.js"></script>
