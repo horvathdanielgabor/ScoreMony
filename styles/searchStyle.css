@@ -23,7 +23,6 @@ body {
 /* Individual sections */
 #filterCont{            /* The entire filter section */
     background-color: #53629E;
-    background: linear-gradient(180deg,rgba(77, 75, 136, 1) 0%, rgba(109, 142, 177, 1) 90%);
     width: 17vw;
     height: 100vh;
     transition: all 0.5s;
@@ -76,6 +75,11 @@ h3{
     margin: auto 15px;
     &:hover{
         cursor: pointer;
+    }
+    &:hover img{
+        filter: invert(20%);
+        transform: scale(1.1);
+        transition: all 0.2s;
     }
 }
 
@@ -254,6 +258,18 @@ p{
     flex-shrink: 0;
     transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
     padding: 20px;
+}
+
+.scoreArtistContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.scoreInstrumentIcon{
+    width: 20px;
+    height: 20px;
 }
 
 .scoreName {
@@ -480,8 +496,8 @@ p{
         &:hover{
             cursor: pointer;
         }
-        &:hover > img{
-            transform: rotate(-90deg);
+        &:hover #arrowCont{
+            filter: invert(20%) blur(0.2px);
         }
     }
 
@@ -563,6 +579,7 @@ p{
         transition: height 0.5s ease-out;
         flex-direction: column;
         background-color: #53629E;
+        background: linear-gradient(180deg,rgba(77, 75, 136, 1) 0%, rgba(109, 142, 177, 1) 90%);
     }
 
     #filterCont.activeMenu{
@@ -708,14 +725,24 @@ p{
         flex: 1;
     }
 
+    .scoreArtistContainer{
+        gap: 10px;
+    }
+
     .scoreArtist {
         font-size: 20px;
+        text-align: end;
+        padding: 0px;
     }
 }
 
 @media (max-width: 550px) {
     .scoreResult{
         height: 110px;
+    }
+
+    .scoreArtist {
+        font-size: 18px;
     }
 }
 

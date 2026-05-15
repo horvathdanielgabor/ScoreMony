@@ -44,55 +44,55 @@ const scores = [
     new Score("Girl From Ipanema", "Various", "Gitár", "Jazz", "Haladó", "G major", 161.85, 1, "IKT_kották/Gitár/Jazz/Haladó/Képek/The_girl_from_Ipanema/The_girl_from_Ipanema_page_0001.jpg"),
     new Score("Girls Like You", "Various", "Hegedű", "Pop", "Kezdő", "F# major", 138.22, 1, "IKT_kották/Hegedű/Pop/Kezdő/Képek/Girls_like_you/Girls_like_you_page_0001.jpg"),
     new Score("Golden", "Various", "Hegedű", "Zenés színház", "Kezdő", "F# major", 63.30, 1, "IKT_kották/Hegedű/Zenés_színház/Kezdő/Képek/Golden/Golden_page_0001.jpg"),
-    new Score("Grande Valse Brillante", "Chopin", "Gitár", "Klasszikus", "Haladó", "A major", 137.05, 1, "IKT_kották/Gitár/Klasszikus/Haladó/Képek/Grande_valse_brillante_Op.18/Grande_valse_brillante_Op.18_page_0001.jpg"),
+    new Score("Grande Valse Brillante", "Chopin", "Gitár", "Klasszikus", "Haladó", "A major", 137.05, 1, "IKT_kották/Gitár/Klasszikus/Haladó/Képek/Grande_valse_brillante_Op.18/Grande_valse_brillante_Op.18__page_0001.jpg"),
     new Score("Hammer To Fall", "Queen", "Dob", "Rock", "Kezdő", "Bm", 44.98, 4, "IKT_kották/Dob/Rock/Kezdő/Képek/Hammer_to_fall/hammer_to_fall_page_0001.jpg"),
     new Score("He's A Pirate", "Various", "Fuvola", "Zenés színház", "Haladó", "G major", 146.03, 1, "IKT_kották/Fuvola/Zenés_színház/Haladó/Képek/Hes_a_pirate/Hes_a_pirate_page_0001.jpg"),
     new Score("Holiday", "Green Day", "Dob", "Rock", "Közép", "E major", 73.49, 5, "IKT_kották/Dob/Rock/Középhaladó/Képek/Holiday/holiday_green_day_drum_chart2_page_0001.jpg"),
-    new Score("I Really Want To Stay At Your House", "Various", "Zongora", "Zenés színház", "Haladó", "D major", 139.20, 1, "IKT_kották/Zongora/Zenés_színház/Haladó/Képek/I_Really_Want_To_Stay_At_Your_House_page_0001.jpg"),
-    new Score("I Won't Say I'm In Love", "Disney", "Dob", "Zenés színház", "Kezdő", "D major", 109.63, 1, "IKT_kották/Dob/Zenés_színház/Kezdő/Képek/I_wont_say_(Im_in_love)/I_wont_say_(Im_in_love)_page_0001.jpg"),
-    new Score("Imagine", "John Lennon", "Zongora", "Pop", "Kezdő", "C major", 126.16, 1, "IKT_kották/Zongora/Pop/Kezdő/Képek/Pink_Pony_Club_page_0001.jpg"),
+    new Score("I Really Want To Stay At Your House", "Various", "Zongora", "Zenés színház", "Haladó", "D major", 139.20, 1, "IKT_kották/Zongora/Zenés_színház/Haladó/Képek/I_Really_Want_To_Stay_At_Your_House/I_Really_Want_To_Stay_At_Your_House_page_0001.jpg"),
+    new Score("I Won't Say I'm In Love", "Disney", "Dob", "Zenés színház", "Kezdő", "D major", 109.63, 1, "IKT_kották/Dob/Zenés_színház/Kezdő/Képek/I_wont_say_Im_in_love/I_wont_say_Im_in_love_page_0001.jpg"),
+    new Score("Pink Pony Club", "Chappell Roan", "Zongora", "Pop", "Kezdő", "C major", 126.16, 1, "IKT_kották/Zongora/Pop/Kezdő/Képek/Pink_Pony_Club/Pink_Pony_Club_page_0001.jpg"),
     new Score("Jazz Independence 1", "Various", "Dob", "Jazz", "Kezdő", "Bb major", 41.71, 1, "IKT_kották/Dob/Jazz/Kezdő/Képek/Jazz_exercises_1/jazz_independence_exercises_1_page_0001.jpg"),
     new Score("Jazz Independence 2", "Various", "Dob", "Jazz", "Közép", "F major", 46.91, 1, "IKT_kották/Dob/Jazz/Középhaladó/Képek/Jazz_independence_exercises_2/jazz_independence_exercises_2_page_0001.jpg"),
     new Score("Jazz Vespas", "Various", "Dob", "Jazz", "Haladó", "C major", 80.92, 3, "IKT_kották/Dob/Jazz/Haladó/Képek/Jazz_Vespas/Jazz_Vespas_Drums_page_0001.jpg"),
-    new Score("Love For Sale", "Various", "Gitár", "Jazz", "Kezdő", "F major", 104.76, 1, "IKT_kották/Gitár/Jazz/Kezdő/Képek/Love_for_sale_page_0001.jpg"),
-    new Score("Love Control", "Various", "Zongora", "Pop", "Közép", "D major", 108.14, 1, "IKT_kották/Zongora/Pop/Középhaladó/Képek/Lose_Control_page_0001.jpg"),
-    new Score("Malaguena", "Various", "Gitár", "Klasszikus", "Kezdő", "E major", 62.77, 1, "IKT_kották/Gitár/Klasszikus/Kezdő/Képek/Malaguena_page_0001.jpg"),
+    new Score("Love For Sale", "Various", "Gitár", "Jazz", "Kezdő", "F major", 104.76, 1, "IKT_kották/Gitár/Jazz/Kezdő/Képek/Love_for_sale/Love_for_sale_page_0001.jpg"),
+    new Score("Lose Control", "Various", "Zongora", "Pop", "Közép", "D major", 108.14, 1, "IKT_kották/Zongora/Pop/Középhaladó/Képek/Lose_Control/Lose_Control_page_0001.jpg"),
+    new Score("Malaguena", "Various", "Gitár", "Klasszikus", "Kezdő", "E major", 62.77, 1, "IKT_kották/Gitár/Klasszikus/Kezdő/Képek/Malaguena/Malaguena_page_0001.jpg"),
     new Score("Maple Leaf Rag", "Joplin", "Zongora", "Jazz", "Haladó", "A major", 114.49, 4, "IKT_kották/Zongora/Jazz/Haladó/Képek/Maple_leaf_rag/Maple_Leaf_Rag_page_0001.jpg"),
-    new Score("Minor Swing", "Django Reinhardt", "Hegedű", "Jazz", "Közép", "D minor", 158.78, 1, "IKT_kották/Hegedű/Jazz/Középhaladó/Képek/Minor_swing_page_0001.jpg"),
+    new Score("Minor Swing", "Django Reinhardt", "Hegedű", "Jazz", "Közép", "D minor", 158.78, 1, "IKT_kották/Hegedű/Jazz/Középhaladó/Képek/Minor_swing/Minor_swing_page_0001.jpg"),
     new Score("Moeller Jam", "Various", "Dob", "Klasszikus", "Haladó", "G major", 19.28, 1, "IKT_kották/Dob/Klasszikus/Haladó/Képek/Moeller_Jam/moeller_jam_page_0001.jpg"),
-    new Score("Moonlight Serenade", "Glenn Miller", "Fuvola", "Jazz", "Közép", "G major", 508.60, 1, "IKT_kották/Fuvola/Jazz/Középhaladó/Képek/Moonlight_Serenade/miller_glenn_moonlight_serenade_112285_page_0002.jpg"),
-    new Score("Never Enough", "The Greatest Showman", "Hegedű", "Zenés színház", "Közép", "Cm", 69.51, 1, "IKT_kották/Hegedű/Zenés_színház/Középhaladó/Képek/Never_Enough_page_0001.jpg"),
-    new Score("Nothing Else Matters", "Metallica", "Gitár", "Rock", "Haladó", "Em", 110.56, 1, "IKT_kották/Gitár/Rock/Haladó/Képek/Nothing_else_matters_page_0001.jpg"),
-    new Score("Nuvole Bianche", "Einaudi", "Zongora", "Klasszikus", "Kezdő", "E major", 42.19, 1, "IKT_kották/Zongora/Klasszikus/Kezdő/Képek/Nuvole_Bianche_page_0001.jpg"),
-    new Score("Ordinary", "Various", "Hegedű", "Pop", "Közép", "A major", 125.62, 1, "IKT_kották/Hegedű/Pop/Középhaladó/Képek/Ordinary_page_0001.jpg"),
+    new Score("Moonlight Serenade", "Glenn Miller", "Fuvola", "Jazz", "Közép", "G major", 508.60, 1, "IKT_kották/Fuvola/Jazz/Középhaladó/Képek/Moonlight_Serenade/miller_glenn_moonlight_serenade_112285_page_0001.jpg"),
+    new Score("Never Enough", "The Greatest Showman", "Hegedű", "Zenés színház", "Közép", "Cm", 69.51, 1, "IKT_kották/Hegedű/Zenés_színház/Középhaladó/Képek/Never_Enough/Never_Enough_page_0001.jpg"),
+    new Score("Nothing Else Matters", "Metallica", "Gitár", "Rock", "Haladó", "Em", 110.56, 1, "IKT_kották/Gitár/Rock/Haladó/Képek/Nothing_else_matters/Nothing_else_matters_page_0001.jpg"),
+    new Score("Nuvole Bianche", "Einaudi", "Zongora", "Klasszikus", "Kezdő", "E major", 42.19, 1, "IKT_kották/Zongora/Klasszikus/Kezdő/Képek/Nuvole_Bianche/Nuvole_Bianche_page_0001.jpg"),
+    new Score("Ordinary", "Various", "Hegedű", "Pop", "Közép", "A major", 125.62, 1, "IKT_kották/Hegedű/Pop/Középhaladó/Képek/Ordinary/Ordinary_page_0001.jpg"),
     new Score("Over The Rainbow", "Wizard Of Oz", "Fuvola", "Zenés színház", "Közép", "C major", 60.35, 2, "IKT_kották/Fuvola/Zenés_színház/Középhaladó/Képek/Over_the_rainbow/over_the_rainbow_page_0001.jpg"),
-    new Score("Paint It Black", "Rolling Stones", "Hegedű", "Rock", "Haladó", "B minor", 114.97, 1, "IKT_kották/Hegedű/Rock/Haladó/Képek/Paint_it_black_page_0001.jpg"),
-    new Score("Peaches", "Various", "Gitár", "Zenés színház", "Kezdő", "D major", 76.54, 1, "IKT_kották/Gitár/Zenés_színház/Kezdő/Képek/Peaches_page_0001.jpg"),
-    new Score("Phantom Of The Opera", "Lloyd Webber", "Fuvola", "Zenés színház", "Kezdő", "Am", 35.75, 1, "IKT_kották/Fuvola/Zenés_színház/Kezdő/Képek/The_phantom_of_the_opera_page_0001.jpg"),
+    new Score("Paint It Black", "Rolling Stones", "Hegedű", "Rock", "Haladó", "B minor", 114.97, 1, "IKT_kották/Hegedű/Rock/Haladó/Képek/Paint_it_black/Paint_it_black_page_0001.jpg"),
+    new Score("Peaches", "Various", "Gitár", "Zenés színház", "Kezdő", "D major", 76.54, 1, "IKT_kották/Gitár/Zenés_színház/Kezdő/Képek/Peaches/Peaches_page_0001.jpg"),
+    new Score("Phantom Of The Opera", "Lloyd Webber", "Fuvola", "Zenés színház", "Kezdő", "Am", 35.75, 1, "IKT_kották/Fuvola/Zenés_színház/Kezdő/Képek/The_phantom_of_the_opera/The_phantom_of_the_opera_page_0001.jpg"),
     new Score("Ravel Bolero", "Maurice Ravel", "Fuvola", "Klasszikus", "Közép", "C major", 84.95, 1, "IKT_kották/Fuvola/Klasszikus/Középhaladó/Képek/Bolero/ravel_bolero_page_0001.jpg"),
-    new Score("Rather Be", "Clean Bandit", "Hegedű", "Pop", "Haladó", "F# major", 144.58, 1, "IKT_kották/Hegedű/Pop/Haladó/Képek/Rather_be_page_0001.jpg"),
-    new Score("Rewrite The Stars", "The Greatest Showman", "Zongora", "Zenés színház", "Közép", "D major", 130.86, 1, "IKT_kották/Zongora/Zenés_színház/Középhaladó/Képek/Rewrite_The_Stars_page_0001.jpg"),
-    new Score("Rythme Ruse", "Various", "Fuvola", "Pop", "Haladó", "G major", 463.86, 3, "IKT_kották/Fuvola/Pop/Haladó/Képek/Rythme_rusé/[Free_scores.com]_chauve_thierry_rythme_ruse_183039_page_0002.jpg"),
+    new Score("Rather Be", "Clean Bandit", "Hegedű", "Pop", "Haladó", "F# major", 144.58, 1, "IKT_kották/Hegedű/Pop/Haladó/Képek/Rather_be/Rather_be_page_0001.jpg"),
+    new Score("Rewrite The Stars", "The Greatest Showman", "Zongora", "Zenés színház", "Közép", "D major", 130.86, 1, "IKT_kották/Zongora/Zenés_színház/Középhaladó/Képek/Rewrite_The_Stars/Rewrite_The_Stars_page_0001.jpg"),
+    new Score("Rythme Ruse", "Various", "Fuvola", "Pop", "Haladó", "G major", 463.86, 3, "IKT_kották/Fuvola/Pop/Haladó/Képek/Rythme_rusé/chauve_thierry_rythme_ruse_183039_page_0002.jpg"),
     new Score("Rolling In The Deep", "Adele", "Dob", "Pop", "Közép", "Dm", 52.09, 3, "IKT_kották/Dob/Pop/Középhaladó/Képek/Rolling_in_the_deep/rolling_in_the_deep_page_0001.jpg"),
-    new Score("Shallow", "Lady Gaga", "Gitár", "Pop", "Közép", "A major", 118.77, 1, "IKT_kották/Gitár/Pop/Középhaladó/Képek/Shallow_page_0001.jpg"),
-    new Score("Smile", "Various", "Zongora", "Jazz", "Közép", "F major", 72.89, 1, "IKT_kották/Zongora/Jazz/Középhaladó/Képek/#207_Smile/#207_Smile_page_0001.jpg"),
+    new Score("Shallow", "Lady Gaga", "Gitár", "Pop", "Közép", "A major", 118.77, 1, "IKT_kották/Gitár/Pop/Középhaladó/Képek/Shallow/Shallow_page_0001.jpg"),
+    new Score("Smile", "Various", "Zongora", "Jazz", "Közép", "F major", 72.89, 1, "IKT_kották/Zongora/Jazz/Középhaladó/Képek/Smile/Smile_page_0001.jpg"),
     new Score("Smells Like Teen Spirit", "Nirvana", "Gitár", "Rock", "Közép", "F major", 213.12, 3, "IKT_kották/Gitár/Rock/Középhaladó/Képek/Smells_like_teen_spirit/Jam_Nirvana_Smells_Like_Teen_Spirit_2019_page_0001.jpg"),
-    new Score("Solo Violin Partita 2", "Bach", "Hegedű", "Klasszikus", "Haladó", "D minor", 190.35, 1, "IKT_kották/Hegedű/Klasszikus/Haladó/Képek/Solo_Violin_Partita_No._2_in_D_Minor_page_0001.jpg"),
-    new Score("Someone You Loved", "Lewis Capaldi", "Zongora", "Pop", "Haladó", "G major", 79.58, 1, "IKT_kották/Zongora/Pop/Haladó/Képek/Someone_You_Loved_page_0001.jpg"),
+    new Score("Solo Violin Partita 2", "Bach", "Hegedű", "Klasszikus", "Haladó", "D minor", 190.35, 1, "IKT_kották/Hegedű/Klasszikus/Haladó/Képek/Solo_Violin_Partita_No._2_in_D_Minor/Solo_Violin_Partita_No._2_in_D_Minor_page_0001.jpg"),
+    new Score("Someone You Loved", "Lewis Capaldi", "Zongora", "Pop", "Haladó", "G major", 79.58, 1, "IKT_kották/Zongora/Pop/Haladó/Képek/Someone_You_Loved/Someone_You_Loved_page_0001.jpg"),
     new Score("Spring", "Vivaldi", "Fuvola", "Klasszikus", "Haladó", "E major", 143.69, 5, "IKT_kották/Fuvola/Klasszikus/Haladó/Képek/Spring/vivaldi_the_four_seasons_spring_page_0001.jpg"),
     new Score("Summer Nights", "Michele Gori", "Fuvola", "Jazz", "Haladó", "Bb major", 56.96, 2, "IKT_kották/Fuvola/Jazz/Haladó/Képek/Summer_Nights/summer_nights_michele_gori_page_0001.jpg"),
-    new Score("Sweet Child O' Mine", "Guns N' Roses", "Fuvola", "Rock", "Haladó", "D major", 114.88, 1, "IKT_kották/Fuvola/Rock/Haladó/Képek/Sweet_Child_o_mine_page_0001.jpg"),
+    new Score("Sweet Child O' Mine", "Guns N' Roses", "Fuvola", "Rock", "Haladó", "D major", 114.88, 1, "IKT_kották/Fuvola/Rock/Haladó/Képek/Sweet_Child_o_mine/Sweet_Child_o_mine_page_0001.jpg"),
     new Score("Take Five", "Dave Brubeck", "Gitár", "Jazz", "Közép", "Em", 123.51, 1, "IKT_kották/Gitár/Jazz/Középhaladó/Képek/Take_Five/Take_five_page_0001.jpg"),
     new Score("The Lion King", "Elton John", "Dob", "Zenés színház", "Haladó", "A major", 202.71, 1, "IKT_kották/Dob/Zenés_színház/Haladó/Képek/The_lion_king/The_lion_king_page_0001.jpg"),
-    new Score("The Show Must Go On", "Queen", "Zongora", "Rock", "Közép", "B major", 69.48, 1, "IKT_kották/Zongora/Rock/Középhaladó/Képek/The_Show_Must_Go_On_page_0001.jpg"),
-    new Score("Under The Sea", "Disney", "Gitár", "Zenés színház", "Közép", "F major", 44.32, 1, "IKT_kották/Gitár/Zenés_színház/Középhaladó/Képek/Under_the_sea_page_0001.jpg"),
+    new Score("The Show Must Go On", "Queen", "Zongora", "Rock", "Közép", "B major", 69.48, 1, "IKT_kották/Zongora/Rock/Középhaladó/Képek/The_Show_Must_Go_On/The_Show_Must_Go_On_page_0001.jpg"),
+    new Score("Under The Sea", "Disney", "Gitár", "Zenés színház", "Közép", "F major", 44.32, 1, "IKT_kották/Gitár/Zenés_színház/Középhaladó/Képek/Under_the_sea/Under_the_sea_page_0001.jpg"),
     new Score("Viva La Vida", "Coldplay", "Hegedű", "Rock", "Kezdő", "Dm", 128.96, 1, "IKT_kották/Hegedű/Rock/Kezdő/Képek/Viva_la_vida/viva_la_vida_page_0001.jpg"),
     new Score("Viva La Vida (Flute)", "Coldplay", "Fuvola", "Rock", "Közép", "Dm", 115.86, 1, "IKT_kották/Fuvola/Rock/Középhaladó/Képek/Viva_la_vida/viva_la_vida_page_0001.jpg"),
     new Score("We Don't Talk About Bruno", "Encanto", "Hegedű", "Zenés színház", "Haladó", "C major", 47.07, 1, "IKT_kották/Hegedű/Zenés_színház/Haladó/Képek/We_dont_talk_about_Bruno/We_dont_talk_about_Bruno_page_0001.jpg"),
     new Score("When The Saints Go Marching In", "Various", "Fuvola", "Jazz", "Kezdő", "F major", 40.89, 1, "IKT_kották/Fuvola/Jazz/Kezdő/Képek/When_the_saints_go_marching_in/when_the_saints_go_marching_in_page_0001.jpg"),
-    new Score("Yellow", "Coldplay", "Fuvola", "Rock", "Kezdő", "Gm", 37.04, 1, "IKT_kották/Fuvola/Rock/Kezdő/Képek/Yellow_page_0001.jpg"),
-    new Score("Yesterday", "The Beatles", "Zongora", "Rock", "Kezdő", "F major", 63.08, 1, "IKT_kották/Zongora/Rock/Kezdő/Képek/Yesterday_page_0001.jpg"),
-    new Score("Afro Caribbean Rhythms", "Various", "Dob", "Klasszikus", "Közép", "A minor", 53.50, 2, "IKT_kották/Dob/Klasszikus/Középhaladó/Képek/Afro_Caribbean_Rhythms/afrocaribbeanrhythms_page_0001.jpg")
+    new Score("Yellow", "Coldplay", "Fuvola", "Rock", "Kezdő", "Gm", 37.04, 1, "IKT_kották/Fuvola/Rock/Kezdő/Képek/Yellow/Yellow_page_0001.jpg"),
+    new Score("Yesterday", "The Beatles", "Zongora", "Rock", "Kezdő", "F major", 63.08, 1, "IKT_kották/Zongora/Rock/Kezdő/Képek/Yesterday/Yesterday_page_0001.jpg"),
+    new Score("Afro Caribbean Rhythms", "Various", "Dob", "Klasszikus", "Közép", "A minor", 53.50, 2, "IKT_kották/Dob/Klasszikus/Középhaladó/Képek/Afro_Caribbean_Rhythms/afrocaribbean_rhythms_page_0001.jpg")
 ];
 
 const filterMappings = {
@@ -114,12 +114,30 @@ const difficultyMappings = {
 function createScoreElement(score) {
     const scoreElement = document.createElement('div');
     scoreElement.classList.add('scoreResult');
+    let instrumentIcon;
+    switch (score.instrument) {
+        case 'Hegedű': instrumentIcon = 'images/hangszerek/violin.svg';
+            break;
+        case 'Fuvola': instrumentIcon = 'images/hangszerek/transverse-flute.svg';
+            break;
+        case 'Gitár': instrumentIcon = 'images/hangszerek/guitar.svg';
+            break;
+        case 'Dob': instrumentIcon = 'images/hangszerek/drum.svg';
+            break;
+        case 'Zongora': instrumentIcon = 'images/hangszerek/grand-piano.svg';
+            break;
+        default: instrumentIcon = 'images/reloadIcon.svg';
+    }
     scoreElement.innerHTML = `
         <div class="scoreResultImage" style="background-image: url('${score.fileName}');"></div>
         <div class="scoreResultInfo">
             <div class="scoreResultTop">
                 <h2 class="scoreName">${score.name}</h2>
-                <p class="scoreArtist">${score.artist}</p>
+                <div class="scoreArtistContainer">
+                    <img class="scoreInstrumentIcon" src="${instrumentIcon}" alt="${score.instrument} icon">
+                    <p class="scoreArtist">${score.artist}</p>
+                </div>
+
             </div>
             <div class="scoreResultBottom">
                 <div class="scoreResultCorner scoreCornerLeft">
@@ -359,7 +377,6 @@ document.addEventListener('DOMContentLoaded', function() { // I can explain, thi
 
 function filterDropDownTrigger(el){
     holderParent = el.parentElement.nextSibling.nextSibling;
-    console.log(holderParent);
     if (!el.classList.contains("spinEffect")) {
         el.classList.add("spinEffect");
         holderParent.style.maxHeight = 0;
@@ -384,15 +401,30 @@ function menuOpenClose(){
     let menuEl = document.getElementById("filterCont");
     let btnEl = document.getElementById("filterMenuTriggerCont");
     let searchBarEl = document.getElementById("searchBarContainer");
+    let btnIcon = document.getElementById("arrowCont");
 
     if (!menuEl.classList.contains("activeMenu")) {
         menuEl.classList.add("activeMenu");
+        if (document.body.clientWidth > 768) {
+            btnIcon.style.transform = "rotate(90deg)";
+        }
+        else {
+            btnIcon.style.transform = "rotate(180deg)";
+        }
+
         if (searchBarEl) {
             searchBarEl.classList.remove("menu-closed");
         }
     }
     else {
         menuEl.classList.remove("activeMenu");
+        if (document.body.clientWidth > 768) {
+            btnIcon.style.transform = "rotate(-90deg)";
+        }
+        else {
+            btnIcon.style.transform = "rotate(0deg)";
+        }
+
         if (searchBarEl) {
             searchBarEl.classList.add("menu-closed");
         }
@@ -400,9 +432,9 @@ function menuOpenClose(){
 }
 
 window.addEventListener("resize", () => {
-    console.log("resize");
+    let menuEl = document.getElementById("filterCont");
+    let btnIcon = document.getElementById("arrowCont");
     if (document.body.clientWidth > 1180) {
-        let menuEl = document.getElementById("filterCont");
         menuEl.style.display = "block";
         menuEl.classList.remove("activeMenu");
         menuEl.style.width = '';
@@ -415,8 +447,8 @@ window.addEventListener("resize", () => {
             card.classList.remove('expanded');
         });
     } else if (document.body.clientWidth > 768) {
-        let menuEl = document.getElementById("filterCont");
         menuEl.classList.remove("activeMenu");
+        btnIcon.style.transform = "rotate(-90deg)";
         let searchBarEl = document.getElementById("searchBarContainer");
         if (searchBarEl) {
             searchBarEl.classList.add("menu-closed");
@@ -428,5 +460,6 @@ window.addEventListener("resize", () => {
     } else if (document.body.clientWidth <= 768) {
         // Reattach handlers when resizing into SM view
         attachSmViewHandlers();
+        btnIcon.style.transform = "rotate(0deg)";
     }
 });

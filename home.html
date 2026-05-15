@@ -32,6 +32,7 @@
         </a>
       </div>
     </header>
+
     <div id="udvozlo">
       <div id="udvozlo_szoveg">
         <h1>Üdvözöllek a ScoreMony oldalán!</h1>
@@ -44,51 +45,297 @@
       <input type="radio" name="slider" id="item-1" checked>
       <input type="radio" name="slider" id="item-2">
       <input type="radio" name="slider" id="item-3">
-    <div class="cards">
-      <label class="card" for="item-1" id="song-1">
-        <div class="sidebar">
-          <p class="song_name">Various - Jazz Vespas</p>
-          <img class="instrument" src="/images/hangszerek/drum.svg" alt="">
-        </div>
-        <img src="/IKT_kották/Dob/Jazz/Haladó/Képek/Jazz_Vespas/Jazz_Vespas_Drums_page_0001.jpg" alt="song">
-        <p class="genre">Jazz</p>
-        <p class="level-hard">Haladó</p>
-      </label>
-      <label class="card" for="item-2" id="song-2">
-        <div class="sidebar">
-          <p class="song_name">Various - Jazz Independence Exercises</p>
-          <img class="instrument" src="/images/hangszerek/drum.svg" alt="">
-        </div>
-        <img src="/IKT_kották/Dob/Jazz/Kezdő/Képek/Jazz_exercises_1/jazz_independence_exercises_1_page_0001.jpg" alt="song">
-        <p class="genre">Jazz</p>
-        <p class="level-easy">Kezdő</p>
-      </label>
-      <label class="card" for="item-3" id="song-3">
-        <div class="sidebar">
-          <p class="song_name">Various - Jazz Independence Exercises/Combos</p>
-          <img class="instrument" src="/images/hangszerek/drum.svg" alt="">
-        </div>
-        <img src="/IKT_kották/Dob/Jazz/Középhaladó/Képek/Jazz_independence_exercises_2/jazz_independence_exercises_2_page_0001.jpg" alt="song">
-        <p class="genre">Jazz</p>
-        <p class="level-medium">Középhaladó</p>
-      </label>
+      <div class="cards">
+        <label class="card" for="item-1" id="song-1">
+          <div class="sidebar">
+            <p class="song_name">Various - Jazz Vespas</p>
+            <img class="instrument" src="/images/hangszerek/drum.svg" alt="">
+          </div>
+          <img src="/IKT_kották/Dob/Jazz/Haladó/Képek/Jazz_Vespas/Jazz_Vespas_Drums_page_0001.jpg" alt="song">
+          <p class="genre">Jazz</p>
+          <p class="level-hard">Haladó</p>
+        </label>
+        <label class="card" for="item-2" id="song-2">
+          <div class="sidebar">
+            <p class="song_name">Various - Jazz Independence Exercises</p>
+            <img class="instrument" src="/images/hangszerek/drum.svg" alt="">
+          </div>
+          <img src="/IKT_kották/Dob/Jazz/Kezdő/Képek/Jazz_exercises_1/jazz_independence_exercises_1_page_0001.jpg" alt="song">
+          <p class="genre">Jazz</p>
+          <p class="level-easy">Kezdő</p>
+        </label>
+        <label class="card" for="item-3" id="song-3">
+          <div class="sidebar">
+            <p class="song_name">Various - Jazz Independence Exercises/Combos</p>
+            <img class="instrument" src="/images/hangszerek/drum.svg" alt="">
+          </div>
+          <img src="/IKT_kották/Dob/Jazz/Középhaladó/Képek/Jazz_independence_exercises_2/jazz_independence_exercises_2_page_0001.jpg" alt="song">
+          <p class="genre">Jazz</p>
+          <p class="level-medium">Középhaladó</p>
+        </label>
+      </div>
     </div>
-</div>
+
         <div id="bal_nyil">
-          <div id="bal" class="arrow-box">
+          <div id="bal" class="arrow-box" onclick="moveCar(-1)">
               <img id="bal_nyil_kep" src="./images/Arrow.svg" alt="">
           </div>
         </div>
         
         <div id="jobbnyil">
-            <div id="jobb" class="arrow-box">
+            <div id="jobb" class="arrow-box" onclick="moveCar(1)">
               <img id="jobb_nyil_kep" src="./images/Arrow.svg" alt="">
             </div>
         </div>
       </div>
+      <div id="kiemelt_kottak_kep" class="atvezeto">
+
+      </div>
+      <p id="kiemelt_kottak_p">Kiemelt kották</p>
+      <div id="kiemelt_kottak">
+        <input type="radio" name="kiemelt-slider" id="kiemelt-item-1" checked>
+        <input type="radio" name="kiemelt-slider" id="kiemelt-item-2">
+        <input type="radio" name="kiemelt-slider" id="kiemelt-item-3">
+        <input type="radio" name="kiemelt-slider" id="kiemelt-item-4">
+
+        <div class="kiemelt-carousel">
+
+          <div class="kiemelt-item" id="kiemelt-song-1">
+
+            <div class="kiemelt-card">
+              <div class="kiemelt-sheet">
+                <img src="/IKT_kották/Dob/Pop/Kezdő/Képek/Billie_Jean/17_Billie_Jean_page_0001.jpg" alt="sheet">
+              </div>
+              <div class="kiemelt-info">
+                <h3>Uptown Funk</h3>
+                <p>Mark Ronson feat. Bruno Mars</p>
+                <div class="kiemelt-meta">
+                  <span class="kiemelt-genre">Funk</span>
+                  <span class="kiemelt-level kiemelt-level-hard">Haladó</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="kiemelt-card">
+              <div class="kiemelt-sheet">
+                <img src="/IKT_kották/Dob/Pop/Kezdő/Képek/Billie_Jean/17_Billie_Jean_page_0001.jpg" alt="sheet">
+              </div>
+              <div class="kiemelt-info">
+                <h3>Smooth Criminal</h3>
+                <p>Michael Jackson</p>
+                <div class="kiemelt-meta">
+                  <span class="kiemelt-genre">Pop</span>
+                  <span class="kiemelt-level kiemelt-level-medium">Közép</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="kiemelt-card">
+              <div class="kiemelt-sheet">
+                <img src="/IKT_kották/Dob/Pop/Kezdő/Képek/Billie_Jean/17_Billie_Jean_page_0001.jpg" alt="sheet">
+              </div>
+              <div class="kiemelt-info">
+                <h3>Smooth Criminal</h3>
+                <p>Michael Jackson</p>
+                <div class="kiemelt-meta">
+                  <span class="kiemelt-genre">Pop</span>
+                  <span class="kiemelt-level kiemelt-level-medium">Közép</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="kiemelt-card">
+              <div class="kiemelt-sheet">
+                <img src="/IKT_kották/Dob/Pop/Kezdő/Képek/Billie_Jean/17_Billie_Jean_page_0001.jpg" alt="sheet">
+              </div>
+              <div class="kiemelt-info">
+                <h3>Smooth Criminal</h3>
+                <p>Michael Jackson</p>
+                <div class="kiemelt-meta">
+                  <span class="kiemelt-genre">Pop</span>
+                  <span class="kiemelt-level kiemelt-level-medium">Közép</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="kiemelt-item" id="kiemelt-song-2">
+            <div class="kiemelt-card">
+              <div class="kiemelt-sheet">
+                <img src="/IKT_kották/Dob/Pop/Kezdő/Képek/Billie_Jean/17_Billie_Jean_page_0001.jpg" alt="sheet">
+              </div>
+              <div class="kiemelt-info">
+                <h3>Smooth Criminal</h3>
+                <p>Michael Jackson</p>
+                <div class="kiemelt-meta">
+                  <span class="kiemelt-genre">Pop</span>
+                  <span class="kiemelt-level kiemelt-level-medium">Közép</span>
+                </div>
+              </div>
+            </div>
+            <div class="kiemelt-card">
+              <div class="kiemelt-sheet">
+                <img src="/IKT_kották/Dob/Pop/Kezdő/Képek/Billie_Jean/17_Billie_Jean_page_0001.jpg" alt="sheet">
+              </div>
+              <div class="kiemelt-info">
+                <h3>Smooth Criminal</h3>
+                <p>Michael Jackson</p>
+                <div class="kiemelt-meta">
+                  <span class="kiemelt-genre">Pop</span>
+                  <span class="kiemelt-level kiemelt-level-medium">Közép</span>
+                </div>
+              </div>
+            </div>
+                        <div class="kiemelt-card">
+              <div class="kiemelt-sheet">
+                <img src="/IKT_kották/Dob/Pop/Kezdő/Képek/Billie_Jean/17_Billie_Jean_page_0001.jpg" alt="sheet">
+              </div>
+              <div class="kiemelt-info">
+                <h3>Smooth Criminal</h3>
+                <p>Michael Jackson</p>
+                <div class="kiemelt-meta">
+                  <span class="kiemelt-genre">Pop</span>
+                  <span class="kiemelt-level kiemelt-level-medium">Közép</span>
+                </div>
+              </div>
+            </div>
+            <div class="kiemelt-card">
+              <div class="kiemelt-sheet">
+                <img src="/IKT_kották/Dob/Pop/Kezdő/Képek/Billie_Jean/17_Billie_Jean_page_0001.jpg" alt="sheet">
+              </div>
+              <div class="kiemelt-info">
+                <h3>Smooth Criminal</h3>
+                <p>Michael Jackson</p>
+                <div class="kiemelt-meta">
+                  <span class="kiemelt-genre">Pop</span>
+                  <span class="kiemelt-level kiemelt-level-medium">Közép</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="kiemelt-item" id="kiemelt-song-3">
+            <div class="kiemelt-card">
+              <div class="kiemelt-sheet">
+                <img src="/IKT_kották/Dob/Pop/Kezdő/Képek/Billie_Jean/17_Billie_Jean_page_0001.jpg" alt="sheet">
+              </div>
+              <div class="kiemelt-info">
+                <h3>Take Five</h3>
+                <p>The Dave Brubeck Quartet</p>
+                <div class="kiemelt-meta">
+                  <span class="kiemelt-genre">Jazz</span>
+                  <span class="kiemelt-level kiemelt-level-easy">Kezdő</span>
+                </div>
+              </div>
+            </div>
+            <div class="kiemelt-card">
+              <div class="kiemelt-sheet">
+                <img src="/IKT_kották/Dob/Pop/Kezdő/Képek/Billie_Jean/17_Billie_Jean_page_0001.jpg" alt="sheet">
+              </div>
+              <div class="kiemelt-info">
+                <h3>Take Five</h3>
+                <p>The Dave Brubeck Quartet</p>
+                <div class="kiemelt-meta">
+                  <span class="kiemelt-genre">Jazz</span>
+                  <span class="kiemelt-level kiemelt-level-easy">Kezdő</span>
+                </div>
+              </div>
+            </div>
+            <div class="kiemelt-card">
+              <div class="kiemelt-sheet">
+                <img src="/IKT_kották/Dob/Pop/Kezdő/Képek/Billie_Jean/17_Billie_Jean_page_0001.jpg" alt="sheet">
+              </div>
+              <div class="kiemelt-info">
+                <h3>Take Five</h3>
+                <p>The Dave Brubeck Quartet</p>
+                <div class="kiemelt-meta">
+                  <span class="kiemelt-genre">Jazz</span>
+                  <span class="kiemelt-level kiemelt-level-easy">Kezdő</span>
+                </div>
+              </div>
+            </div>
+            <div class="kiemelt-card">
+              <div class="kiemelt-sheet">
+                <img src="/IKT_kották/Dob/Pop/Kezdő/Képek/Billie_Jean/17_Billie_Jean_page_0001.jpg" alt="sheet">
+              </div>
+              <div class="kiemelt-info">
+                <h3>Take Five</h3>
+                <p>The Dave Brubeck Quartet</p>
+                <div class="kiemelt-meta">
+                  <span class="kiemelt-genre">Jazz</span>
+                  <span class="kiemelt-level kiemelt-level-easy">Kezdő</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="kiemelt-item" id="kiemelt-song-4">
+            <div class="kiemelt-card">
+              <div class="kiemelt-sheet">
+                <img src="/IKT_kották/Dob/Pop/Kezdő/Képek/Billie_Jean/17_Billie_Jean_page_0001.jpg" alt="sheet">
+              </div>
+              <div class="kiemelt-info">
+                <h3>Bohemian Rhapsody</h3>
+                <p>Queen</p>
+                <div class="kiemelt-meta">
+                  <span class="kiemelt-genre">Rock</span>
+                  <span class="kiemelt-level kiemelt-level-hard">Haladó</span>
+                </div>
+              </div>
+            </div>
+            <div class="kiemelt-card">
+              <div class="kiemelt-sheet">
+                <img src="/IKT_kották/Dob/Pop/Kezdő/Képek/Billie_Jean/17_Billie_Jean_page_0001.jpg" alt="sheet">
+              </div>
+              <div class="kiemelt-info">
+                <h3>Bohemian Rhapsody</h3>
+                <p>Queen</p>
+                <div class="kiemelt-meta">
+                  <span class="kiemelt-genre">Rock</span>
+                  <span class="kiemelt-level kiemelt-level-hard">Haladó</span>
+                </div>
+              </div>
+            </div>
+            <div class="kiemelt-card">
+              <div class="kiemelt-sheet">
+                <img src="/IKT_kották/Dob/Pop/Kezdő/Képek/Billie_Jean/17_Billie_Jean_page_0001.jpg" alt="sheet">
+              </div>
+              <div class="kiemelt-info">
+                <h3>Bohemian Rhapsody</h3>
+                <p>Queen</p>
+                <div class="kiemelt-meta">
+                  <span class="kiemelt-genre">Rock</span>
+                  <span class="kiemelt-level kiemelt-level-hard">Haladó</span>
+                </div>
+              </div>
+            </div>
+            <div class="kiemelt-card">
+              <div class="kiemelt-sheet">
+                <img src="/IKT_kották/Dob/Pop/Kezdő/Képek/Billie_Jean/17_Billie_Jean_page_0001.jpg" alt="sheet">
+              </div>
+              <div class="kiemelt-info">
+                <h3>Bohemian Rhapsody</h3>
+                <p>Queen</p>
+                <div class="kiemelt-meta">
+                  <span class="kiemelt-genre">Rock</span>
+                  <span class="kiemelt-level kiemelt-level-hard">Haladó</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="kiemelt-arrow kiemelt-left" onclick="moveKiemeltCar(-1)">
+          <img src="./images/Arrow.svg" alt="">
+        </div>
+        <div class="kiemelt-arrow kiemelt-right" onclick="moveKiemeltCar(1)">
+          <img src="./images/Arrow.svg" alt="">
+        </div>
+      </div>
 
       <div id="Nemreg_megnyitott_kottak_listaja" class="atvezeto">
-        
+
       </div>
       <p id="ajanlott_kottak_listaja_p">Nemrég megnyitott kották listája</p>
       <div id="ajanlott_kottak_listaja">
@@ -763,5 +1010,6 @@
       </div>
     </footer>
     <script src="app.js"></script>
+    <script src="homeSearch.js"></script>
 </body>
 </html>
