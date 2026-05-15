@@ -423,6 +423,187 @@ label > img {
 }
 
 
+/* Kiemelt kották carousel */
+
+#kiemelt_kottak_p {
+    position: relative;
+    z-index: 0;
+    font-size: 3vh;
+    width: 35%;
+    background-color: #BEEEE3;
+    margin: -60px 0% 0% 0%;
+    height: 60px;
+    border-radius: 45px 45px 0 0;
+    text-align: center;
+    padding-top: 13px;
+}
+
+#kiemelt_kottak {
+    width: 100%;
+    background: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #53629E;
+}
+
+input[name="kiemelt-slider"] {
+    display: none;
+}
+
+.kiemelt-carousel {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.kiemelt-item {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.kiemelt-card {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 2;
+    position: relative;
+}
+
+.kiemelt-sheet {
+    width: 100%;
+    overflow: hidden;
+}
+
+.kiemelt-sheet img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.kiemelt-info {
+    width: 100%;
+    background: linear-gradient(135deg, #6D8EB1 0%, #53629E 100%);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.kiemelt-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.kiemelt-info p {
+    margin: 0 0 15px 0;
+    font-size: 0.9rem;
+    opacity: 0.95;
+}
+
+.kiemelt-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.kiemelt-genre {
+    background: rgba(255,255,255,0.2);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    flex: 1;
+    text-align: center;
+}
+
+.kiemelt-level {
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+}
+
+.kiemelt-level-easy {
+    background: #7ADB24;
+    color: black;
+}
+
+.kiemelt-level-medium {
+    background: #F8F855;
+    color: black;
+}
+
+.kiemelt-level-hard {
+    background: #F20000;
+    color: white;
+}
+
+.kiemelt-arrow {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: #BEEEE3;
+    width: 50px;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.kiemelt-arrow img {
+    width: 30px;
+    height: 30px;
+}
+
+.kiemelt-left {
+    left: 10px;
+}
+
+.kiemelt-right {
+    right: 10px;
+    transform: translateY(-50%) rotateZ(180deg);
+}
+
+#kiemelt-item-1:checked ~ .kiemelt-carousel #kiemelt-song-1,
+#kiemelt-item-2:checked ~ .kiemelt-carousel #kiemelt-song-2,
+#kiemelt-item-3:checked ~ .kiemelt-carousel #kiemelt-song-3,
+#kiemelt-item-4:checked ~ .kiemelt-carousel #kiemelt-song-4 {
+    display: flex;
+}
+
+#kiemelt-item-1:checked ~ .kiemelt-carousel #kiemelt-song-2,
+#kiemelt-item-1:checked ~ .kiemelt-carousel #kiemelt-song-3,
+#kiemelt-item-1:checked ~ .kiemelt-carousel #kiemelt-song-4,
+#kiemelt-item-2:checked ~ .kiemelt-carousel #kiemelt-song-1,
+#kiemelt-item-2:checked ~ .kiemelt-carousel #kiemelt-song-3,
+#kiemelt-item-2:checked ~ .kiemelt-carousel #kiemelt-song-4,
+#kiemelt-item-3:checked ~ .kiemelt-carousel #kiemelt-song-1,
+#kiemelt-item-3:checked ~ .kiemelt-carousel #kiemelt-song-2,
+#kiemelt-item-3:checked ~ .kiemelt-carousel #kiemelt-song-4,
+#kiemelt-item-4:checked ~ .kiemelt-carousel #kiemelt-song-1,
+#kiemelt-item-4:checked ~ .kiemelt-carousel #kiemelt-song-2,
+#kiemelt-item-4:checked ~ .kiemelt-carousel #kiemelt-song-3 {
+    display: none;
+}
+
 /* --- RESZPONZIVITÁS --- */
 
 /* Tablet nézet (600px felett) */
@@ -528,6 +709,70 @@ label > img {
     }
     .song_name{
         font-size: 70%;
+    }
+
+    #kiemelt_kottak_p {
+        width: 100%;
+    }
+
+    .kiemelt-carousel {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        height: 400px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .kiemelt-item {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    #kiemelt-item-1:checked ~ .kiemelt-carousel #kiemelt-song-1,
+    #kiemelt-item-2:checked ~ .kiemelt-carousel #kiemelt-song-2,
+    #kiemelt-item-3:checked ~ .kiemelt-carousel #kiemelt-song-3,
+    #kiemelt-item-4:checked ~ .kiemelt-carousel #kiemelt-song-4 {
+        opacity: 1;
+    }
+
+    .kiemelt-vinyl {
+        width: 100%;
+        height: 45%;
+        object-fit: cover;
+    }
+
+    .kiemelt-card {
+        width: 100%;
+        height: 55%;
+        border-radius: 0;
+    }
+
+    .kiemelt-sheet {
+        width: 50%;
+    }
+
+    .kiemelt-info {
+        width: 50%;
+        padding: 15px;
+    }
+
+    .kiemelt-info h3 {
+        font-size: 0.95rem;
+    }
+
+    .kiemelt-info p {
+        font-size: 0.8rem;
+        margin: 0 0 10px 0;
+    }
+
+    .kiemelt-arrow {
+        display: flex !important;
     }
 }
 
