@@ -438,6 +438,10 @@ label > img {
     padding-top: 13px;
 }
 
+#kiemelt_kottak_kep{
+    background-image: url(/images/kiemelt_kottak.jpg);
+}
+
 #kiemelt_kottak {
     width: 100%;
     background: white;
