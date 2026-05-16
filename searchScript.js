@@ -337,7 +337,6 @@ function handleCardClick(e) {
             this.classList.add('expanded');
         } else {
             localStorage.setItem('selectedScore', JSON.stringify(scoreData));
-            localStorage.setItem("pdfName", pdfName);
             window.location.href = 'sheet.html';
         }
     }
@@ -457,6 +456,7 @@ function menuOpenClose(){
 window.addEventListener("resize", () => {
     let menuEl = document.getElementById("filterCont");
     let btnIcon = document.getElementById("arrowCont");
+    let homeIcon = document.getElementById("homeIcon").children[0];
     
     if (document.body.clientWidth > 1180) {
         menuEl.style.display = "block";
@@ -481,6 +481,7 @@ window.addEventListener("resize", () => {
                 }
             };
         document.getElementsByClassName("icon")[0].children[0].src = "images/UserIcon.png";
+        homeIcon.src = "images/Icon.png";
 
         // Menu
         menuEl.classList.remove("activeMenu");
@@ -497,6 +498,7 @@ window.addEventListener("resize", () => {
         // Reattach handlers when resizing into SM view
         attachSmViewHandlers();
         btnIcon.style.transform = "rotate(0deg)";
+        homeIcon.src = "images/home.png";
     }
 });
 
@@ -508,6 +510,7 @@ function headerSlidePush(onBlock) {
   var turnOn = Array(...allFound).find(item => item.className.includes("slide"));
   var change = Array(...allFound).find(item => item.className.includes("icon")).children[0];
   let searchIn = document.getElementById("searchInput");
+  let homeIcon = document.getElementById("homeIcon");
 
   if (turnOn.style.width == "") {
     containOriginal = change.src;
@@ -538,6 +541,8 @@ function headerSlidePush(onBlock) {
     searchIn.style.width = "0%";
     searchIn.style.padding = "0px";
     searchIn.style.border = "none";
+    homeIcon.style.width = "0%";
+    homeIcon.children[0].style.width = "0%";
   }
   else
   {
@@ -554,8 +559,13 @@ function headerSlidePush(onBlock) {
         innerElement.style.order = null;
       }
     }
+    if (window.location.width > 768) {
+        searchIn.style.width = "100%";
+    }
+    else {
+        searchIn.style.width = "60%";
+    }
 
-    searchIn.style.width = "100%";
     searchIn.style.padding = "0 15px";
     searchIn.style.border = "2px solid #f0f1ff";
   }
