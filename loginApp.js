@@ -8,8 +8,10 @@ class User {
     }
 }
 // USERS
-const users = [new User(1, "e", "ee@gmail.com", "e"), new User(2, "a", "aa@gmail.com", "a")];
-localStorage.setItem("loggedUsers", JSON.stringify(users));
+if (localStorage.getItem("loggedUsers") == null) {
+    localStorage.setItem("loggedUsers", JSON.stringify([new User(1, "e", "ee@gmail.com", "e"), new User(2, "a", "aa@gmail.com", "a")]));
+}
+
 // Submit/Login logic
 
 function checkData() {
