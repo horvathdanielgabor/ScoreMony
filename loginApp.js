@@ -50,6 +50,14 @@ function registerDataCheck() {
 
     try {
         if (nameIn.value.length > 5 && nameIn.value.length <= 20 && isNaN(nameIn.value[0]) && nameIn.value[0].toUpperCase() == nameIn.value[0] && !nameIn.value.includes(' ')) {
+            for (const el of JSON.parse(localStorage.getItem("loggedUsers"))) {
+                if (el.name === nameIn.value) {
+                    RevealAlert("Ez a felhasználónév már foglalt");
+                    nameIn.style.border = "2px solid red";
+                    setTimeout(() => nameIn.style.border = "2px solid rgba(0, 0, 0, 0)", 1500);
+                    throw("NAME ALREADY EXISTS");
+                }
+            }
             console.log("Name good");
         }
         else{
@@ -60,6 +68,14 @@ function registerDataCheck() {
         }
         
         if (emailIn.value.length > 5 && emailIn.value.length < 253 && correctEmailRegExp.test(emailIn.value)) {
+            for (const el of JSON.parse(localStorage.getItem("loggedUsers"))) {
+                if (el.email === emailIn.value) {
+                    RevealAlert("Ez az email már használatban van");
+                    emailIn.style.border = "2px solid red";
+                    setTimeout(() => emailIn.style.border = "2px solid rgba(0, 0, 0, 0)", 1500);
+                    throw("EMAIL ALREADY EXISTS");
+                }
+            }
             console.log("Email good");
         }
         else{
