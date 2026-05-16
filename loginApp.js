@@ -9,15 +9,16 @@ class User {
 }
 // USERS
 const users = [new User(1, "e", "ee@gmail.com", "e"), new User(2, "a", "aa@gmail.com", "a")];
-
+localStorage.setItem("loggedUsers", JSON.stringify(users));
 // Submit/Login logic
 
 function checkData() {
     let nameIn = document.getElementById("loginName");
     let passIn = document.getElementById("loginPass");
     let matchingBool = false;
+    let currentLoggedUsers = JSON.parse(localStorage.getItem("loggedUsers"));
 
-    for (const el of users) {
+    for (const el of currentLoggedUsers) {
         if (el.name === nameIn.value && el.password === passIn.value) {
             matchingBool = true;
         }
@@ -95,6 +96,12 @@ function registerDataCheck() {
         }
 
         RevealAlert("Sikeres regisztráció!", false)
+
+        var existingUsers = JSON.parse(localStorage.getItem("loggedUsers"));
+        if(existingUsers == null) existingUsers = [];
+        existingUsers.push(new User(existingUsers.length + 1, nameIn.value, emailIn.value, passInOnce.value));
+        localStorage.setItem("loggedUsers", JSON.stringify(existingUsers));
+
         setTimeout(document.getElementById("flipBackID").click(), 500);
         setTimeout(function(){flipCard.reset()}, 1500);
     } catch (error) {
