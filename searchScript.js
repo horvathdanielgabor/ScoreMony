@@ -448,6 +448,7 @@ function menuOpenClose(){
 window.addEventListener("resize", () => {
     let menuEl = document.getElementById("filterCont");
     let btnIcon = document.getElementById("arrowCont");
+    
     if (document.body.clientWidth > 1180) {
         menuEl.style.display = "block";
         menuEl.classList.remove("activeMenu");
@@ -461,6 +462,18 @@ window.addEventListener("resize", () => {
             card.classList.remove('expanded');
         });
     } else if (document.body.clientWidth > 768) {
+        // Header
+        for (let element of document.getElementsByClassName("topnav")) {
+            element.style = null;
+            for (const innerElement of element.children) {
+                    innerElement.style = null;
+                    for (const child of innerElement.children) {child.style = null};
+                    innerElement.style = null;
+                }
+            };
+        document.getElementsByClassName("icon")[0].children[0].src = "images/UserIcon.png";
+
+        // Menu
         menuEl.classList.remove("activeMenu");
         btnIcon.style.transform = "rotate(-90deg)";
         let searchBarEl = document.getElementById("searchBarContainer");
@@ -477,3 +490,64 @@ window.addEventListener("resize", () => {
         btnIcon.style.transform = "rotate(0deg)";
     }
 });
+
+
+// Header code (mock of app.js header)
+
+function headerSlidePush(onBlock) {
+  var allFound = document.getElementsByClassName(onBlock);
+  var turnOn = Array(...allFound).find(item => item.className.includes("slide"));
+  var change = Array(...allFound).find(item => item.className.includes("icon")).children[0];
+  let searchIn = document.getElementById("searchInput");
+
+  if (turnOn.style.width == "") {
+    containOriginal = change.src;
+    change.src = "images/CloseIcon.png";
+
+    for (const element of document.getElementsByClassName("topnav")[0].children)
+    {
+      if (!element.className.includes(onBlock))
+      {
+        element.style.width = "0%";
+      }
+      else
+      {
+        for (const innerElement of element.children)
+        {
+          if (!innerElement.className.includes(onBlock) && innerElement.tagName != "IMG")
+          {
+            innerElement.style.width = "0%";
+            innerElement.style.order = 4
+          }
+        }
+      }
+    }
+
+    document.getElementsByClassName("topnav")[0].children[1].style.width = "80%"
+    turnOn.style.order = onBlock == "search"? 2 : 4
+    turnOn.style.width = "100%";
+    searchIn.style.width = "0%";
+    searchIn.style.padding = "0px";
+    searchIn.style.border = "none";
+  }
+  else
+  {
+    change.src = containOriginal;
+    document.getElementsByClassName("topnav")[0].children[1].style.width = "60%"
+
+    for (const element of document.getElementsByClassName("topnav")[0].children)
+    {
+      element.style.width = null;
+      for (const innerElement of element.children)
+      {
+        innerElement.style.width = null;
+        for (const child of innerElement.children) {child.style.width = null};
+        innerElement.style.order = null;
+      }
+    }
+
+    searchIn.style.width = "100%";
+    searchIn.style.padding = "0 15px";
+    searchIn.style.border = "2px solid #f0f1ff";
+  }
+}
