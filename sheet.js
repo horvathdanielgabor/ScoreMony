@@ -67,7 +67,7 @@ async function loadIn(Details, pdfLink) {
         }).promise;
       }
 
-      document.getElementById("download").href = pdfLink;
+      document.getElementById("download").children[0].href = pdfLink;
       document.getElementById("downloadPDF").href = pdfLink;
 }
 
@@ -115,20 +115,18 @@ function metronomeFlipflop(){
 }
 
 function openDetails(){
+  details.parentElement.classList.toggle("detailsOpen");
+  sheet.classList.toggle("sheetClose");
+  maximizeBtn.classList.toggle("maximizePushed");
+  
   if (!sidebar)
   {
     sidebar = true;
-    details.parentElement.style.flex = "30%";
-    sheet.style.flex = "65%";
-    maximizeBtn.style.right = "calc(10px + 35%)";
     sidebarBtn.innerText = "chevron_forward";
   }
   else
   {
     sidebar = false;
-    details.parentElement.style.flex = null;
-    sheet.style.flex = null;
-    maximizeBtn.style.right = null;
     sidebarBtn.innerText = "chevron_backward";
   }
 }

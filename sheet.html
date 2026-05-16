@@ -36,14 +36,22 @@
     </header>
     <div id="main">
         <div id="sheet" class="sheet">
-          <button class="fixedIcons" id="download">
-            <img src="images/downloadIcon2.svg">
+          <button class="fixedIcons download" id="download" type="button">
+            <a href="" download><img src="images/downloadIcon2.svg"></a>
           </button>
-          <button class="fixedIcons" id="maximize" onclick="toggleFullscreen()">
+          <button class="fixedIcons" id="metronomeBtn" type="button">
+            <img src="images/landingMetronome.png">
+          </button>
+          <button class="fixedIcons maximize" id="maximize" onclick="toggleFullscreen()" type="button">
             <span class="material-symbols-outlined">zoom_out_map</span>
           </button>
         </div>
         <div class="details">
+          <button type="button" class="closeBtn" onclick="openDetails()">
+            <span class="material-symbols-outlined">
+              chevron_forward
+            </span>
+          </button>
             <div id="details">
                 <div>
                     <p>Név:</p>
@@ -84,7 +92,7 @@
             </form>
             <a id="downloadPDF" href="" download>Letöltés<img src="images/downloadIcon.svg" alt="download icon"></a>
         </div>
-        <button class="collapse-menu" onclick="openDetails()">
+        <button type="button" class="collapse-menu" onclick="openDetails()">
           <span class="material-symbols-outlined">
             chevron_backward
           </span>

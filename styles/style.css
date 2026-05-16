@@ -2,8 +2,9 @@ body {
   margin: 0px;
 }
 
-/*Color palette*/
+
 :root{
+  /*Color palette*/
   --Priority1-bg-color: #4D4B88;
   --Priority2-bg-color: #53629E;
   --Priority3-bg-color: #6D8EB1;
