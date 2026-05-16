@@ -108,6 +108,15 @@ const difficultyMappings = {
     'Haladó': 'Haladó'
 };
 
+// Set username
+
+try {
+  document.getElementById("username").innerText = JSON.parse(localStorage.getItem("currentUser")).name;
+}
+catch {
+  document.getElementById("username").innerText = "Anonymous12345";
+}
+
 // Element template
 function createScoreElement(score) {
     const scoreElement = document.createElement('div');

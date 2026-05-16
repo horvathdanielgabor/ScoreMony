@@ -9,7 +9,7 @@ class User {
 }
 // USERS
 if (localStorage.getItem("loggedUsers") == null) {
-    localStorage.setItem("loggedUsers", JSON.stringify([new User(1, "e", "ee@gmail.com", "e"), new User(2, "a", "aa@gmail.com", "a")]));
+    localStorage.setItem("loggedUsers", JSON.stringify([new User(1, "User", "ee@gmail.com", "Pass1"), new User(2, "AnotherUser", "aa@gmail.com", "Pass2")]));
 }
 
 // Submit/Login logic
@@ -27,6 +27,8 @@ function checkData() {
     }
 
     if (matchingBool) {
+        let currentUser = currentLoggedUsers.find((e) => e.name === nameIn.value);
+        localStorage.setItem("currentUser", JSON.stringify(currentUser));
         window.location.replace("home.html");
     }
     else{

@@ -618,6 +618,10 @@ p{
         width: 0%;
     }
 
+    #user h2{
+        font-size: 25px;
+    }
+
     #resultCont {
         grid-template-columns: 1fr;
         padding-left: 10px;

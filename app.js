@@ -4,6 +4,14 @@ let searchBtn = document.getElementById("search").children[1];
 
 // Search bar
 
+// Set username
+try {
+  document.getElementById("username").innerText = JSON.parse(localStorage.getItem("currentUser")).name;
+}
+catch {
+  document.getElementById("username").innerText = "Anonymous12345";
+}
+
 searchIn.addEventListener("keypress", key => {
   if (key.code == "Enter") {
     enterSearchWithQuery();
