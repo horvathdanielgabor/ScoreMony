@@ -14,9 +14,7 @@ class Score {
 }
 
 // All of the scores, cuz we don't have a database, so we need to hardcode them in :D
-// This is the only part done by AI, cuz I am too lazy to write them all, cry about it
 
-// P.S. Half of it doesn't work so I need to fix it manually one-by-one
 const scores = [
     new Score("All Of Me", "Various", "Hegedű", "Jazz", "Kezdő", "A major", 108.81, 1, "IKT_kották/Hegedű/Jazz/Kezdő/Képek/All_of_me/All_of_me_page_0001.jpg"),
     new Score("All I Want For Christmas Is You", "Various", "Fuvola", "Pop", "Közép", "A major", 39.34, 1, "IKT_kották/Fuvola/Pop/Középhaladó/Képek/All_i_want_for_christmas_is_you/all_i_want_for_christmas_is_you_page_0001.jpg"),
@@ -109,6 +107,15 @@ const difficultyMappings = {
     'Közép': 'Közép',
     'Haladó': 'Haladó'
 };
+
+// Set username
+
+try {
+  document.getElementById("username").innerText = JSON.parse(localStorage.getItem("currentUser")).name;
+}
+catch {
+  document.getElementById("username").innerText = "Anonymous12345";
+}
 
 // Element template
 function createScoreElement(score) {
@@ -219,6 +226,10 @@ function getSelectedDifficultyFilters() {
 // Search and filter function
 function performSearch() {
     const searchInput = document.getElementById("searchInput").value.toLowerCase();
+    const urlParams = new URLSearchParams(window.location.search);
+    urlParams.set('query', searchInput);
+    history.replaceState(null, null, "?" + urlParams.toString());
+
     const resultCont = document.getElementById("resultCont");
     const selectedInstruments = getSelectedInstrumentFilters();
     const selectedGenres = getSelectedGenreFilters();
@@ -275,6 +286,16 @@ function performSearch() {
     }
 }
 
+// Load search result from home via query
+window.addEventListener("load", () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('query');
+    if (query) {
+        document.getElementById("searchInput").value = query;
+        performSearch();
+    }
+});
+
 // SM view onclick handlers - expand/collapse with redirect
 function isSmView() {
     return document.body.clientWidth <= 768;
@@ -316,7 +337,6 @@ function handleCardClick(e) {
             this.classList.add('expanded');
         } else {
             localStorage.setItem('selectedScore', JSON.stringify(scoreData));
-            localStorage.setItem("pdfName", pdfName);
             window.location.href = 'sheet.html';
         }
     }
@@ -431,9 +451,13 @@ function menuOpenClose(){
     }
 }
 
+// Rezise responsivity handler
+
 window.addEventListener("resize", () => {
     let menuEl = document.getElementById("filterCont");
     let btnIcon = document.getElementById("arrowCont");
+    let homeIcon = document.getElementById("homeIcon").children[0];
+    
     if (document.body.clientWidth > 1180) {
         menuEl.style.display = "block";
         menuEl.classList.remove("activeMenu");
@@ -447,6 +471,19 @@ window.addEventListener("resize", () => {
             card.classList.remove('expanded');
         });
     } else if (document.body.clientWidth > 768) {
+        // Header
+        for (let element of document.getElementsByClassName("topnav")) {
+            element.style = null;
+            for (const innerElement of element.children) {
+                    innerElement.style = null;
+                    for (const child of innerElement.children) {child.style = null};
+                    innerElement.style = null;
+                }
+            };
+        document.getElementsByClassName("icon")[0].children[0].src = "images/UserIcon.png";
+        homeIcon.src = "images/Icon.png";
+
+        // Menu
         menuEl.classList.remove("activeMenu");
         btnIcon.style.transform = "rotate(-90deg)";
         let searchBarEl = document.getElementById("searchBarContainer");
@@ -461,5 +498,75 @@ window.addEventListener("resize", () => {
         // Reattach handlers when resizing into SM view
         attachSmViewHandlers();
         btnIcon.style.transform = "rotate(0deg)";
+        homeIcon.src = "images/home.png";
     }
 });
+
+
+// Header code (mock of app.js header)
+
+function headerSlidePush(onBlock) {
+  var allFound = document.getElementsByClassName(onBlock);
+  var turnOn = Array(...allFound).find(item => item.className.includes("slide"));
+  var change = Array(...allFound).find(item => item.className.includes("icon")).children[0];
+  let searchIn = document.getElementById("searchInput");
+  let homeIcon = document.getElementById("homeIcon");
+
+  if (turnOn.style.width == "") {
+    containOriginal = change.src;
+    change.src = "images/CloseIcon.png";
+
+    for (const element of document.getElementsByClassName("topnav")[0].children)
+    {
+      if (!element.className.includes(onBlock))
+      {
+        element.style.width = "0%";
+      }
+      else
+      {
+        for (const innerElement of element.children)
+        {
+          if (!innerElement.className.includes(onBlock) && innerElement.tagName != "IMG")
+          {
+            innerElement.style.width = "0%";
+            innerElement.style.order = 4
+          }
+        }
+      }
+    }
+
+    document.getElementsByClassName("topnav")[0].children[1].style.width = "80%"
+    turnOn.style.order = onBlock == "search"? 2 : 4
+    turnOn.style.width = "100%";
+    searchIn.style.width = "0%";
+    searchIn.style.padding = "0px";
+    searchIn.style.border = "none";
+    homeIcon.style.width = "0%";
+    homeIcon.children[0].style.width = "0%";
+  }
+  else
+  {
+    change.src = containOriginal;
+    document.getElementsByClassName("topnav")[0].children[1].style.width = "60%"
+
+    for (const element of document.getElementsByClassName("topnav")[0].children)
+    {
+      element.style.width = null;
+      for (const innerElement of element.children)
+      {
+        innerElement.style.width = null;
+        for (const child of innerElement.children) {child.style.width = null};
+        innerElement.style.order = null;
+      }
+    }
+    if (window.location.width > 768) {
+        searchIn.style.width = "100%";
+    }
+    else {
+        searchIn.style.width = "60%";
+    }
+
+    searchIn.style.padding = "0 15px";
+    searchIn.style.border = "2px solid #f0f1ff";
+  }
+}
