@@ -14,9 +14,7 @@ class Score {
 }
 
 // All of the scores, cuz we don't have a database, so we need to hardcode them in :D
-// This is the only part done by AI, cuz I am too lazy to write them all, cry about it
 
-// P.S. Half of it doesn't work so I need to fix it manually one-by-one
 const scores = [
     new Score("All Of Me", "Various", "Hegedű", "Jazz", "Kezdő", "A major", 108.81, 1, "IKT_kották/Hegedű/Jazz/Kezdő/Képek/All_of_me/All_of_me_page_0001.jpg"),
     new Score("All I Want For Christmas Is You", "Various", "Fuvola", "Pop", "Közép", "A major", 39.34, 1, "IKT_kották/Fuvola/Pop/Középhaladó/Képek/All_i_want_for_christmas_is_you/all_i_want_for_christmas_is_you_page_0001.jpg"),
@@ -219,6 +217,10 @@ function getSelectedDifficultyFilters() {
 // Search and filter function
 function performSearch() {
     const searchInput = document.getElementById("searchInput").value.toLowerCase();
+    const urlParams = new URLSearchParams(window.location.search);
+    urlParams.set('query', searchInput);
+    history.replaceState(null, null, "?" + urlParams.toString());
+
     const resultCont = document.getElementById("resultCont");
     const selectedInstruments = getSelectedInstrumentFilters();
     const selectedGenres = getSelectedGenreFilters();
@@ -274,6 +276,16 @@ function performSearch() {
         });
     }
 }
+
+// Load search result from home via query
+window.addEventListener("load", () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('query');
+    if (query) {
+        document.getElementById("searchInput").value = query;
+        performSearch();
+    }
+});
 
 // SM view onclick handlers - expand/collapse with redirect
 function isSmView() {
@@ -430,6 +442,8 @@ function menuOpenClose(){
         }
     }
 }
+
+// Rezise responsivity handler
 
 window.addEventListener("resize", () => {
     let menuEl = document.getElementById("filterCont");

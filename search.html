@@ -6,6 +6,7 @@
     <title>ScoreMony - Search</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/searchStyle.css">
+    <link rel="icon" type="image/x-icon" href="/images/Icon.png">
 </head>
 <body>
     <section id="middleContainer">
@@ -106,12 +107,17 @@
         </div>
         <div id="searchBarContainer">
             <input type="text" id="searchInput" class="searchBar" placeholder="Keress kotta vagy előadó alapján...">
+            <div class="search user">
+                <div id="user" class="slide user">
+                    <h2 id="username">Anonymous12345</h2>
+                    <a href="login.html" id="logOut"><img src="images/LogOut.png" alt="LogOut"></a>
+                </div>
+            </div>
         </div>
         <div id="resultCont">
 
         </div>
     </section>
-    <!-- <script src="app.js"></script> -->
     <script src="searchScript.js"></script>
 </body>
 </html>

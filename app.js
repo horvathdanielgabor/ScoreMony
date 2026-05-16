@@ -2,6 +2,8 @@ var containOriginal;
 let searchIn = document.getElementById("search").children[0];
 let searchBtn = document.getElementById("search").children[1];
 
+// Search bar
+
 searchIn.addEventListener("keypress", key => {
   if (key.code == "Enter") {
     enterSearchWithQuery();
@@ -13,9 +15,11 @@ searchBtn.addEventListener("click", () => {
 })
 
 function enterSearchWithQuery() {
-  window.history = `search.html?query=${searchIn.value}`;
+  window.location.href = `search.html?query=${searchIn.value}`;
   console.log(`search.html?query=${searchIn.value}`)
 }
+
+// Header
 
 function headerSlidePush(onBlock) {
   var allFound = document.getElementsByClassName(onBlock);
@@ -84,5 +88,3 @@ window.addEventListener("resize", function(){
     document.getElementsByClassName("icon")[1].children[0].src = "images/UserIcon.png"
   }
 });
-
-//  -----------------------------------
