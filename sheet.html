@@ -39,7 +39,7 @@
           <button class="fixedIcons download" id="download" type="button">
             <a href="" download><img src="images/downloadIcon2.svg"></a>
           </button>
-          <button class="fixedIcons" id="metronomeBtn" type="button">
+          <button class="fixedIcons" id="metronomeBtn" class type="button" onclick="metronomeModal()">
             <img src="images/landingMetronome.png">
           </button>
           <button class="fixedIcons maximize" id="maximize" onclick="toggleFullscreen()" type="button">
@@ -78,7 +78,7 @@
                     <p id="difficulty"></p>
                 </div>
             </div>
-            <form oninput="out.value=inp.value">
+            <form class="metronome" oninput="out.value=inp.value">
               <div>
                 <output name="out" for="inp">100</output>
                 <h2>BPM</h2>
@@ -97,6 +97,25 @@
             chevron_backward
           </span>
         </button>
+    </div>
+    <div id="metronomeModal" class="">
+      <form class="metronome">
+      <div>
+        <output name="out" for="inp">100</output>
+        <h2>BPM</h2>
+      </div>
+      <div>
+        <input id="metronomeSpeedSlider" name="inp" type="range" min="40" max="218" value="100">
+      </div>
+      <div>
+        <button type="button" id="closeBtn" onclick="metronomeModal()">
+          <span class="material-symbols-outlined">
+            close
+          </span>
+        </button>
+        <button type="button" id="metronomeToggle" onclick="metronomeFlipflop()"><img src="images/start.svg"></button>
+      </div>
+    </form>
     </div>
     <script src="app.js"></script>
     <script src="sheet.js"></script>

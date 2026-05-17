@@ -5,26 +5,40 @@ let sidebarBtn =  Array(...document.getElementsByTagName("span")).pop();
 
 console.log(sidebarBtn);
 
-let toggleM = document.getElementById("metronomeToggle");
+
 let metronome = null;
 let isPlaying = false;
 let bpm = document.getElementById('metronomeSpeedSlider').value;
-const slider = document.getElementById('metronomeSpeedSlider');
 let audioCtx = null;
+
+const allToggles = Array.from(document.querySelectorAll('#metronomeToggle'));
+const allSliders = Array.from(document.querySelectorAll('#metronomeSpeedSlider'));
+const allOutputs = Array.from(document.querySelectorAll('output[for="inp"]'));
 
 let sidebar = false;
 
 let lastWidth = null;
 
-slider.addEventListener('input', () => {
-  bpm = parseInt(slider.value);
-  document.getElementById('metronomeSpeedSlider').textContent = bpm;
-
+function syncBpm(value) {
+  bpm = value;
+  allSliders.forEach(s => s.value = bpm);
+  allOutputs.forEach(o => o.value = bpm);
   if (isPlaying) {
     clearInterval(metronome);
-    const intervalMs = (60 / bpm) * 1000;
-    metronome = setInterval(tick, intervalMs);
+    metronome = setInterval(tick, (60 / bpm) * 1000);
   }
+}
+
+function syncIcon(playing) {
+  allToggles.forEach(btn => {
+    btn.children[0].src = playing ? "images/pause.svg" : "images/start.svg";
+  });
+}
+
+allSliders.forEach(slider => {
+  slider.addEventListener('input', () => {
+    syncBpm(parseInt(slider.value));
+  });
 });
 
 function ensureAudio() {
@@ -88,11 +102,19 @@ function playClick() {
     }
 
 function tick() {
-  toggleM.style.backgroundColor = 'rgba(77, 75, 136, 0.5)';
-  toggleM.style.borderColor = 'rgba(77, 75, 136, 0.5)';
+  allToggles.forEach(btn => {
+    btn.style.backgroundColor = 'rgba(77, 75, 136, 0.5)';
+    btn.style.borderColor = 'rgba(77, 75, 136, 0.5)';
+  });
+  document.getElementById("metronomeBtn").style.backgroundColor = 'rgba(77, 75, 136, 0.5)';
+  document.getElementById("metronomeBtn").style.borderColor = 'rgba(77, 75, 136, 0.5)';
   setTimeout(() => {
-    toggleM.style.backgroundColor = null;
-    toggleM.style.borderColor = null;
+    allToggles.forEach(btn => {
+      btn.style.backgroundColor = null;
+      btn.style.borderColor = null;
+    });
+    document.getElementById("metronomeBtn").style.backgroundColor = null;
+    document.getElementById("metronomeBtn").style.borderColor = null;
   }, 80);
   playClick();
 }
@@ -101,16 +123,16 @@ function metronomeFlipflop(){
     if (!isPlaying)
     {
         metronome = setInterval(tick,(60/+document.getElementById("metronomeSpeedSlider").value)*1000);
-        toggleM.children[0].src = "images/pause.svg";
         isPlaying = true;
         ensureAudio();
+        syncIcon(true);
     }
     else
     {
         clearInterval(metronome);
-        toggleM.children[0].src = "images/start.svg";
         isPlaying = false;
         audioCtx = null;
+        syncIcon(false);
     }
 }
 
@@ -131,14 +153,22 @@ function openDetails(){
   }
 }
 
+function metronomeModal(){
+  document.getElementById("metronomeModal").classList.toggle("modalOpen");
+}
+
 function toggleFullscreen() {
   if (!document.fullscreenElement) {
     document.documentElement.requestFullscreen();
     lastWidth = [maximizeBtn.style.right, details.parentNode.style.flex, sheet.style.flex, sheet.style.height];
     maximizeBtn.children[0].innerText = "zoom_in_map";
     details.parentNode.style.flex = "0%";
+    document.getElementById("metronomeBtn").classList.toggle("fullscreen");
+    document.getElementById("download").classList.toggle("fullscreen");
     document.getElementsByClassName("collapse-menu")[0].style.flex = "0%";
     document.getElementsByTagName("header")[0].style.height = "0px";
+    document.getElementById("main").style.height = "100%";
+    document.getElementsByClassName("collapse-menu")[0].style.height = "0px";
     sheet.style.flex = "100%";
     sheet.style.height = "100%";
     maximizeBtn.style.right = "10px";
@@ -146,8 +176,12 @@ function toggleFullscreen() {
     document.exitFullscreen();
     maximizeBtn.children[0].innerText = "zoom_out_map";
     details.parentNode.style.flex = lastWidth[1];
+    document.getElementById("metronomeBtn").classList.toggle("fullscreen");
+    document.getElementById("download").classList.toggle("fullscreen");
     document.getElementsByClassName("collapse-menu")[0].style.flex = null;
     document.getElementsByTagName("header")[0].style.height = null;
+    document.getElementById("main").style.height = null;
+    document.getElementsByClassName("collapse-menu")[0].style.height = null;
     sheet.style.flex = lastWidth[2];
     sheet.style.height = lastWidth[3];
     maximizeBtn.style.right = lastWidth[0];
