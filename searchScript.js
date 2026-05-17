@@ -319,8 +319,15 @@ function handleCardClick(e) {
         imgName: this.querySelector('.scoreResultImage')?.style.backgroundImage.slice(5, -2) || '',
     };
 
+    const normalizedImagePath = scoreData.imgName.replace(/\\/g, '/');
+    let passedPDF = normalizedImagePath.replace(/^(.*?\/)(?:Képek)\/(?:.+\/)?([^/]+?)_page_\d+\.(?:jpg|jpeg|png)$/i, '$1PDF/$2.pdf');
+    if (scoreData.imgName.includes('\\')) {
+        passedPDF = passedPDF.replace(/\//g, '\\');
+    }
+
     if (!isSmView()) {
         localStorage.setItem('selectedScore', JSON.stringify(scoreData));
+        localStorage.setItem('passedPDF', passedPDF);
         window.location.href = 'sheet.html';
     }
     else{
