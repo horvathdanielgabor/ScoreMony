@@ -767,6 +767,10 @@ p{
         text-align: end;
         padding: 0px;
     }
+
+    #homeIcon > img{
+        content:url("../images/home.png");
+    }
 }
 
 @media (max-width: 550px) {
