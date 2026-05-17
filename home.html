@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/homeStyle.css">
     <link rel="icon" type="image/x-icon" href="./images/Icon.png">
@@ -13,23 +14,33 @@
 <body>
     <header>
       <div class="topnav">
-        <a href="javascript:void(0);" class="icon search" onclick="headerSlidePush('search')">
-          <img src="images/searchIcon.svg" alt="">
-        </a>
+        <button class="icon search" onclick="headerSlidePush('search')">
+          <span class="material-symbols-outlined">
+            search
+          </span>
+        </button>
         <div class="search user">
           <a href="home.html" id="home"><img src="images/Icon.png" alt="Icon"></a>
           <div id="search" class="slide search">
             <input type="text" placeholder="Search.." name="search">
-            <button type="submit"><i class="fa fa-search"></i></button>
+            <button type="submit">
+              <span class="material-symbols-outlined">search</span>
+            </button>
           </div>
           <div id="user" class="slide user">
             <h2 id="username">Anonymous12345</h2>
-            <a href="login.html" id="logOut"><img src="images/LogOut.png" alt="LogOut"></a>
+            <a href="login.html" id="logOut">
+              <span class="material-symbols-outlined">
+                logout
+              </span>
+            </a>
           </div>
         </div>
-        <a href="javascript:void(0);" class="icon user" onclick="headerSlidePush('user')">
-          <img src="images/UserIcon.png" alt="">
-        </a>
+        <button class="icon user" onclick="headerSlidePush('user')">
+          <span class="material-symbols-outlined">
+            person
+          </span>
+        </button>
       </div>
     </header>
 

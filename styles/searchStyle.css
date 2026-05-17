@@ -214,6 +214,12 @@ p{
     height: 50px;
 }
 
+.topnav > div{
+    flex: 90%;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
 /* Score results page */
 
 .scoreResult {
@@ -559,6 +565,16 @@ p{
         font-weight: 50;
     }
 }
+
+@media (max-width: 1028px){
+    #user h2{
+        flex: 70%;
+    }
+    #user a{
+        flex: 30%;
+    }
+}
+
 @media (max-width: 860px) {
     .scoreResultCorner p{
         font-size: small;
@@ -773,6 +789,12 @@ p{
     }
 }
 
+@media (max-width: 768px) {
+    .topnav > div{
+        flex-wrap: nowrap;
+    }
+}
+
 @media (max-width: 550px) {
     .scoreResult{
         height: 110px;
@@ -783,7 +805,7 @@ p{
     }
 
     .searchBar {
-        width: 50%;
+        flex: 100%;
     }
 
     #searchBarContainer {

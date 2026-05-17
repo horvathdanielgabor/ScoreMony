@@ -189,5 +189,5 @@ function toggleFullscreen() {
 }
 
 
-loadIn(localStorage.selectedScore, "IKT_kották\\Dob\\Pop\\Középhaladó\\PDF\\rolling_in_the_deep.pdf")
+loadIn(localStorage.selectedScore, localStorage.passedPDF)
 /*"IKT_kották\Dob\Pop\Középhaladó\PDF\rolling_in_the_deep.pdf"*/

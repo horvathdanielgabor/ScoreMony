@@ -13,9 +13,11 @@
 <body>
     <header>
       <div class="topnav">
-        <a href="javascript:void(0);" class="icon search" onclick="headerSlidePush('search')">
-          <img src="images/searchIcon.svg">
-        </a>
+        <button class="icon search" onclick="headerSlidePush('search')">
+          <span class="material-symbols-outlined">
+            search
+          </span>
+        </button>
         <div class="search user">
           <a href="home.html" id="home"><img src="images/Icon.png" alt="Icon"></a>
           <div id="search" class="slide search">
@@ -26,12 +28,18 @@
           </div>
           <div id="user" class="slide user">
             <h2 id="username">Anonymous12345</h2>
-            <a href="login.html" id="logOut"><img src="images/LogOut.png" alt="LogOut"></a>
+            <a href="login.html" id="logOut">
+              <span class="material-symbols-outlined">
+                logout
+              </span>
+            </a>
           </div>
         </div>
-        <a href="javascript:void(0);" class="icon user" onclick="headerSlidePush('user')">
-          <img src="images/UserIcon.png">
-        </a>
+        <button class="icon user" onclick="headerSlidePush('user')">
+          <span class="material-symbols-outlined">
+            person
+          </span>
+        </button>
       </div>
     </header>
     <div id="main">

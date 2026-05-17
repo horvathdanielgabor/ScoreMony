@@ -1,4 +1,4 @@
-var containOriginal;
+var containOriginal = null;
 let searchIn = document.getElementById("search").children[0];
 let searchBtn = document.getElementById("search").children[1];
 
@@ -31,51 +31,54 @@ function enterSearchWithQuery() {
 
 function headerSlidePush(onBlock) {
   var allFound = document.getElementsByClassName(onBlock);
-  var turnOn = Array(...allFound).find(item => item.className.includes("slide"));
-  var change = Array(...allFound).find(item => item.className.includes("icon")).children[0];
+  var slide = Array(...allFound).find(item => item.className.includes("slide"));
+  var icon = Array(...allFound).find(item => item.className.includes("icon")).children[0];
 
-  if (turnOn.style.width == "") {
-    containOriginal = change.src;
-    change.src = "images/CloseIcon.png";
+  console.log(slide)
+  console.log(document.getElementsByClassName("topnav")[0].children)
 
-    for (const element of document.getElementsByClassName("topnav")[0].children)
-    {
+  if (icon.innerText != "close") {
+    containOriginal = icon.innerText;
+    icon.innerText = "close";
+
+    Array(...document.getElementsByClassName("topnav")[0].children).forEach(element => {
+      console.log(element)
       if (!element.className.includes(onBlock))
       {
-        element.style.width = "0%";
+        element.classList.add("closeDown");
+      }
+      else if (element.className.includes("icon")) {}
+      else
+      {
+        element.classList.add("openUp");
+      }
+    });
+
+    Array(...document.getElementsByClassName("topnav")[0].children[1].children).forEach(element => {
+      console.log(element)
+      if (element.id == onBlock)
+      {
+        element.classList.add("openUp");
       }
       else
       {
-        for (const innerElement of element.children)
-        {
-          if (!innerElement.className.includes(onBlock) && innerElement.tagName != "IMG")
-          {
-            innerElement.style.width = "0%";
-            innerElement.style.order = 4
-          }
-        }
+        element.classList.add("closeDown");
       }
-    }
-
-    document.getElementsByClassName("topnav")[0].children[1].style.width = "80%"
-    turnOn.style.order = onBlock == "search"? 2 : 4
-    turnOn.style.width = "80%";
+    });
   }
   else
   {
-    change.src = containOriginal;
-    document.getElementsByClassName("topnav")[0].children[1].style.width = "60%"
+    icon.innerText = containOriginal;
 
-    for (const element of document.getElementsByClassName("topnav")[0].children)
-    {
-      element.style.width = null;
-      for (const innerElement of element.children)
-      {
-        innerElement.style.width = null;
-        for (const child of innerElement.children) {child.style.width = null};
-        innerElement.style.order = null;
-      }
-    }
+    Array(...document.getElementsByClassName("topnav")[0].children).forEach(element => {
+      element.classList.remove("openUp");
+      element.classList.remove("closeDown");
+    });
+
+    Array(...document.getElementsByClassName("topnav")[0].children[1].children).forEach(element => {
+      element.classList.remove("openUp");
+      element.classList.remove("closeDown");
+    });
   }
 }
 
