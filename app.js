@@ -92,7 +92,7 @@ window.addEventListener("resize", function(){
         innerElement.style = null;
       }
     };
-    document.getElementsByClassName("icon")[0].children[0].src = "images/SearchIcon.svg"
+    document.getElementsByClassName("icon")[0].children[0].src = "images/searchIcon.svg"
     document.getElementsByClassName("icon")[1].children[0].src = "images/UserIcon.png"
   }
 });
