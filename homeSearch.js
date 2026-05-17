@@ -113,7 +113,7 @@ function moveKiemeltCar(direction) {
     document.getElementById("kiemelt-item-" + nextIndex).click();
 }
 
-function kattintas(element, idSzam) 
+function ajanlott_kottak_kattintas(element, idSzam) 
 {
 
     const teljesNev = element.querySelector('.song_name')?.textContent.trim() || '';
@@ -157,4 +157,29 @@ function kattintas(element, idSzam)
         localStorage.setItem('passedPDF', passedPDF);
         window.location.href = 'sheet.html';
     }
+}
+
+function kattintas(element) 
+{
+
+
+    const scoreData = {
+
+        name: element.querySelector('.name_of_the_song')?.textContent.trim() || '',
+        artist: element.querySelector('.band')?.textContent.trim() || '',
+        instrument: utvonalReszek[2] || '', 
+        genre: element.querySelector('.genre')?.textContent.trim() || '',
+        difficulty: element.querySelector('p[class^="level-"]')?.textContent.trim() || '',
+        key: element.querySelector('.key')?.textContent.trim() || '', 
+        imgName: element.querySelector('img[alt="song"]')?.getAttribute('src') || ''
+    };
+
+    const normalizedImagePath = scoreData.imgName.replace(/\\/g, '/');
+    let passedPDF = normalizedImagePath.replace(/^(.*?\/)(?:Képek)\/(?:.+\/)?([^/]+?)_page_\d+\.(?:jpg|jpeg|png)$/i, '$1PDF/$2.pdf');
+    if (scoreData.imgName.includes('\\')) {
+        passedPDF = passedPDF.replace(/\//g, '\\');
+    }
+        localStorage.setItem('selectedScore', JSON.stringify(scoreData));
+        localStorage.setItem('passedPDF', passedPDF);
+        window.location.href = 'sheet.html';
 }
