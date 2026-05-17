@@ -145,10 +145,16 @@ function kattintas(element, idSzam)
 
     const checkbox = document.getElementById(`item-${idSzam}`);
 
+    const normalizedImagePath = scoreData.imgName.replace(/\\/g, '/');
+    let passedPDF = normalizedImagePath.replace(/^(.*?\/)(?:Képek)\/(?:.+\/)?([^/]+?)_page_\d+\.(?:jpg|jpeg|png)$/i, '$1PDF/$2.pdf');
+    if (scoreData.imgName.includes('\\')) {
+        passedPDF = passedPDF.replace(/\//g, '\\');
+    }
 
     if (checkbox && checkbox.checked) 
     {
         localStorage.setItem('selectedScore', JSON.stringify(scoreData));
+        localStorage.setItem('passedPDF', passedPDF);
         window.location.href = 'sheet.html';
     }
 }

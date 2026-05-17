@@ -2,7 +2,7 @@
 
 html{
     background: antiquewhite;
-    background-image: url(/images/coffee-3512027.jpg);
+    background-image: url(../images/coffee-3512027.jpg);
     min-height: 100%;
     background-size: cover;
     font-family: Inter, sans-serif;

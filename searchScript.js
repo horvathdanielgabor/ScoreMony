@@ -47,7 +47,7 @@ const scores = [
     new Score("He's A Pirate", "Various", "Fuvola", "Zenés színház", "Haladó", "G major", 146.03, 1, "IKT_kották/Fuvola/Zenés_színház/Haladó/Képek/Hes_a_pirate/Hes_a_pirate_page_0001.jpg"),
     new Score("Holiday", "Green Day", "Dob", "Rock", "Közép", "E major", 73.49, 5, "IKT_kották/Dob/Rock/Középhaladó/Képek/Holiday/holiday_green_day_drum_chart2_page_0001.jpg"),
     new Score("I Really Want To Stay At Your House", "Various", "Zongora", "Zenés színház", "Haladó", "D major", 139.20, 1, "IKT_kották/Zongora/Zenés_színház/Haladó/Képek/I_Really_Want_To_Stay_At_Your_House/I_Really_Want_To_Stay_At_Your_House_page_0001.jpg"),
-    new Score("I Won't Say I'm In Love", "Disney", "Dob", "Zenés színház", "Kezdő", "D major", 109.63, 1, "IKT_kották/Dob/Zenés_színház/Kezdő/Képek/I_wont_say_Im_in_love/I_wont_say_Im_in_love_page_0001.jpg"),
+    new Score("I Won't Say I'm In Love", "Disney", "Dob", "Zenés színház", "Kezdő", "D major", 109.63, 1, "IKT_kották/Dob/Zenés_színház/Kezdő/Képek/I_wont_say_Im_in_Love/I_wont_say_Im_in_love_page_0001.jpg"),
     new Score("Pink Pony Club", "Chappell Roan", "Zongora", "Pop", "Kezdő", "C major", 126.16, 1, "IKT_kották/Zongora/Pop/Kezdő/Képek/Pink_Pony_Club/Pink_Pony_Club_page_0001.jpg"),
     new Score("Jazz Independence 1", "Various", "Dob", "Jazz", "Kezdő", "Bb major", 41.71, 1, "IKT_kották/Dob/Jazz/Kezdő/Képek/Jazz_exercises_1/jazz_independence_exercises_1_page_0001.jpg"),
     new Score("Jazz Independence 2", "Various", "Dob", "Jazz", "Közép", "F major", 46.91, 1, "IKT_kották/Dob/Jazz/Középhaladó/Képek/Jazz_independence_exercises_2/jazz_independence_exercises_2_page_0001.jpg"),
@@ -79,12 +79,12 @@ const scores = [
     new Score("Someone You Loved", "Lewis Capaldi", "Zongora", "Pop", "Haladó", "G major", 79.58, 1, "IKT_kották/Zongora/Pop/Haladó/Képek/Someone_You_Loved/Someone_You_Loved_page_0001.jpg"),
     new Score("Spring", "Vivaldi", "Fuvola", "Klasszikus", "Haladó", "E major", 143.69, 5, "IKT_kották/Fuvola/Klasszikus/Haladó/Képek/Spring/vivaldi_the_four_seasons_spring_page_0001.jpg"),
     new Score("Summer Nights", "Michele Gori", "Fuvola", "Jazz", "Haladó", "Bb major", 56.96, 2, "IKT_kották/Fuvola/Jazz/Haladó/Képek/Summer_Nights/summer_nights_michele_gori_page_0001.jpg"),
-    new Score("Sweet Child O' Mine", "Guns N' Roses", "Fuvola", "Rock", "Haladó", "D major", 114.88, 1, "IKT_kották/Fuvola/Rock/Haladó/Képek/Sweet_Child_o_mine/Sweet_Child_o_mine_page_0001.jpg"),
+    new Score("Sweet Child O' Mine", "Guns N' Roses", "Fuvola", "Rock", "Haladó", "D major", 114.88, 1, "IKT_kották/Fuvola/Rock/Haladó/Képek/Sweet_Child_o_mine/sweet_child_o_mine_page_0001.jpg"),
     new Score("Take Five", "Dave Brubeck", "Gitár", "Jazz", "Közép", "Em", 123.51, 1, "IKT_kották/Gitár/Jazz/Középhaladó/Képek/Take_Five/Take_five_page_0001.jpg"),
     new Score("The Lion King", "Elton John", "Dob", "Zenés színház", "Haladó", "A major", 202.71, 1, "IKT_kották/Dob/Zenés_színház/Haladó/Képek/The_lion_king/The_lion_king_page_0001.jpg"),
     new Score("The Show Must Go On", "Queen", "Zongora", "Rock", "Közép", "B major", 69.48, 1, "IKT_kották/Zongora/Rock/Középhaladó/Képek/The_Show_Must_Go_On/The_Show_Must_Go_On_page_0001.jpg"),
     new Score("Under The Sea", "Disney", "Gitár", "Zenés színház", "Közép", "F major", 44.32, 1, "IKT_kották/Gitár/Zenés_színház/Középhaladó/Képek/Under_the_sea/Under_the_sea_page_0001.jpg"),
-    new Score("Viva La Vida", "Coldplay", "Hegedű", "Rock", "Kezdő", "Dm", 128.96, 1, "IKT_kották/Hegedű/Rock/Kezdő/Képek/Viva_la_vida/viva_la_vida_page_0001.jpg"),
+    new Score("Viva La Vida", "Coldplay", "Hegedű", "Rock", "Kezdő", "Dm", 128.96, 1, "IKT_kották/Hegedű/Rock/Kezdő/Képek/Viva_la_vida/Viva_la_vida_page_0001.jpg"),
     new Score("Viva La Vida (Flute)", "Coldplay", "Fuvola", "Rock", "Közép", "Dm", 115.86, 1, "IKT_kották/Fuvola/Rock/Középhaladó/Képek/Viva_la_vida/viva_la_vida_page_0001.jpg"),
     new Score("We Don't Talk About Bruno", "Encanto", "Hegedű", "Zenés színház", "Haladó", "C major", 47.07, 1, "IKT_kották/Hegedű/Zenés_színház/Haladó/Képek/We_dont_talk_about_Bruno/We_dont_talk_about_Bruno_page_0001.jpg"),
     new Score("When The Saints Go Marching In", "Various", "Fuvola", "Jazz", "Kezdő", "F major", 40.89, 1, "IKT_kották/Fuvola/Jazz/Kezdő/Képek/When_the_saints_go_marching_in/when_the_saints_go_marching_in_page_0001.jpg"),
@@ -319,8 +319,15 @@ function handleCardClick(e) {
         imgName: this.querySelector('.scoreResultImage')?.style.backgroundImage.slice(5, -2) || '',
     };
 
+    const normalizedImagePath = scoreData.imgName.replace(/\\/g, '/');
+    let passedPDF = normalizedImagePath.replace(/^(.*?\/)(?:Képek)\/(?:.+\/)?([^/]+?)_page_\d+\.(?:jpg|jpeg|png)$/i, '$1PDF/$2.pdf');
+    if (scoreData.imgName.includes('\\')) {
+        passedPDF = passedPDF.replace(/\//g, '\\');
+    }
+
     if (!isSmView()) {
         localStorage.setItem('selectedScore', JSON.stringify(scoreData));
+        localStorage.setItem('passedPDF', passedPDF);
         window.location.href = 'sheet.html';
     }
     else{

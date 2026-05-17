@@ -17,7 +17,7 @@ body{
 #udvozlo{
     width: 100%;
     height: 55vw;
-    background-image: url(/images/Sheet.jpg);
+    background-image: url(../images/Sheet.jpg);
     background-size: cover;       
     background-repeat: no-repeat;
     position: relative;
@@ -390,7 +390,7 @@ label > img {
 
 #Gitar_kottak{
 
-    background-image: url(/images/gitar_kottak.jpg);
+    background-image: url(../images/gitar_kottak.jpg);
 
 }
 
@@ -398,7 +398,7 @@ label > img {
 
 #Dob_kottak{
 
-    background-image: url(/images/dob_kottak.jpg);
+    background-image: url(../images/dob_kottak.jpg);
 
 }
 
@@ -406,7 +406,7 @@ label > img {
 
 #Zongora_kottak{
 
-    background-image: url(/images/zongora_kottak.jpg);
+    background-image: url(../images/zongora_kottak.jpg);
 
 }
 
@@ -414,7 +414,7 @@ label > img {
 
 #Hegedu_kottak{
 
-    background-image: url(/images/hegedu_kottak.jpg);
+    background-image: url(../images/hegedu_kottak.jpg);
 
 }
 
@@ -422,7 +422,7 @@ label > img {
 
 #Fuvola_kottak{
 
-    background-image: url(/images/fuvola_kottak.jpg);
+    background-image: url(../images/fuvola_kottak.jpg);
 
 }
 
@@ -443,7 +443,7 @@ label > img {
 }
 
 #kiemelt_kottak_kep{
-    background-image: url(/images/kiemelt_kottak.jpg);
+    background-image: url(../images/kiemelt_kottak.jpg);
 }
 
 #kiemelt_kottak {
