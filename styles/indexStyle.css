@@ -9,7 +9,7 @@ body{
 
 /*hero start*/
 #hero{
-    background: url("/images/landingBackground.png") right border-box no-repeat;
+    background: url("../images/landingBackground.png") right border-box no-repeat;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -444,7 +444,7 @@ header a::after{
     /*hero start*/
     #hero > div{
         height: auto;
-        background: url("/images/landingBackground.png") right border-box no-repeat;
+        background: url("../images/landingBackground.png") right border-box no-repeat;
         mask: linear-gradient(black, white);
         padding-left: 0px;
         align-items: center;
