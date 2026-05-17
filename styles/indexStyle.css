@@ -27,10 +27,12 @@ body{
 }
 
 header {
+    box-shadow: none;
+    overflow: visible;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 67.75%;
+    width: calc(100vw - 34%);
     height: 90px;
 }
 
@@ -255,7 +257,7 @@ header a::after{
 #advantages > div > div > div{
     display: flex;
     justify-content: space-between;
-    width: 1170px;
+    width: 90%;
     margin: 20px 0px;
 }
 
@@ -390,6 +392,14 @@ header a::after{
     #functions > div{
         width: 95%;
     }
+
+    #functions > div > div{
+        flex: 25%;
+    }
+
+    #functions > div > div > p{
+        width: 200px;
+    }
     /*functions end*/
 
     /*advantages start*/
@@ -472,6 +482,12 @@ header a::after{
         display: block;
     }
 
+    .tableLink > span{
+        font-size: 64px;
+        color: black;
+        text-shadow: none;
+    }
+
     #hero > h2{
         font-size: 40px;
     }
@@ -545,6 +561,10 @@ header a::after{
         flex-direction: column;
         width: calc(100% - 20px);
         align-items: center;
+    }
+
+    #advantages > div > h2{
+        font-size: 64px;
     }
 
     #advantages > div > div{
@@ -669,13 +689,25 @@ header a::after{
         font-size: 32px;
     }
 
+    #advantages > div > div:nth-child(1){
+        padding: 10px;
+    }
+
+    #advantages > div > div:nth-child(2){
+        padding: 10px;
+    }
+
+    #advantages > div > div:nth-child(2) > h2{
+        font-size: 32px;
+    }
+
     #advantages > div > div:nth-child(3) > div > div > img{
         width: 75px;
         height: 75px;
     }
 
     #advantages > div > div > div{
-        width: 320px;
+        width: 95%;
     }
 
     #advantages > div > div h1{
@@ -691,7 +723,7 @@ header a::after{
     }
 
     #numberPosition{
-        font-size: 150px;
+        font-size: 124px;
     }
 
     #advantages div:last-child > h2{
