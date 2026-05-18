@@ -206,7 +206,7 @@ p{
 
 #homeIcon{
     order: -1;
-    width: 50px;
+    width: 80px;
 }
 
 #homeIcon > img{
@@ -782,6 +782,10 @@ p{
         font-size: 20px;
         text-align: end;
         padding: 0px;
+    }
+
+    #homeIcon {
+        width: 65px;
     }
 
     #homeIcon > img{
